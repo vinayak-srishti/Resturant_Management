@@ -21,37 +21,40 @@ body{
 .userregcustomer-name{
     width: 30rem;
     display: flex;
-    padding: 0.1rem;
-    margin-left: 2rem;
+    padding: 1rem;
+    margin-left: 0.3rem;
 }
-.userregdob{
-    padding: 1.5rem;
-    width:30.5rem ;
-    margin-left: -.5rem;
-}
-.userregno-email{
+
+.userregno-email-pass{
     width: 27.5rem;
     margin-left: -.5rem;
+    padding: 0.1rem;
+    
 }
-.userregdistrict-state{
+.userreg-address{
     display: flex;
-    width: 30rem;
-    margin-left: 2rem;
+    width: 29.3rem;
+    margin-left: -0.3rem;
+    padding: 1.1rem;
 }
 .userregpincode{
     width: 13.1rem;
-    padding: 0.1rem;
+    padding: 0.01rem;
     margin-left: -14.9rem;
     
 }
 .userregcustomer-form button{
     margin-top: 1rem;
     margin-left: 1rem;
+    width: 8rem;
     -webkit-text-fill-color: black;
 }
-input[type="text"],[type="email"],[type="date"]{
+input[type="text"],[type="email"],[type="password"]{
     background-color: rgba(240, 248, 255, 0.416);
-    -webkit-text-fill-color: black;
-    
+    -webkit-text-fill-color: black;   
+}
+.userreg-district-state{
+    margin-left: 6rem;
+    padding: 0.1rem;
 }
 
