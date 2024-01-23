@@ -1,0 +1,16 @@
+.staff-form form{
+    background-color: rgb(0,0,0,0.073);
+    margin-top: 10rem;
+    height: 34rem;
+    width: 40rem;
+    margin-left: 45rem;
+}
+body{
+    background-image: url("");
+
+}
+.staff-form h1{
+    margin-top: 3rem;
+    -webkit-text-fill-color: aliceblue;
+    font-family: 'Lucida Console','Courier New',monospace;
+}
