@@ -8,8 +8,7 @@ function UserRegistration() {
     lastname:"",
     contactno:"",
     email:"",
-    newpassword:"",
-    confirmpassword:"",
+    password:"",
     address:"",
     district:"",
     state:"",
@@ -26,6 +25,8 @@ function UserRegistration() {
       seterrormsg('not strong password')
     }
   }
+
+   
   const handleclickfunction=(e)=>{
     setform({...form,[e.target.name]:[e.target.value]})
   }
@@ -56,8 +57,8 @@ function UserRegistration() {
 
       <div className='userregno-email-pass'>
       <input type='text' placeholder='Contact No' name='contactno' onChange={handleclickfunction} className='form-control' required/><br/>
-      <input type='text' placeholder='Email' name='email' onChange={handleclickfunction} className='form-control' required/><br/>
-      <input type='password' placeholder=' Password' onChange={(e) => validate(e.target.value)} name='newpassword' className='form-control' required/>
+      <input type='email' placeholder='Email' name='email' onChange={handleclickfunction} className='form-control' required/><br/>
+      <input type='password' placeholder=' Password' onChange={(e) => validate(e.target.value)} name='password' className='form-control' required/>
       {errormsg === '' ? null :<span style={{  fontWeight: 'bold',color: 'red',}}>{errormsg}</span>}
      </div>
     
