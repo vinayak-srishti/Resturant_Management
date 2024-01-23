@@ -1,0 +1,82 @@
+.footer{
+    width: 100%;
+    bottom: 0;
+    background-color: #070707f6;
+    padding: 1px 0 20px;
+    font-size: 10px;
+    font-weight: 400;
+    position: absolute;
+    display: flex;
+    
+    
+}
+.footer-row{
+    width: 85%;
+    margin: top;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.footer-col1 h1{
+    font-weight: 500;
+    margin-top: 3rem;
+    font-style: italic; 
+    -webkit-text-fill-color: rgb(187, 7, 7);
+    
+}
+.footer-col1 p{
+    font-weight: 400;
+    margin-bottom: 3rem;
+    -webkit-text-fill-color: aliceblue;
+}
+.footer-col1{
+    flex-basis: 25%;
+    padding: 10px;
+    margin-left: 5rem;
+    font-weight: 300;
+    font-size: large;
+    align-content: center;
+}
+.footer-col2 h1{
+    font-weight: 500;
+    margin-top: 4rem;
+    font-style: italic;
+    color:rgb(187, 7, 7) ;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+.footer-col2 h5{
+    font-weight: 400;
+    -webkit-text-fill-color: aliceblue;
+}
+.footer-col3 h1{
+    font-weight: 500;
+    margin-top: 4rem;
+    font-style: italic;
+    color:rgb(187, 7, 7) ;
+    font-size: x-large;
+}
+.footer-col3 p{
+    font-weight: 400;
+    font-size: large;
+    align-content: center;
+    -webkit-text-fill-color: aliceblue;
+}
+.footer-col4 h1{
+    font-weight: 500;
+    margin-top: 4rem;
+    font-style: italic;
+    color:rgb(187, 7, 7) ;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+.footer-col4 p{
+    font-weight: 400;
+    font-size: large;
+    align-content: center;
+    -webkit-text-fill-color: aliceblue;
+}
+
+
