@@ -1,14 +1,16 @@
-.userregcustomer-form form{
-    background-color: rgba(0, 0, 0, 0.073);
-margin-top: 10rem;
- height: 34rem;
- width:40rem;
- margin-left: 45rem;
-}
 body{
     background-image: url('../../Images/UserRegistration.jpg');
     background-size: cover;
 }
+
+.userregcustomer-form form{
+    background-color: rgba(0, 0, 0, 0.073);
+margin-top: 7rem;
+ height: 34rem;
+ width:40rem;
+ margin-left: 45rem;
+}
+
 .userregcustomer-form  h1{
     margin-top: 3rem;
     -webkit-text-fill-color: aliceblue;
@@ -30,6 +32,9 @@ body{
     margin-left: -.5rem;
     padding: 0.1rem;
     
+}
+.userreg-conifrmpassword{
+    margin-top: 1.5rem;
 }
 .userreg-address{
     display: flex;

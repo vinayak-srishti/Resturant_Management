@@ -9,6 +9,7 @@ function UserRegistration() {
     contactno:"",
     email:"",
     password:"",
+    confirmPassword:"",
     address:"",
     district:"",
     state:"",
@@ -26,7 +27,21 @@ function UserRegistration() {
     }
   }
 
-   
+ 
+
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [validationMessage, setValidationMessage] = useState('');
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+
+    if (errormsg && confirmPassword && errormsg !== confirmPassword) {
+      setValidationMessage('Passwords do not match.');
+    } else {
+      setValidationMessage('Password match');
+    }
+  };
+
+  
   const handleclickfunction=(e)=>{
     setform({...form,[e.target.name]:[e.target.value]})
   }
@@ -59,7 +74,11 @@ function UserRegistration() {
       <input type='text' placeholder='Contact No' name='contactno' onChange={handleclickfunction} className='form-control' required/><br/>
       <input type='email' placeholder='Email' name='email' onChange={handleclickfunction} className='form-control' required/><br/>
       <input type='password' placeholder=' Password' onChange={(e) => validate(e.target.value)} name='password' className='form-control' required/>
-      {errormsg === '' ? null :<span style={{  fontWeight: 'bold',color: 'red',}}>{errormsg}</span>}
+      {errormsg === '' ? null :<span style={{  fontWeight: 'bold',color: 'red'}}>{errormsg}</span>}
+      <div className='userreg-conifrmpassword'>
+      <input type='password' placeholder='Confirm Password' onChange={handleConfirmPasswordChange} name='confirmpassword' className='form-control' required/>
+      {validationMessage && <span style={{fontWeight: 'bold',color: 'red'}}>{validationMessage}</span>}
+      </div>
      </div>
     
      <div className='userreg-address'>
