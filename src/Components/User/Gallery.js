@@ -11,11 +11,13 @@ import img7 from '../../Images/g-img7.jpg'
 function Gallery() {
   return (
     <div>
+      <div className='Gallery'>
     <div className='Gallery-page1'>
       <form>
         <h1>EL-DEMETER</h1>
         <p>-CHEFS SUGGESTION-</p>
       </form>
+      </div>
       </div>
       <div className='Gallery-page2'>
         <p>Gallery-Collections</p>

@@ -6,7 +6,7 @@ import HomePage from './Components/User/HomePage';
 import UserRegistration from './Components/User/UserRegistration'
 import Footer from './Components/User/Footer';
 import Gallery from './Components/User/Gallery';
-
+import StaffMenu from './Components/Staff/StaffMenu';
 function App() {
   return (
     <BrowserRouter>
@@ -16,7 +16,7 @@ function App() {
       <Route path='/userregistration' element={<UserRegistration/>} />
       <Route path='/footer' element={<Footer/>} />
       <Route path='/homepage' element={<HomePage/>} />
-      
+      <Route path='/staffmenu' element={<StaffMenu/>} />
       </Routes>
     </div>
     </BrowserRouter>

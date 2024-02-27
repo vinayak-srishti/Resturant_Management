@@ -1,15 +1,16 @@
 @import url('https://fonts.google.com/specimen/Cedarville+Cursive?query=cursive');
 
-body{
+.Gallery{
     background-image: url('../../Images/Galleryimg1.jpg');
-    background-size: contain;
+    background-size: cover;
+
 }
 form{
     margin-left: 20rem;
     font-size: xx-large;
     font-family:cursive;
     width: 30rem;
-    height: 35rem;
+    height: 50rem;
 }
 form h1{
     margin-left: 3rem;
