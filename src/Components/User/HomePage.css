@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+body{
+    background-image: url('../../Images/HomePage1.jpg');
+    background-size: cover;
+}
+.Home-heading h1{
+     -webkit-text-fill-color: aliceblue;
+     margin-top: 10rem;
+     margin-left: 4rem;
+     margin-bottom: 3rem;
+}
+.Home-heading p{
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight:800;
+    font-size:3rem;
+    -webkit-text-fill-color:hsl(0, 6%, 69%);
+    text-shadow:0px 5px 4px #a03333be;
+}
+form{
+    margin-left: 3rem;
+    margin-top: 15rem;
+}

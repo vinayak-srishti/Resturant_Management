@@ -1,0 +1,60 @@
+.userregcustomer-form form{
+    background-color: rgba(0, 0, 0, 0.073);
+margin-top: 10rem;
+ height: 34rem;
+ width:40rem;
+ margin-left: 45rem;
+}
+body{
+    background-image: url('../../Images/UserRegistration.jpg');
+    background-size: cover;
+}
+.userregcustomer-form  h1{
+    margin-top: 3rem;
+    -webkit-text-fill-color: aliceblue;
+    font-family:  "Lucida Console", "Courier New", monospace;
+    font: weight 25px; 
+}
+.userregcustomer-details{
+    margin-top: 1rem;
+}
+.userregcustomer-name{
+    width: 30rem;
+    display: flex;
+    padding: 1rem;
+    margin-left: 0.3rem;
+}
+
+.userregno-email-pass{
+    width: 27.5rem;
+    margin-left: -.5rem;
+    padding: 0.1rem;
+    
+}
+.userreg-address{
+    display: flex;
+    width: 29.3rem;
+    margin-left: -0.3rem;
+    padding: 1.1rem;
+}
+.userregpincode{
+    width: 13.1rem;
+    padding: 0.01rem;
+    margin-left: -14.9rem;
+    
+}
+.userregcustomer-form button{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 8rem;
+    -webkit-text-fill-color: black;
+}
+input[type="text"],[type="email"],[type="password"]{
+    background-color: rgba(240, 248, 255, 0.416);
+    -webkit-text-fill-color: black;   
+}
+.userreg-district-state{
+    margin-left: 6rem;
+    padding: 0.1rem;
+}
+
