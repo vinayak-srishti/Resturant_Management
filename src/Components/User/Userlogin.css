@@ -1,0 +1,51 @@
+body {
+    background-image: url("../../Images/tasty-pizza-near-ingredients.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.user_login form{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 25rem;
+    height: 18rem;
+    margin:4rem;
+    margin-left:33rem;
+    margin-top: 10rem;
+    box-shadow: 5px;
+    background-color: rgba(0, 0, 0, 0.384);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+.user_login h3{
+    text-align: center;
+    padding-top: 1.5rem; 
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.user_login button{
+    margin-top: 1.5rem;
+    margin-left: 9rem;
+    /* text-align: center; */
+
+    
+}
+.user_forgot a{
+    margin-left: 16rem;
+    margin-top:1rem;
+}
+.user_login input[type="text"],[type="password"]{
+    -webkit-text-fill-color: rgb(0, 0, 0);
+
+}
+
+.usrlogin_username{
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+.userlogin_password{
+    margin-left: 3.3rem;
+    margin-top: 1rem;
+}
+#btn1{
+    width: 7rem;
+}
