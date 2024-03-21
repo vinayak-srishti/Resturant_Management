@@ -1,12 +1,12 @@
-#userreg{
+.userregcustomer-form{
     background-image: url('../../Images/UserRegistration.jpg');
     background-size: cover;
 }
 
 .userregcustomer-form form{   
 margin-top: -3rem;
- height: 50rem;
- width:40rem;
+ height: 45rem;
+ width:50rem;
  margin-left: 45rem;
 }
 
@@ -14,7 +14,7 @@ margin-top: -3rem;
     
     margin-top: 3rem;
     -webkit-text-fill-color: aliceblue;
-    font-family:  "Lucida Console", "Courier New", monospace;
+    font-family:  Lucida Console, Courier New, monospace;
     font: weight 25px; 
 }
 .userregcustomer-details{
@@ -23,8 +23,7 @@ margin-top: -3rem;
 .userregcustomer-name{
     margin-left: 6rem;
     margin-bottom: 1rem;
-    padding: 0.1rem;
-   
+    padding: 0.1rem;  
 }
 
 .userregno-email-pass{
