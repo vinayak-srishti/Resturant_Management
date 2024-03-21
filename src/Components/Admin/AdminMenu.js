@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import "../User/UserMenu.css"
-function UserMenu() {
-    const[data,setdata]=useState([])
+function AdminMenu() {
+    const[adminmenu,setadminmenu]=useState([])
     useEffect(()=>{
-      axios.post('http://localhost:4000/menucard')
-      .then((result)=>{
-       console.log(result);
-       setdata(result.data.msg)
-       console.log(result.data.msg);
-      })
-      .catch((err)=>{
-      console.log(err,'error');
-      })
-  },[])
-    
+        axios.post('http://localhost:4000/menucard')
+        .then((result)=>{
+            console.log(result);
+            setadminmenu(result.data.msg)
+            console.log(result.data.msg);
+           })
+           .catch((err)=>{
+           console.log(err,'error');
+           })
+       },[])
+
   return (
     <div>
       <div className="container">
@@ -50,4 +49,4 @@ function UserMenu() {
   )
 }
 
-export default UserMenu
+export default AdminMenu

@@ -11,6 +11,7 @@ import ContactUs from './Components/User/ContactUs';
 import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
 import UserLogin from './Components/User/UserLogin';
+import UserMenu from './Components/User/UserMenu';
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +24,7 @@ function App() {
       <Route path='/homepage' element={<HomePage/>} />
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/userlogin' element={<UserLogin/>}/>
+      <Route path='/usermenu' element={<UserMenu/>}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffreg' element={<Staffreg/>}/>
