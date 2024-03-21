@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "../User/UserRegistration.css";
-import axios from "axios";
-import React, { useState } from 'react'
-import '../User/UserRegistration.css'
-import validator from 'validator'
+
+
+// import validator from 'validator'
 import axios from 'axios'
 
 function UserRegistration() {
@@ -16,7 +15,7 @@ function UserRegistration() {
     address: "",
     district: "",
     state: "",
-    pincode: "",
+    pincode: ""
   });
 
   // const[errormsg,seterrormsg]=useState('')
@@ -39,7 +38,8 @@ function UserRegistration() {
     console.log(form)
     console.log("submitted")
   }
-  return (
+  return(
+
     <div id="userreg">
       
       <div className="userregcustomer-form">
@@ -63,8 +63,8 @@ function UserRegistration() {
       <div className='userregno-email-pass'>
       <input type='text' placeholder='Contact No' name='contactno' onChange={handleclickfunction} className='form-control' required/><br/>
       <input type='email' placeholder='Email' name='email' onChange={handleclickfunction} className='form-control' required/><br/>
-      <input type='password' placeholder=' Password' onChange={(e) => validate(e.target.value)} name='password' className='form-control' required/>
-      {errormsg === '' ? null :<span style={{  fontWeight: 'bold',color: 'red',}}>{errormsg}</span>}
+      <input type='password' placeholder=' Password' onChange={handleclickfunction} name='password' className='form-control' required/>
+    
      </div>
     
      <div className='userreg-address'>
@@ -91,6 +91,7 @@ function UserRegistration() {
      </div>
         </form>
         </center>   
+    </div>
     </div>
   )
 }
