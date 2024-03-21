@@ -15,11 +15,11 @@ function StaffMenu() {
     },[])
   return (
     <div>
-             {axiosdata.map((a) => {
-        return (
-
+           
           <div className="container">
             <div class="row">
+            {axiosdata.map((a) => {
+        return (
               <div class="col-3">
                 <div class="card" style={{ width: 18 + "rem" }}>
                   <img src={`http://localhost:4000/${a.img.filename}`} class="card-img-top" alt="..." />
@@ -45,13 +45,14 @@ function StaffMenu() {
                   </div>
                 </div>
               </div>
+                );
+              })}
             </div>
           </div>
-        );
-      })}
+      
       
     </div>
-  )
+  );
 }
 
 export default StaffMenu
