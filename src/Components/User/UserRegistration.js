@@ -29,18 +29,28 @@ function UserRegistration() {
   //   }
   // }
 
-   
-  const handleclickfunction=(e)=>{
-    setform({...form,[e.target.name]:[e.target.value]})
-  }
-  const onSubmitdata=(e)=>{
-    e.preventDefault()
-    console.log(form)
-    console.log("submitted")
-  }
-  return(
-
-    <div id="userreg">
+  const handleclickfunction = (e) => {
+    setform({ ...form, [e.target.name]: e.target.value });
+  };
+  const onSubmitdata = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:4000/userregister", form)
+      .then((result) => {
+        console.log(result);
+        if (result.data.staus === 200) {
+          alert("succefully registered");
+          console.log(result.data);
+          console.log("submitted");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log(form);
+  };
+  return (
+    // <div id="userreg">
       
       <div className="userregcustomer-form">
         <center>
@@ -71,29 +81,55 @@ function UserRegistration() {
      <input type='text' placeholder=' Address' name='address' onChange={handleclickfunction} className='form-control' required/><br/> 
      </div>  
 
-      <div className='userreg-district-state'>  
-      <div className='row gt-2'>
-      <div className='col-auto'>
-      <input type='text' placeholder='City/District' onChange={handleclickfunction} name='district' className='form-control' required/>
+              <div className="userreg-district-state">
+                <div className="row gt-2">
+                  <div className="col-auto">
+                    <input
+                      type="text"
+                      placeholder="City/District"
+                      onChange={handleclickfunction}
+                      name="district"
+                      value={form.district}
+                      className="form-control"
+                      required
+                    />
+                  </div>
+                  <div className="col-auto">
+                    <input
+                      type="text"
+                      placeholder="State"
+                      name="state"
+                      value={form.state}
+                      onChange={handleclickfunction}
+                      className="form-control"
+                      required
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+
+              <div className="userregpincode">
+                <input
+                  type="number"
+                  placeholder="Pincode"
+                  name="pincode"
+                  value={form.pincode}
+                  onChange={handleclickfunction}
+                  className="form-control"
+                  required
+                />
+              </div>
+              <button type="submit" className="btn btn-danger">
+                Register
+              </button>
+              <br />
+            </div>
+          </form>
+        </center>
       </div>
-      <div className='col-auto'>
-     <input type='text' placeholder='State' name='state' onChange={handleclickfunction} className='form-control' required /><br/>
-     </div>
-     </div>
-     </div>
-     
-
-
-     <div className='userregpincode'>
-      <input type='text' placeholder='Pincode' name='pincode' onChange={handleclickfunction} className='form-control' required/>
-     </div>
-     <button type='button' className='btn btn-danger'>Register</button><br/>
-     </div>
-        </form>
-        </center>   
-    </div>
-    </div>
-  )
+    // </div>
+  );
 }
 
 
