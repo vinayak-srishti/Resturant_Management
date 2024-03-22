@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import "../User/UserMenu.css"
 function UserMenu() {
+  const[count,setcount]=useState(0)
+  const increment=()=>{
+      setcount(count+1)
+  }
+  const decrement=()=>{
+      setcount(count-1)
+  }
     const[data,setdata]=useState([])
     useEffect(()=>{
       axios.post('http://localhost:4000/menucard')
@@ -31,14 +38,9 @@ function UserMenu() {
                       {a.description}
                       <br/>
                     </p>
-                   
-                    <button
-                      class="btn btn-danger"
-                      style={{ marginLeft: "2rem" }}
-                   
-                    >
-                      Add
-                    </button>
+              <button onClick={decrement}  style={{width:"3rem",marginLeft:"0.5rem" }}>-</button>
+              <button onClick={increment}  style={{width:"3rem" ,marginLeft:"0.5rem"}}>+</button>
+                   <button style={{width:"3rem",marginLeft:"5rem"}}>{count}</button> 
                   </div>
                 </div>
               </div>
