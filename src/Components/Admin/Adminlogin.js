@@ -14,7 +14,7 @@ function Adminlogin() {
     console.log(adlog);
   }
   return (
-    <div className="admin_page">
+    <div id="adminlogin_page">
     <div className="admin_login">
       <form onSubmit={SubmitData}>
         <h3>LOGIN</h3>
@@ -45,7 +45,7 @@ function Adminlogin() {
           </tr>
         </table>
         <button className="btn btn-danger">Login</button><br/>
-       <div className="admin_forgot"><a href="forgot.in">forgotPassword?</a></div> 
+       
       </form>
     </div>
   </div>

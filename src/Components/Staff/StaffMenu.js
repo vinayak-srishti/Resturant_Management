@@ -18,7 +18,7 @@ function StaffMenu() {
            
           <div className="container">
             <div class="row">
-            {axiosdata.map((a) => {
+            {axiosdata.map((a)=>{
         return (
               <div class="col-3">
                 <div class="card" style={{ width: 18 + "rem" }}>
@@ -26,8 +26,6 @@ function StaffMenu() {
                   <div class="card-body">
                     <h5 class="card-title">{a.name}</h5>
                     <p class="card-text">
-                      {/* Some quick example text to build on the card title and make
-                    up the bulk of the card's content. */}
                       <h6> {a.price} </h6>
                       {a.description}
                       <br/>
@@ -38,7 +36,7 @@ function StaffMenu() {
                     <button
                       class="btn btn-danger"
                       style={{ marginLeft: "2rem" }}
-                    //   onClick={()=>handleDelete(a._id)}
+                   
                     >
                       Delete
                     </button>

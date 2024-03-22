@@ -1,7 +1,11 @@
-body {
+#adminlogin_page {
     background-image: url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 50rem;
+    width: 120rem;
+    position: absolute;
+    
 }
 .admin_login form{
     border: 2px solid black;
