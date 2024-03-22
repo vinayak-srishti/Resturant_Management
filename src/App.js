@@ -10,11 +10,8 @@ import Staffreg from './Components/Staff/Staffreg';
 import ContactUs from './Components/User/ContactUs';
 import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
-import UserLogin from './Components/User/UserLogin';
 import UserMenu from './Components/User/UserMenu';
-import Staffaddfood from './Components/Staff/Staffaddfood';
-import Adminlogin from './Components/Admin/Adminlogin';
-import Navbar from './Components/User/Navbar';
+import UserLogin from './Components/User/UserLogin';
 function App() {
   return (
     <BrowserRouter>
@@ -35,7 +32,6 @@ function App() {
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       {/********************************Admin***********************************/}
-      
       </Routes> 
     </div>
      </BrowserRouter>
