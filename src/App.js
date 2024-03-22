@@ -10,8 +10,8 @@ import Staffreg from './Components/Staff/Staffreg';
 import ContactUs from './Components/User/ContactUs';
 import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
-import UserLogin from './Components/User/UserLogin';
 import UserMenu from './Components/User/UserMenu';
+import UserLogin from './Components/User/UserLogin';
 function App() {
   return (
     <BrowserRouter>
