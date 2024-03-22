@@ -30,6 +30,7 @@ function App() {
       <Route path='/staffreg' element={<Staffreg/>}/>
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       {/********************************Admin***********************************/}
+      <Route path='/adminmenu' element={}
       </Routes> 
     </div>
      </BrowserRouter>
