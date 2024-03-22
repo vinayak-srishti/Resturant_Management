@@ -47,10 +47,10 @@ function Staffreg() {
           <div className="staffreg-details">
             <div className="staff-name">
               <div className="row gt-2">
-              <div class="col-auto">
+              <div className="col-auto">
                 <input type="text" placeholder="First Name" name="firstname" onChange={handleclick}className="form-control"required value={form.firstname}/>
               </div>
-              <div class="col-auto">
+              <div className="col-auto">
               <input type="text" placeholder="Last Name" name="lastname" onChange={handleclick}className="form-control"required value={form.lastname}/>
               </div>
               </div>
@@ -65,7 +65,7 @@ function Staffreg() {
               </div>
               <div className="staff-photo">
                 <label className="label">Upload your photo</label>
-                <input type="file" name="uploadyourphoto"  className="form-control"required value={form.uploadyourphoto}/><br/>
+                <input type="file" name="uploadyourphoto"  className="form-control"required  onChange={handleclick} value={form.uploadyourphoto}/><br/>
               </div>
               <div className="staff-address">
               <input type="text"placeholder="Address" name="address"onChange={handleclick} className="form-control" required value={form.address}/><br/>
@@ -73,13 +73,13 @@ function Staffreg() {
               
               <div className="staff-idproof">
                 <label>Upload an ID Proof</label>
-                <input type="file" name="selectanidproof" className="form-control"required value={form.selectanidproof}/><br/>
+                <input type="file" name="selectanidproof" className="form-control" onChange={handleclick} required value={form.selectanidproof}/><br/>
               </div>
 
              
-              <div class="drop-down">
+              <div className="drop-down">
   
-  {/* <button style={{height:'45px',width:'28.5rem',backgroundColor:'rgba(240,248,255,0.416)',color:'black'}} class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> */}
+
   <select name="jobposition" className="form-control" value={form.jobposition} onChange ={handleclick}>
     <option value={'Jpose'}>Choose your Job position</option>
     <option value={'Dish-washer'}>Dish washer</option>
@@ -89,15 +89,7 @@ function Staffreg() {
 
 
   </select>
-    Job Position
-  {/* </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Dish washer</a></li>
-    <li><a class="dropdown-item" href="#">Cashier</a></li>
-    <li><a class="dropdown-item" href="#">Cooking</a></li>
-    <li><a class="dropdown-item" href="#">Delivery</a></li> */}
-
-  {/* </ul> */}
+  
 </div>
 
         

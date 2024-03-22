@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import '../User/Userlogin.css'
-function Userlogin() {
+import "../User/UserLogin.css"
+
+function UserLogin() {
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -11,8 +12,7 @@ function Userlogin() {
   const onSubmitData = (e) => {
     e.preventDefault();
     console.log(form);
-    alert("login Successfull")
-    
+    alert("Submitted");
   };
   return (
     <div className="user_page">
@@ -25,16 +25,15 @@ function Userlogin() {
               <div className="col-auto">
                 <input
                   type="text"
-                  name="username" 
+                  name="username"
                   className="form-control"
-                  maxLength={20}
-                  onChange={HandleChange}v  
+                  onChange={HandleChange}
                 />
               </div>
             </div>
           </div>
 
-          <div className="userlogin_password">
+          <div className="usrlogin_password">
             <div className="row gt-2">
               <div className="col-auto">Password</div>
               <div className="col-auto">
@@ -42,19 +41,16 @@ function Userlogin() {
                   type="Password"
                   name="password"
                   className="form-control"
-                  maxLength={20}
                   onChange={HandleChange}
                 />
               </div>
             </div>
           </div>
 
-          <button id="btn1" className="btn btn-danger">Login</button>
+          <button className="btn btn-danger">Login</button>
           <br />
-          <br/> 
-          
           <div className="user_forgot">
-            <a href="forgot.in">forgot password?</a>
+            <a href="forgot.in">forgotPassword?</a>
           </div>
         </form>
       </div>
@@ -62,4 +58,4 @@ function Userlogin() {
   );
 }
 
-export default Userlogin;
+export default UserLogin;

@@ -1,35 +1,57 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-function UserMenu() {
-    const[axiosdata,setaxios]=useState([])
+function StaffMenu() {
+    const [axiosdata,setaxiosdata]=useState([])
     useEffect(()=>{
-        axios.get('http://localhost:3000/menucard')
+        axios.post('http://localhost:4000/menucard')
         .then((result)=>{
-            setaxios(result.data)
+         console.log(result);
+         setaxiosdata(result.data.msg)
+         console.log(result.data.msg);
         })
-        .catch((error)=>{
-        console.log("error",error);
+        .catch((err)=>{
+        console.log(err,'error');
         })
-    })
-
+    },[])
   return (
     <div>
-      {axiosdata.map((a)=>{
-          return(
-            <div><div class="card" style={{width: 18+ "rem"}}>
-            <img src={a.img} class="card-img-top" alt="..."/>
-            <div class="card-body">
-              <h5 class="card-title">{a.name}</h5>
-              <p class="card-text">{a.description}</p>
-              <p class="card-text">{a.price}</p>
-              <a href="#" class="btn btn-primary" style={{marginLeft:2+"rem"}}>Buy Now</a>
-              <a href="#" class="btn btn-danger"  style={{marginLeft:2+"rem"}}>Remove</a>
+           
+          <div className="container">
+            <div class="row">
+            {axiosdata.map((a)=>{
+        return (
+              <div class="col-3">
+                <div class="card" style={{ width: 18 + "rem" }}>
+                  <img src={`http://localhost:4000/${a.img.filename}`} class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">{a.name}</h5>
+                    <p class="card-text">
+                      <h6> {a.price} </h6>
+                      {a.description}
+                      <br/>
+                    </p>
+                    <a href="#" class="btn btn-primary">
+                    Edit
+                    </a>
+                    <button
+                      class="btn btn-danger"
+                      style={{ marginLeft: "2rem" }}
+                   
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+                );
+              })}
             </div>
-          </div></div>
-          )
-         })}
+          </div>
+      
+      
     </div>
-  )
+  );
 }
 
-export default UserMenu
+export default StaffMenu
+

@@ -34,7 +34,7 @@ function UserRegistration() {
       .post("http://localhost:4000/userregister", form)
       .then((result) => {
         console.log(result);
-        if (result.data.staus == 200) {
+        if (result.data.staus === 200) {
           alert("succefully registered");
           console.log(result.data);
           console.log("submitted");
@@ -46,7 +46,7 @@ function UserRegistration() {
     console.log(form);
   };
   return (
-    <div id="userreg">
+    // <div id="userreg">
       
       <div className="userregcustomer-form">
         <center>
@@ -173,7 +173,7 @@ function UserRegistration() {
           </form>
         </center>
       </div>
-    </div>
+    // </div>
   );
 }
 
