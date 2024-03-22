@@ -16,6 +16,8 @@ function App() {
   return (
     <BrowserRouter>
     <div>
+      <Adminlogin/>
+      <Navbar/>
        <Routes> 
       {/*******************************User************************************/}
       <Route path='/gallery' element={<Gallery/>} />
@@ -24,11 +26,11 @@ function App() {
       <Route path='/homepage' element={<HomePage/>} />
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/userlogin' element={<UserLogin/>}/>
-      <Route path='/usermenu' element={<UserMenu/>}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffreg' element={<Staffreg/>}/>
       <Route path='/stafflogin' element={<Stafflogin/>}/>
+      <Route path="/addfood" element={<Staffaddfood/>}/>
       {/********************************Admin***********************************/}
       {/* <Route path='/adminmenu' element={} */}
       </Routes> 
@@ -37,4 +39,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
