@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "../User/UserRegistration.css";
-
-
-// import validator from 'validator'
-import axios from 'axios'
-
+import axios from 'axios';
 function UserRegistration() {
   const [form, setform] = useState({
     firstname: "",

@@ -32,6 +32,7 @@ function App() {
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       {/********************************Admin***********************************/}
+      {/* <Route path='/adminmenu' element={} */}
       </Routes> 
     </div>
      </BrowserRouter>

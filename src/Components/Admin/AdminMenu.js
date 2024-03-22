@@ -30,13 +30,15 @@ function AdminMenu() {
                       {a.description}
                       <br/>
                     </p>
-                   
+                    <a href="#" class="btn btn-primary">
+                    Edit
+                    </a>
                     <button
                       class="btn btn-danger"
                       style={{ marginLeft: "2rem" }}
                    
                     >
-                      Add
+                      Delete
                     </button>
                   </div>
                 </div>
