@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../Staff/Staffaddfood.js';
+import '../Staff/Staffaddfood.css';
 import axios from "axios";
 
 function Staffaddfood() {
@@ -7,6 +7,7 @@ function Staffaddfood() {
     name: "",
     description: "",
     price: "",
+    img:"",
     ftype: "",
   });
   const handleChange = (e) => {
@@ -33,9 +34,9 @@ function Staffaddfood() {
   return (
     <div>
       <div className="addfood_main">
-        <form>
+        <form onSubmit={onSubmitdata}>
           <h1>Add Food</h1>
-          <table cellPadding={"7rem"} cellSpacing={"20px"}>
+          <table>
             <tr>
               <td>Food Name</td   >
               <td>
