@@ -12,12 +12,15 @@ import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
 import UserMenu from './Components/User/UserMenu';
 import UserLogin from './Components/User/UserLogin';
+import Staffaddfood from './Components/Staff/Staffaddfood';
+import AdminUserList from './Components/Admin/AdminUserList';
 function App() {
   return (
     <BrowserRouter>
     <div>
-      <Adminlogin/>
-      <Navbar/>
+      <AdminUserList/>
+      
+      {/* <Navbar/> */}
        <Routes> 
       {/*******************************User************************************/}
       <Route path='/gallery' element={<Gallery/>} />
@@ -32,7 +35,8 @@ function App() {
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       {/********************************Admin***********************************/}
-      {/* <Route path='/adminmenu' element={} */}
+      {/* <Route path='/adminlogin' element={<Adminlogin/>}/> */}
+      
       </Routes> 
     </div>
      </BrowserRouter>
