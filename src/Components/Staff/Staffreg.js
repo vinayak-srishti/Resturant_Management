@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import axios from "axios";
 import '../Staff/Staffreg.css'
-import validator from 'validator'
+
 function Staffreg() {
-  const[form,settForm]=useState({
+  
+
+  const[form1,settForm]=useState({
     firstname:"",
     lastname:"",
-    contactno:"",
+    age:"",
+    dob:"",
+    contactno:'',
     email:"",
     password:"",
     confirmpassword:"",
@@ -13,9 +18,9 @@ function Staffreg() {
     address:"",
     selectanidproof:"",
     jobposition:""
-
-    
+  
   })
+  
 
 
   // const[errormsg,seterrormsg]=useState('')
@@ -31,11 +36,49 @@ function Staffreg() {
     
 
      const handleclick=(e)=>{
-      settForm({...form,[e.target.name]:[e.target.value]})
+      settForm({...form1,[e.target.name]:[e.target.value]})
      }
+     const handleFileChange = (e) => {
+      const { name, files } = e.target;
+      settForm({ ...form1, [name]: files[0] });
+    };
+
+
+
      const onSubmitdata=(e)=>{
-      console.log(form)
-      console.log("submitted")
+      e.preventDefault()
+      const formData = new FormData();
+      formData.append("firstname", form1.firstname);
+      formData.append("lastname", form1.lastname);
+      formData.append("age", form1.age);
+      formData.append("dob", form1.dob);
+      formData.append("contactno", form1.contactno);
+      formData.append("email", form1.email);
+      formData.append("password", form1.password);
+      formData.append("confirmpassword", form1.confirmpassword);
+      formData.append("files", form1.uploadyourphoto);
+      formData.append("address", form1.address);
+      formData.append("files", form1.selectanidproof);
+      formData.append("jobposition", form1.jobposition);
+
+      console.log('Staffreg form ', formData)
+      axios.post("http://localhost:4000/staffregister",formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((result)=>{
+        console.log(result)
+        if (result.data.status === 200) {
+          alert("successfully registered");
+          console.log(result.data);
+          console.log("submitted"); 
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log(form1);
      }
   return (
     <div id="staff-register">
@@ -47,49 +90,60 @@ function Staffreg() {
           <div className="staffreg-details">
             <div className="staff-name">
               <div className="row gt-2">
-              <div class="col-auto">
-                <input type="text" placeholder="First Name" name="firstname" onChange={handleclick}className="form-control"required value={form.firstname}/>
+              <div className="col-auto">
+                <input type="text" placeholder="First Name" name="firstname" onChange={handleclick}className="form-control"required value={form1.firstname}/>
               </div>
-              <div class="col-auto">
-              <input type="text" placeholder="Last Name" name="lastname" onChange={handleclick}className="form-control"required value={form.lastname}/>
+              <div className="col-auto">
+              <input type="text" placeholder="Last Name" name="lastname" onChange={handleclick}className="form-control"required value={form1.lastname}/>
+              </div>
+              </div>
+              </div>
+
+              <div className="staff-age-dob">
+              <div className="row gt-2">
+              <div className="col-auto">
+                <input type="text" placeholder="Age" name="age" onChange={handleclick}className="form-control"required value={form1.age}/>
+              </div>
+              <div className="col-auto">
+              <input type="date" placeholder="DOB" name="dob" onChange={handleclick}className="form-control"required value={form1.dob}/>
               </div>
               </div>
               </div>
            
              <div className="staffno-email-pass">
-              <input type="text" placeholder="Contact No" name="contactno" onChange={handleclick} className="form-control" required value={form.contactno}/><br/>
-              <input type="email" placeholder="Email" name="email" onChange={handleclick} className="form-control" required value={form.email} /><br/>
-              <input type="password" placeholder="Password" name="password" onChange={handleclick} className="form-control"required value={form.password} /><br/>
+              <input type="text" placeholder="Contact No" name="contactno" onChange={handleclick} className="form-control" required value={form1.contactno}/><br/>
+              <input type="email" placeholder="Email" name="email" onChange={handleclick} className="form-control" required value={form1.email} /><br/>
+              <input type="password" placeholder="Password" name="password" onChange={handleclick} className="form-control"required value={form1.password} /><br/>
               {/* {errormsg===''? null:<span style={{fontWeight:'bold',color:'red'}}>{errormsg}</span>} */}
-              <input type="password" placeholder="Confirm Password" name="confirmpassword" className="form-control"required value={form.confirmpassword}/><br/>
+              <input type="password" placeholder="Confirm Password" name="confirmpassword" onChange={handleclick} className="form-control"required value={form1.confirmpassword}/><br/>
               </div>
               <div className="staff-photo">
-                <label className="label">Upload your photo</label>
-                <input type="file" name="uploadyourphoto"  className="form-control"required value={form.uploadyourphoto}/><br/>
+                <h6>Upload your photo</h6>
+                <input type="file" name="uploadyourphoto"  className="form-control"required onChange={handleFileChange} /><br/>
               </div>
               <div className="staff-address">
-              <input type="text"placeholder="Address" name="address"onChange={handleclick} className="form-control" required value={form.address}/><br/>
+              <input type="text"placeholder="Address" name="address"onChange={handleclick} className="form-control" required value={form1.address}/><br/>
               </div>
               
               <div className="staff-idproof">
-                <label>Upload an ID Proof</label>
-                <input type="file" name="selectanidproof" className="form-control"required value={form.selectanidproof}/><br/>
+                <h6>ID proof</h6>
+                <input type="file" name="selectanidproof" onChange={handleFileChange} className="form-control"required/><br/>
               </div>
 
              
-              <div class="drop-down">
+              <div className="drop-down">
   
   {/* <button style={{height:'45px',width:'28.5rem',backgroundColor:'rgba(240,248,255,0.416)',color:'black'}} class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> */}
-  <select name="jobposition" className="form-control" value={form.jobposition} onChange ={handleclick}>
-    <option value={'Jpose'}>Choose your Job position</option>
-    <option value={'Dish-washer'}>Dish washer</option>
-    <option value={'Cashier'}>Cashier</option>
-    <option value={'Cooking'}>Cooking</option>
-    <option value={'Delivery'}>Delivery</option>
+  <select style={{backgroundColor:"rgba(240,248,255,0.416)",width:"28.5rem"}} name="jobposition" onChange ={handleclick} className="form-control" required value={form1.jobposition}>
+    <option  value='Jpose'>Choose your Job position</option>
+    <option  value='Dish-washer'>Dish washer</option>
+    <option  value='Cashier'>Cashier</option>
+    <option  value='Cooking'>Cooking</option>
+    <option  value='Delivery'>Delivery</option>
 
 
   </select>
-    Job Position
+    
   {/* </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Dish washer</a></li>
@@ -103,7 +157,7 @@ function Staffreg() {
         
               
               <div className="staff-button">
-              <button style={{height:'55px',width:'155px',position:'absolute',bottom:'-6rem',left:'2rem'}} type="button" class="btn btn-danger">Register</button>
+              <button style={{height:'55px',width:'155px',position:'absolute',bottom:'-6rem',left:'2rem'}} type="submit" class="btn btn-danger">Register</button>
               </div>
               </div>
          </form>

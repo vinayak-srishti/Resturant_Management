@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 #contact-us{
     background-image: url('../../Images/ContacttUs.jpeg');
     height: 35rem;
@@ -6,7 +7,7 @@
     position: absolute;
 
 }
-h1{
+#contact-h1{
   color: #f1e9e9;
   font-size: 4rem; 
   font-weight: bolder;
@@ -14,8 +15,8 @@ h1{
   padding-top: 15rem;
   margin-left: 45px;
 }
-h5{
-    color: rgb(141, 25, 5);
+#contact-h5{
+    color: #991b1f;
     font-family: 'Pirata One';
     font-size: 30px;
     font-weight: bold;
@@ -34,25 +35,25 @@ h5{
     color: aliceblue;
     font-family: 'Bona Nova';
     margin-top: 38rem;
-    color: brown;
+    color: #991b1f;
     font-weight: bold;
     font-size: 40px;
     margin-left: 45px;
 }
 .phone{
-    color: brown;
+    color: #991b1f;
     font-family: 'Bona Nova';
     margin-left: 50px;
     line-height: 2.5;
 }
 .location{
-    color: brown;
+    color: #991b1f;
     font-family: 'Bona Nova';
     margin-left:50px ;
     line-height: 2.5;
 }
 .email{
-    color: brown;
+    color: #991b1f;
     font-family: 'Bona Nova';
     margin-left:50px ;
     line-height: 2.5;
@@ -64,7 +65,9 @@ top: 40rem;
 right: 10rem;
 background-color: black;
 height: 40rem;
-width:30rem
+width:30rem;
+font-family: 'Pirata One';
+
 
 }
 #reservations{
@@ -76,11 +79,12 @@ width:30rem
     
 }
 #opening-hours {
-    color:brown;
+    color: #991b1f;
     font-size: 60px;
     position: absolute;
     bottom: 27.5rem;
-    margin-left: 70px;
+    margin-left: 7rem;
+    /* width: 55rem; */
 }
 #opening-days{
     color: whitesmoke;
@@ -89,9 +93,10 @@ width:30rem
     top: 16rem;
     font-size: 25px;
     word-spacing: 2em;
+    margin-left: 6rem;
 }
 #opening-time{
-    color: brown;
+    color: #991b1f;
     font-family: cursive;
     word-spacing: 2em;
     position: absolute;
@@ -101,8 +106,8 @@ width:30rem
     margin: 30px;
 }
 #button1{
-    background-color:brown;
-    color: aliceblue;
+    color: #991b1f;
+    -webkit-text-fill-color: aliceblue;
     position: absolute;
     top: 30rem;
     left: 8rem;
@@ -122,4 +127,7 @@ input[type=text], input[type=email] ,input[type=textarea]{
     -webkit-text-fill-color: rgb(11, 12, 13);
 border: none;
     
+}
+.contact_hours form{
+   width: 35rem; 
 }

@@ -1,34 +1,58 @@
-import React from 'react'
-import '../Staff/Stafflogin.css'
-// import { CiUser } from "react-icons/ci";
-// import { RiLockPasswordLine } from "react-icons/ri";
+import React, { useState } from "react";
+import "../Staff/Stafflogin.css";
+
 function Stafflogin() {
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+  const Handlechange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  const onSubmitdata = (e) => {
+    e.preventDefault();
+    console.log(form);
+    alert("Login Successfully");
+  };
   return (
-    <div id='staff-login'>
-        <div>
-            <form className='login-form'>
-            <h1 id='header'>STAFF LOGIN</h1>
-            {/* <div class="input-group flex-nowrap" >
-  <span class="input-group-text" id="addon-wrapping" style={{backgroundColor:'rgba(15, 14, 14, 0.037)',color:'white'}}><CiUser /></span>
-  <input type="text" class="form-control" style={{backgroundColor:'rgba(15, 14, 14, 0.037)',WebkitTextFillColor:'white',lineHeight:'25px'}} placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping"/><br/>
-</div>
-<div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping"  style={{backgroundColor:'rgba(15, 14, 14, 0.037)',color:'white'}} ><RiLockPasswordLine /></span>
-  <input type="text" class="form-control"  style={{backgroundColor:'rgba(15, 14, 14, 0.037)',WebkitTextFillColor:'white'}} placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping"/>
-</div> */}
-<div className='input-box'>
-  <input type='email'required='required'/>
-  <span>Email</span>
-</div>
-<div className='input-box'>
-  <input type='password'required='required'/>
-  <span>Password</span>
-</div>
-            </form>
-        </div>
-      
+    <div id="staff-login">
+      <div className="staff_login_form">
+        <form onSubmit={onSubmitdata} className="login-form">
+          <h1 id="header">STAFF LOGIN</h1>
+
+          <div className="staff_login_email">
+          
+                <input
+                  type="email"
+                  name="email" placeholder="Email"
+                  className="form-control"
+                  onChange={Handlechange}
+                />
+             
+          </div>
+          <div className="staff_login_password">
+           
+                <input
+                  type="Password"
+                  name="password" placeholder="Password"
+                  className="form-control"
+                  onChange={Handlechange}
+                />
+            
+          </div>
+         
+          <button style={{width:"8rem",height:"2.5rem",fontSize:'20px',marginLeft:'8rem'}} className="btn btn-danger" type="submit">
+            Login
+          </button>
+          <br />
+         
+          <div className="forgot__password">
+            <a style={{color:"white",marginLeft:"15rem"}} href= "forgot.in">Forgot Password?</a>
+          </div>
+        </form>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Stafflogin
+export default Stafflogin;

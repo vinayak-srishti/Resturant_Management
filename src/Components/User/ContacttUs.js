@@ -23,8 +23,8 @@ function ContacttUs() {
   return (
     <div>
       <div id="contact-us">
-        <h1>CONTACT US</h1>
-        <h5>How to find Us</h5>
+        <h1 id="contact-h1">CONTACT US</h1>
+        <h5 id="contact-h5">How to find Us</h5>
       </div>
       <div className="contact-info">
         <h3
@@ -85,6 +85,7 @@ function ContacttUs() {
         >
           eldemeter@gmail.com
         </p>
+        <div className="contact_hours">
         <form className="opening-hours">
           <h5 id="reservations">Call For Reservations</h5>
           <h1 id="opening-hours">Opening Hours</h1>
@@ -96,9 +97,9 @@ function ContacttUs() {
               marginLeft: "50px",
             }}
           >
-            --------------------------------------------------------------
+            ----------------------------------
           </p>
-          <h5 style={{ fontFamily: "Pirata One" }} id="opening-days">
+          <h5  style={{ fontFamily: "Pirata One" }} id="opening-days">
             Monday-Friday Saturday-Sunday
           </h5>
           <p style={{ fontFamily: "Pirata One" }} id="opening-time">
@@ -113,7 +114,8 @@ function ContacttUs() {
             +91 9876543210
           </button>
         </form>
-        <form onSubmit={onsubmitdata}>
+        </div>
+        <form onSubmit={onsubmitdata} >
           <div className="contact-form">
             <h3
               style={{
@@ -179,10 +181,10 @@ function ContacttUs() {
               className="message"
               style={{ width: "30rem", marginRight: "58rem" }}
             >
-              <div className="col-auto">
+              
                 <input
                   type="textarea"
-                  style={{ height: "10rem" }}
+                  style={{ height:"10rem" ,marginLeft:"1rem",width:"28.5rem"}}
                   placeholder="Message"
                   name="message"
                   onChange={handleclick}
@@ -190,16 +192,17 @@ function ContacttUs() {
                   required
                 />
                 <br />
-              </div>
+              
               <button
                 style={{
                   height: "50px",
-                  width: "145px",
+                  width: "9rem",
                   position: "absolute",
-                  bottom: "-5rem",
-                  left: "0.8rem",
+                  top: "24rem",
+                  left: "11rem",
                   color: "aliceblue",
-                  backgroundColor: "brown",
+                  color: "#991b1f",
+                  WebkitTextFillColor:"aliceblue"
                 }}
                 type="button"
                 class="btn btn-danger"

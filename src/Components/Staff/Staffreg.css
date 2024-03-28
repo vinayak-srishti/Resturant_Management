@@ -10,18 +10,20 @@
     background-color: rgb(0,0,0,0.073);
      position: absolute;
      top: -10rem;
-     right: 13rem;
+     right: 2.5rem;
     /* height: 30rem; */
-    /* width: 40rem; */
-    /* margin-left: 45rem; */
+    width: 50rem;
+    margin-left: 45rem;
      
     
 }
 
 .staff-form h1{
-    /* margin-top: 1rem; */
     -webkit-text-fill-color: aliceblue;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 45px;
+    
     
 }
 /* .staffre-details{
@@ -30,43 +32,96 @@
 /* } */
 .staff-name{
     width: 30.5rem;
-    /* display: inline-block; */
     padding: 1rem; 
     margin-left: 0.3rem;
+    padding-bottom: 2.5rem;
+}
+.staff-name input[type="text"]{
+    background-color: rgba(240,248,255,0.416);
+    -webkit-text-fill-color: black;
+    border: 1px solid white;
+
+}
+.staff-age-dob{
+    width: 30.5rem;
+    /* padding: 1rem;  */
+    margin-left: 2rem;
+    padding-bottom: 2.5rem;
+}
+.staff-age-dob input[type="text"],[type="date"]{
+    background-color: rgba(240,248,255,0.416);
+    -webkit-text-fill-color: black;
+    border: 1px solid white;
+
 }
 .staffno-email-pass{
     width: 28.5rem;
     margin-left: 1rem;
-    padding: 0.1rem;
+    /* padding: 0.1rem; */
+    
    
 }
+.staffno-email-pass input[type="email"],[type="password"]{
+    background-color: rgba(240,248,255,0.416);
+    -webkit-text-fill-color: black;
+    border: 1px solid white
+}
+.staffno-email-pass input[type="text"]{
+    background-color: rgba(240,248,255,0.416);
+    -webkit-text-fill-color: black;
+    border: 1px solid white
+}
 .staff-address{
-    display: flex;
-    width: 27.6rem;
-    margin-left: -0.3rem;
-    padding: 0.1rem;
+   
+    width: 28.5rem;
+    margin-left: 1rem;
+    /* padding: 0.1rem; */
+    padding-bottom: 1rem;
+   
+
+   
+}
+.staff-address input[type="text"]{
+    background-color: rgba(240,248,255,0.416);
+    -webkit-text-fill-color: black;
+    border: 1px solid white;
+
+   
+    
 }
 .staff-photo{
-   width: 27.5rem; 
-   margin-left: -0.5rem;
+   width: 28.5rem; 
+   margin-left: 1rem;
+   /* padding-top: 2.5rem; */
 } 
+.staff-photo input{
+    background-color: rgba(240,248,255,0.416);
+    -webkit-text-fill-color: black;
+}
 .staff-idproof{
-    width: 29.7rem; 
-   margin-left: -0.5rem;
+    width: 31rem; 
+   margin-left: 1rem;
    padding: 1rem;
+}
+.staff-idproof input{
+    background-color: rgba(240,248,255,0.416);
+    -webkit-text-fill-color: black;
+
 }
 .staff-button{
     width: 15rem;
     position: absolute;
-    bottom: -26rem;
-    right: 9rem;
+    bottom: -16rem;
+    right: 17rem;
     
 } 
-input[type="text"],[type="email"],[type="password"],[type="file"]{
-    background-color: rgba(240,248,255,0.416);
-    -webkit-text-fill-color: black;
-}
-label{
-    -webkit-text-fill-color: aliceblue;
-}
 
+ 
+.staff-photo h6{
+    -webkit-text-fill-color: aliceblue;
+    margin-top: -2rem;
+}
+.staff-idproof h6{
+    -webkit-text-fill-color: aliceblue;
+    margin-top: -4rem;
+}
