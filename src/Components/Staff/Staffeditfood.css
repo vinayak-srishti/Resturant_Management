@@ -1,24 +1,24 @@
-.staffaddfood{
+.staffeditfood{
     background-color: black;
     width: 95.5rem;
     height: 56.4rem;
 }
-.staff_addfood_main form{
+.staff_editfood_main form{
     width: 50rem;
     height: 40rem;
     margin-top: -10rem;
     
 }
-.staff_addfood_main h1{
+.staff_editfood_main h1{
     color: #991b1f;
     margin-left: 16rem;
     margin-top: -3rem;
 }
-.staffaddfood button{
+.staffeditfood button{
     width: 10rem;
     margin-left: 19rem;
 }
-.staff_addfood_main2  input{
+.staff_editfood_main2  input{
    background-color: rgba(240, 248, 255, 0.486);
    -webkit-text-fill-color: black;
 }
