@@ -7,16 +7,26 @@ function Staffaddfood() {
     name: "",
     description: "",
     price: "",
-    img:"",
-    ftype: "",
+    img:null,
+    ftype: ""
   });
   const handleChange = (e) => {
     setfdata({ ...fdata, [e.target.name]: e.target.value });
   };
+
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    setfdata({ ...fdata, [name]: files[0] });
+  };
+
   const onSubmitdata = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/staffmenu", fdata)
+      .post("http://localhost:4000/staffmenu", fdata,{
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
       .then((result) => {
         console.log(result);
         if (result.data.staus === 200) {
@@ -28,82 +38,21 @@ function Staffaddfood() {
       .catch((error) => {
         console.log(error);
       });
-    // console.log(form); 
   };
 
   return (
-    <div>
-      <div className="addfood_main">
+    <div className="staffaddfood">
+      <div className="staff_addfood_main">
         <form onSubmit={onSubmitdata}>
           <h1>Add Food</h1>
-          <table>
-            <tr>
-              <td>Food Name</td   >
-              <td>
-                <input
-                  type="text"
-                  name="name"
-                  className="form-control"
-                  onChange={handleChange}
-                />
-              </td>
-            </tr>
-
-            <tr>
-              <th>Food Description</th>
-              <td>
-                <input
-                  type="text"
-                  name="description"
-                  className="form-control"
-                  onChange={handleChange}
-                />
-              </td>
-            </tr>
-
-            <tr>
-              <th>Price</th>
-              <td>
-                <input
-                  type="number"
-                  name="price"
-                  className="form-control"
-                  onChange={handleChange}
-                />
-              </td>
-            </tr>
-            <tr>
-              <th>Add Image</th>
-              <td>
-                <input
-                  type="file"
-                  accept=".png,.jpg,.jpeg"
-                  name="img"
-                  className="form-control"
-                  onChange={handleChange}
-                />
-              </td>
-            </tr>
-            <tr>
-              <th>Food Type</th>
-              <td>
-                <select
-                  name="ftype"
-                  className="form-control "
-                  onChange={handleChange}
-                >
-                  <option value={"none"}>Select Food Type</option>
-                  <option value={"starters"}>Starters</option>
-                  <option value={"maincourse"}>Main Course</option>
-                  <option value={"desserts"}>Desserts</option>
-                  <option value={"beverages"}>Beverages</option>
-                </select>
-              </td>
-            </tr>
-          </table>
-          <button type="submit" className="btn btn-primary">
-            SAVE
-          </button>
+          <div className='staff_addfood_main2'>
+      <input type='string' placeholder='Food Name' name='name' onChange={handleChange} className='form-control' required/><br/>
+      <input type='string' placeholder='Description' name='description' onChange={handleChange} className='form-control' required/><br/>
+      <input type='number' placeholder='Price' onChange={handleChange} name='price' className='form-control' required/><br/>
+      <input type="file" placeholder="Food Image" onChange={handleFileChange} name="img" className="form-control" required/><br/>
+      <input type="string" placeholder="Food Type" onChange={handleChange} name="ftype" className="form-control" required/><br/>
+         </div>
+         <button type="submit" className="btn btn-danger">Add to menu</button>
         </form>
       </div>
     </div>
