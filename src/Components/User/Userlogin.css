@@ -1,13 +1,19 @@
-body {
-    /* background-image: url("../../User_login.jpg"); */
+.user_page{
+    background-image: url("../../Images/User_login.jpg");
+    height:53rem ;
+    width: 100rem;
     background-repeat: no-repeat;
     background-size: cover;
+    position:absolute ;
+    
+    
 }
-.user_login form{
+.user_login form {
+    
     border: 2px solid black;
     border-radius: 5px;
     width: 25rem;
-    height: 18rem;
+    height:20rem;
     margin:4rem;
     margin-left:33rem;
     margin-top: 10rem;
@@ -19,39 +25,50 @@ body {
     text-align: center;
     padding-top: 1.5rem; 
     -webkit-text-fill-color: rgb(255, 255, 255);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .user_login button{
     margin-top: 1.5rem;
-    margin-left: 9rem;
+    margin-left: 7rem;
+    width: 10rem;
 }
 .user_forgot a{
     margin-left: 15rem;
     margin-top: 1rem;
+    font-size: 1rem;
 }
-.user_login input[type="text"],[type="password"]{
+.user_login input[type="text"]{
     -webkit-text-fill-color: rgb(0, 0, 0);
+    height:3rem;
+    
 
 }
 
-.usrlogin_username{
-    margin-left: 3rem;
+.userlogin_username{
+    margin-left: 5rem;
     margin-top: 1rem;
+    height: 3rem;
+    width: 25rem;
 }
 .usrlogin_password{
-    margin-left: 3.3rem;
+    height: 3rem;
+    margin-left: 5rem;
     margin-top: 1rem;
 }
 body {
     /* background-image: url("../../images/tasty-pizza-near-ingredients.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
+    position:absolute ;
+    
+    
 }
-.user_login form{
+.user_login form {
+    
     border: 2px solid black;
     border-radius: 5px;
     width: 25rem;
-    height: 18rem;
+    height:20rem;
     margin:4rem;
     margin-left:33rem;
     margin-top: 10rem;
@@ -63,26 +80,33 @@ body {
     text-align: center;
     padding-top: 1.5rem; 
     -webkit-text-fill-color: rgb(255, 255, 255);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .user_login button{
     margin-top: 1.5rem;
-    margin-left: 9rem;
+    margin-left: 7rem;
+    width: 10rem;
 }
 .user_forgot a{
     margin-left: 15rem;
     margin-top: 1rem;
+    font-size: 1rem;
 }
-.user_login input[type="text"],[type="password"]{
+.user_login input[type="text"]{
     -webkit-text-fill-color: rgb(0, 0, 0);
+    height:3rem;
+    
 
 }
 
-.usrlogin_username{
-    margin-left: 3rem;
+.userlogin_username{
+    margin-left: 5rem;
     margin-top: 1rem;
+    height: 3rem;
+    width: 25rem;
 }
 .usrlogin_password{
-    margin-left: 3.3rem;
+    height: 3rem;
+    margin-left: 5rem;
     margin-top: 1rem;
 }
