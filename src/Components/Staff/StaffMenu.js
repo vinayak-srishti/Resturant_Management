@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../Staff/StaffMenu.css'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 function StaffMenu() {
     const [axiosdata,setaxiosdata]=useState([])
@@ -30,7 +31,7 @@ function StaffMenu() {
       });
     })
   return (
-    <div>
+    <div className='Staffmenu'>
            
           <div className="container">
             <div class="row">
@@ -49,9 +50,9 @@ function StaffMenu() {
                       {a.description}
                       <br/>
                     </p>
-                    <a href="#" class="btn btn-primary">
+                   <Link to={`/editfood/${a._id}`} className='btn btn-primary'>
                     Edit
-                    </a>
+                    </Link>
                     <button
                       class="btn btn-danger"
                       style={{ marginLeft: "2rem" }}  onClick={()=>{handleclick(a._id)}}> Delete</button>
@@ -61,6 +62,8 @@ function StaffMenu() {
               </div>
                 );
               })} 
+              
+              <button type='button' className='btn btn-danger' style={{marginLeft:"5rem",height:"3rem",color:"#991b1f",WebkitTextFillColor:"white"}} >Add New Menu Item</button>  
             </div>
           </div>
       

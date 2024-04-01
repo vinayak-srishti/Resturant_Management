@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import '../Staff/Staffeditfood.css'
+import { useParams } from 'react-router-dom';
 function Staffeditfood() {
+  const id=useParams()
+  console.log("id",id);
     const [edit, setedit] = useState({
         name: "",
         description: "",

@@ -27,12 +27,12 @@ function App() {
     <div>
        <Routes> 
       {/*******************************User************************************/}
-      <Route path='/gallery' element={<Gallery/>} />
+      <Route path='/gallery' element={[<Navbar/>,<Gallery/>,<Footer/>]} />
       <Route path='/userregistration' element={<UserRegistration/>} />
       <Route path='/footer' element={<Footer/>} />
-      <Route path='/homepage' element={[<HomePage/>]} />
-      <Route path='/contactus' element={<ContactUs/>}/>
-      <Route path='/aboutus' element={<Aboutus/>} />
+      <Route path='/homepage' element={[<Navbar/>,<HomePage/>,<Footer/>]} />
+      <Route path='/contactus' element={[<Navbar/>,<ContactUs/>,<Footer/>]}/ >
+      <Route path='/aboutus' element={[<Navbar/>,<Aboutus/>,<Footer/>]} />
       <Route path='/userlogin' element={<UserLogin/>}/>
       <Route path='/navbar' element={<Navbar/>} />
       <Route path='/usermenu'  element={<UserMenu/>} />
@@ -42,7 +42,7 @@ function App() {
       <Route path='/staffreg' element={<Staffreg/>}/>
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
-      <Route path='/editfood' element={<Staffeditfood/>}/>
+      <Route path='/editfood/:id' element={<Staffeditfood/>}/>
       <Route path='/staffforgotpass' element={<StaffForgotPwd/>}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>

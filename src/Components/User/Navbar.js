@@ -1,16 +1,16 @@
 import React from 'react'
 import "../User/Navbar.css"
+import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <div>
        <div className="navbar_main">
-        
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <div className="head">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#" style={{fontSize:"24px",marginLeft:"2rem"}}>
+              <div class="navbar-brand"  style={{fontSize:"50px",marginLeft:"2rem",fontFamily:"pirata one",WebkitTextFillColor:"white"}}>
                 El-Demeter
-              </a>
+              </div>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -27,17 +27,13 @@ function Navbar() {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" >
-                      Home
-                    </a>
+                   <Link to={`/homepage`} class="nav-link active" role='button' aria-current="page" >Home</Link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      About
-                    </a>
+                  <Link to={`/aboutus`} class="nav-link active" role='button' aria-current="page">About</Link>
                   </li>
                   <li class="nav-item dropdown">
-                    <a
+                    <Link to={``}
                       class="nav-link dropdown-toggle"
                       href="#"
                       role="button"
@@ -45,35 +41,35 @@ function Navbar() {
                       aria-expanded="false"
                     >
                       Menu
-                    </a>
+                    </Link>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">
-                          Vegetarian
-                        </a>
+                        <Link class="dropdown-item" href="#">
+                          Starters
+                        </Link>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
-                          Non-Veg
-                        </a>
+                        <Link class="dropdown-item" href="#">
+                          Main Course
+                        </Link>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <Link class="dropdown-item" href="#">
                           Desserts
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <Link to={`/gallery`} class="nav-link" href="#">
                       Gallery
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <Link to={`/contactus`} class="nav-link" href="#">
                       ContactUs
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

@@ -23,17 +23,19 @@ function UserMenu() {
   },[])
     
   return (
-    <div>
+    <div className='user_menu'>
       <div className="container">
             <div class="row">
             {data.map((a)=>{
         return (
               <div class="col-3">
                 <div class="card" style={{ width: 18 + "rem" }}>
+                  <div className='top-section' >
                   <img src={`http://localhost:4000/${a.img.filename}`} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">{a.name}</h5>
-                    <p class="card-text">
+                  </div>
+                  <div class="card-body" className='usermenu_card'>
+                    <h5 class="bottom-title" className='usermenu_bottomsection'>{a.name}</h5>
+                    <p class="card-text" className='usermenu_cardtext'>
                       <h6> {a.price} </h6>
                       {a.description}
                       <br/>

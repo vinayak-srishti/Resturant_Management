@@ -9,8 +9,8 @@ function HomePage() {
   return (
     <div>
 
-
-      <div className="Home-Page">
+ 
+      <div className="Home-Page" id="homepage_img">
         <p>Welcome To EL DemeteR </p>
         <p id="home-head1">Delicious Food & Wonderful</p>
         <p id="home-head2"> Eating Experience</p>

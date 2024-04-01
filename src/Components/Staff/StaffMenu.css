@@ -1,6 +1,10 @@
- img{
+.top-section img{
   height: 230px;
-  width: 5rem;
+  width: 100%;
+}
+.Staffmenu{
+  background-color: black;
+  width: 96rem;
 }
 .card:hover{
   height: 400px;
@@ -32,10 +36,9 @@ transition: height 0.5s;
   width: 400px;
   overflow: hidden;
   height: 330px;
+  margin-left: 5rem;
 }
-/* .bottom-section h5{
-  margin-top: -3rem;
-} */
+
 .bottom-section p{
   padding: -10rem;
   margin-top: -1rem;
@@ -46,14 +49,15 @@ transition: height 0.5s;
   margin-top: 1rem;
 }
 .card{
-  margin-left: 2rem;
+  margin-left: 3rem;
   
 }
-.container{
+#staffmenu-container{
   padding: 2px 16px;
+  margin-left: 4rem;
 } 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(206, 9, 9, 0.788);
   transition: 0.3s;
 }
 
