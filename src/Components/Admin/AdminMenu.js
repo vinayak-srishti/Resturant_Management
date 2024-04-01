@@ -18,7 +18,7 @@ function AdminMenu() {
     <div>
       <div className="container">
             <div class="row">
-            {data.map((a)=>{
+            {adminmenu.map((a)=>{
         return (
               <div class="col-3">
                 <div class="card" style={{ width: 18 + "rem" }}>
@@ -30,13 +30,15 @@ function AdminMenu() {
                       {a.description}
                       <br/>
                     </p>
-                   
+                    <a href="#" class="btn btn-primary">
+                    Edit
+                    </a>
                     <button
                       class="btn btn-danger"
                       style={{ marginLeft: "2rem" }}
                    
                     >
-                      Add
+                      Delete
                     </button>
                   </div>
                 </div>

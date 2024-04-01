@@ -1,0 +1,19 @@
+#feedback-heading{
+    margin-left: 5rem;
+    margin-top: -13rem;
+    color: #991b1f;
+}
+.card{
+   margin-left: 3rem;
+   margin-right: 3rem;
+}
+.container{
+    width: 80rem;
+    padding-block: 3rem;
+    margin-top: -2rem;
+}
+.feedback{
+    background-color: black;
+    width: 95.5rem;
+}
+

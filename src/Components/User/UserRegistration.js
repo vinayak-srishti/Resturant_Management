@@ -11,7 +11,7 @@ function UserRegistration() {
     address: "",
     district: "",
     state: "",
-    pincode: "",
+    pincode: ""
   });
 
   // const[errormsg,seterrormsg]=useState('')
@@ -52,79 +52,30 @@ function UserRegistration() {
         <center>
           <form onSubmit={onSubmitdata}>
           <h1>REGISTRATION</h1>
-            <div className="userregcustomer-details">
-              <div className="userregcustomer-name">
-                <div className="user row gt-2">
-                  <div className="user col-auto">
-                    <input
-                      type="text"
-                      placeholder="First Name"
-                      name="firstname"
-                      value={form.firstname}
-                      onChange={handleclickfunction}
-                      className="form-control"
-                      required
-                    />
-                  </div>
-                  <div className="user col-auto">
-                    <input
-                      type="text"
-                      placeholder="Last Name"
-                      name="lastname"
-                      value={form.lastname}
-                      onChange={handleclickfunction}
-                      className="form-control"
-                      required
-                    />
-                  </div>
-                </div>
-              </div>
 
-              <div className="userregno-email-pass">
-                <input
-                  type="number"
-                  placeholder="Contact No"
-                  name="contactno"
-                  value={form.contactno}
-                  onChange={handleclickfunction}
-                  className="form-control"
-                  required
-                />
-                <br />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleclickfunction}
-                  className="form-control"
-                  required
-                />
-                <br />
-                <input
-                  type="password"
-                  placeholder=" Password"
-                  onChange={handleclickfunction}
-                  name="password"
-                  value={form.password}
-                  className="form-control"
-                  required
-                />
-                {/* {errormsg === '' ? null :<span style={{  fontWeight: 'bold',color: 'red'}}>{errormsg}</span>} */}
-              </div>
+        <div className='userregcustomer-details'>  
+        <div className='userregcustomer-name'>
+        <div className='row gt-2'>
+        <div className='col-auto'>
+        <input type='text' placeholder='First Name' name='firstname' onChange={handleclickfunction} className='form-control' required />
+        </div>
+        <div className='col-auto'>
+        <input type='text' placeholder='Last Name' name='lastname' onChange={handleclickfunction} className='form-control' required/>
+        </div>
+        </div>
+        </div>
+        
 
-              <div className="userreg-address">
-                <input
-                  type="text"
-                  placeholder=" Address"
-                  name="address"
-                  value={form.address}
-                  onChange={handleclickfunction}
-                  className="form-control"
-                  required
-                />
-                <br />
-              </div>
+      <div className='userregno-email-pass'>
+      <input type='text' placeholder='Contact No' name='contactno' onChange={handleclickfunction} className='form-control' required/><br/>
+      <input type='email' placeholder='Email' name='email' onChange={handleclickfunction} className='form-control' required/><br/>
+      <input type='password' placeholder=' Password' onChange={handleclickfunction} name='password' className='form-control' required/>
+    
+     </div>
+    
+     <div className='userreg-address'>
+     <input type='text' placeholder=' Address' name='address' onChange={handleclickfunction} className='form-control' required/><br/> 
+     </div>  
 
               <div className="userreg-district-state">
                 <div className="row gt-2">
@@ -176,5 +127,6 @@ function UserRegistration() {
     // </div>
   );
 }
+
 
 export default UserRegistration;

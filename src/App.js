@@ -12,8 +12,15 @@ import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
 import UserMenu from './Components/User/UserMenu';
 import UserLogin from './Components/User/UserLogin';
-import AboutUs from './Components/User/AboutUs';
-import UserCart from './Components/User/UserCart';
+import Staffaddfood from './Components/Staff/Staffaddfood';
+import AdminUserList from './Components/Admin/AdminUserList';
+import Adminlogin from './Components/Admin/Adminlogin';
+import Feedback from './Components/User/Feedback';
+import Aboutus from './Components/User/AboutUs';
+import Navbar from './Components/User/Navbar'
+import Adminsidenav from './Components/Admin/Adminsidenav';
+import StaffForgotPwd from './Components/Staff/StaffForgotPwd';
+import Staffeditfood from './Components/Staff/Staffeditfood';
 function App() {
   return (
     <BrowserRouter>
@@ -23,21 +30,29 @@ function App() {
       <Route path='/gallery' element={<Gallery/>} />
       <Route path='/userregistration' element={<UserRegistration/>} />
       <Route path='/footer' element={<Footer/>} />
-      <Route path='/homepage' element={<HomePage/>} />
+      <Route path='/homepage' element={[<HomePage/>]} />
       <Route path='/contactus' element={<ContactUs/>}/>
+      <Route path='/aboutus' element={<Aboutus/>} />
       <Route path='/userlogin' element={<UserLogin/>}/>
-      <Route path='/usermenu' element={<UserMenu/>}/>
-      <Route path='/aboutus' element={<AboutUs/>}/>
-      <Route path="/usercart" element={<UserCart/>}/>
+      <Route path='/navbar' element={<Navbar/>} />
+      <Route path='/usermenu'  element={<UserMenu/>} />
+      <Route path='/feedback' element={<Feedback/>} />
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffreg' element={<Staffreg/>}/>
       <Route path='/stafflogin' element={<Stafflogin/>}/>
+      <Route path="/addfood" element={<Staffaddfood/>}/>
+      <Route path='/editfood' element={<Staffeditfood/>}/>
+      <Route path='/staffforgotpass' element={<StaffForgotPwd/>}/>
       {/********************************Admin***********************************/}
+      <Route path='/adminlogin' element={<Adminlogin/>}/>
+      <Route path='/adminuserlist' element={<AdminUserList/>} />
+      <Route path='/adminnav' element={<Adminsidenav/>}/>
+      
       </Routes> 
     </div>
      </BrowserRouter>
   )
 }
 
-export default App
+export default App;

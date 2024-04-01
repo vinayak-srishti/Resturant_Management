@@ -1,18 +1,67 @@
+ img{
+  height: 230px;
+  width: 5rem;
+}
+.card:hover{
+  height: 400px;
+}
+.card:hover .bottom-section {
+  height: 45%;
+  border-radius: 6px;
+}
+.top-section,
+.bottom-section,
+.card {
+transition: height 0.5s;
+}
+.top-section {
+  height: 100%;
+}
+.bottom-section {
+  background-color: #ffffff;
+  height: 100%;
+  font-family:'Bona Nova';
+}
+.card:hover {
+  height: 400px;
+}
+.card:hover .top-section {
+  height: 20%;
+}
+.card {
+  width: 400px;
+  overflow: hidden;
+  height: 330px;
+}
+/* .bottom-section h5{
+  margin-top: -3rem;
+} */
+.bottom-section p{
+  padding: -10rem;
+  margin-top: -1rem;
+  margin-left: 1rem;
+}
+.bottom-section h5{
+  font-size: 20px;
+  margin-top: 1rem;
+}
+.card{
+  margin-left: 2rem;
+  
+}
 .container{
-    padding: 2px 16px;
-  } 
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-  }
-  
-  .card {
-    box-sizing: content-box;
-    margin: 10px;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
-  }
-  
+  padding: 2px 16px;
+} 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card {
+  box-sizing: content-box;
+  margin: 25px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
+}
