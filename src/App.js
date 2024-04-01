@@ -12,6 +12,8 @@ import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
 import UserMenu from './Components/User/UserMenu';
 import UserLogin from './Components/User/UserLogin';
+import AboutUs from './Components/User/AboutUs';
+import UserCart from './Components/User/UserCart';
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +27,8 @@ function App() {
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/userlogin' element={<UserLogin/>}/>
       <Route path='/usermenu' element={<UserMenu/>}/>
+      <Route path='/aboutus' element={<AboutUs/>}/>
+      <Route path="/usercart" element={<UserCart/>}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffreg' element={<Staffreg/>}/>
