@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "../Admin/AdminUserList.css";
 function AdminUserList() {
   const [userdata, setuserdata] = useState([]);
   useEffect(() => {
     axios
-      .post("http://localhost:4000/")
+      .post("http://localhost:4000/userlist")
       .then((result) => {
         console.log(result);
         setuserdata(result.data.msg);
@@ -17,22 +18,33 @@ function AdminUserList() {
   return (
     <div>
       <div>
-        {userdata.map((y)=>{
-            return(
-                <div class="card">
-                <div class="card-header">{y.email}</div>
-                <div class="card-body">
-                  <h6 class="card-title">{y.firstname}  
-                  {y.lastname}</h6>
-                  <p class="card-text">
-                    {y.contactno}
-                  </p>
-                  <br />
-                  <p class="card-text">Address : {y.address}<br/>{y.district}<br/>{y.state}</p>
-                </div>
-              </div>
-            )
-        })}
+      <table class="table table-hover" cellSpacing={"10px"} cellPadding={"5px"}>
+          <thead>
+            <tr>
+              
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Address</th>
+
+            </tr>
+          </thead>
+          
+          {userdata.map((y) => {
+            return (
+              
+              
+                  <tr>
+                    <td>{y.firstname} {y.lastname}</td>
+                    <td>{y.contactno}</td>
+                    <td>{y.email}</td>
+                    <td>{y.address},{y.district}</td>
+                  </tr>
+               
+            
+            );
+          })}
+             </table>
         
       </div>
     </div>

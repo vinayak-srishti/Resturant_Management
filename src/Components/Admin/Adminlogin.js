@@ -11,7 +11,12 @@ function Adminlogin() {
   }
   const SubmitData=(e)=>{
     e.preventDefault();
-    console.log(adlog);
+    if (adlog.username==="admin" && adlog.password === "123"){
+      
+    }
+    else {
+      console.log("incorrect");
+    }
   }
   return (
     <div id="adminlogin_page">

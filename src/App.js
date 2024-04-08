@@ -14,11 +14,14 @@ import UserMenu from './Components/User/UserMenu';
 import UserLogin from './Components/User/UserLogin';
 import Staffaddfood from './Components/Staff/Staffaddfood';
 import AdminUserList from './Components/Admin/AdminUserList';
+import Payment from './Components/User/Payment';
+import Adminlogin from './Components/Admin/Adminlogin';
 function App() {
   return (
     <BrowserRouter>
     <div>
-      <AdminUserList/>
+      {/* <AdminUserList/> */}
+      {/* <Payment/> */}
       
       {/* <Navbar/> */}
        <Routes> 
@@ -35,7 +38,7 @@ function App() {
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       {/********************************Admin***********************************/}
-      {/* <Route path='/adminlogin' element={<Adminlogin/>}/> */}
+      <Route path='/adminlogin' element={<Adminlogin/>}/>
       
       </Routes> 
     </div>
