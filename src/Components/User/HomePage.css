@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+/* body{
+    /* background-image: url('../../Images/HomePage1.jpg'); */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+} */ */
+
+.Home-Page p{
+    font-size: 60px;
+    font-family:'pirata one', cursive;  
+    font-weight: 400;
+    color: #991b1f;
+    margin-left: 48rem;
+    margin-top: 9rem;
+    display: flex;
+}  
+#home-head1{
+   margin-left: 33.5rem;
+   margin-top: 7rem; 
+   font-size: 100px;
+   color:#d1cbcb;
+   
+}
+#home-head2{
+    margin-left: 40rem;
+   margin-top: -1rem;
+   font-size: 100px;
+   color: #d1cbcb;
+}
+.Home-Page2{
+    background-color:hwb(0 4% 96%);
+    margin-top: 7rem;
+    width: 94.5rem;
+}
+.Home-Page2 p{
+   font-family:'pirata one', cursive;  
+    font-weight: 400;
+    font-size: 70px;
+    color: #991b1f;
+    margin-left: 6rem;
+}
+.Home-Page2 h5{
+    margin-left: 6rem;
+    color: whitesmoke;
+}
+.Home-Page2 img{
+    width: 30rem;
+    height:40rem ;
+    margin-left: 62rem;
+    margin-top: -18rem;
+}
+
+.Home-Page2 form{
+    width: 50rem;
+    height: 25rem;
+    margin-top: -17rem;
+    margin-left: 5rem;
+    -webkit-text-fill-color: aliceblue;
+}
+.Home-Page2 h6{
+    font-size: 25px;
+}
+.home-img2 img{
+    width: 30rem;
+    height:30rem ;
+    margin-left: 3rem;
+    transition: transform 0.2s ease-out;
+    margin-top: 7rem;
+}
+.home-img2 img:hover {
+    transform: scale(1.2);
+}
+
+.home-img2 p{
+    font-weight: 400;
+    font-size: 35px;
+    color: #e3dddd;
+    font-family: 'Bona Nova'; 
+    margin-left: 45rem;
+    margin-top: -29rem; 
+    display: flex;
+    
+}
+.home-img3 p{
+    font-weight: 400;
+    font-size: 60px;
+    color: #991b1f;
+    font-family:'pirata one', cursive;
+    margin-left: 56rem;  
+    margin-top: 4rem;
+}
+.Home-Page3{
+    background-color: black;
+    width: 94.5rem;
+}
+.home-img3 form{
+    width: 40rem;
+    height: 25rem;
+    -webkit-text-fill-color: #e3dddd;
+    margin-left: 50rem;
+}
+
+.Home-Page3 h6{
+    font-size: 25px;
+    margin-top: 3rem;
+}
+.HomePage-4 h4{
+    margin-top: 6rem;
+    margin-left: -6.9rem;
+    font-family:'Bona Nova' ;
+    font-size: large;
+    color: rgba(227, 114, 9, 0.913);
+    font-weight: 900;
+}
+.HomePage-4 h1{
+    margin-left: -8rem;
+    margin-top: -14rem;
+    font-size: larger;
+}
+.HomePage-4 h6{
+    margin-top: 2rem;
+    margin-left: -12rem;
+    font-family:'Bona Nova' ;
+    display: flex;
+    font-weight: 550;
+    font-size: large;
+}
+hr{
+    color: black;
+}
+#home-starter1 hr{
+    margin-left: 2rem;
+    width: 9rem;  
+} 
+#home-starter2 hr {
+    margin-left: 2rem;
+    width:11rem;
+}
+#home-starter3 hr{
+    margin-left: 2rem;
+    width: 8.6rem;
+}
+#home-starter4 hr{
+    margin-left: 2rem;
+    width: 5rem; 
+}
+#home-maindishes {
+    margin-top: -55.5rem;
+    margin-left: 50rem; 
+}
+#home-main1 hr{
+    margin-left: 2rem;
+    width: 10rem; 
+}
+#home-main2 hr{
+    margin-left: 2rem;
+    width: 5.5rem; 
+}
+#home-main3 hr{
+    margin-left: 2rem;
+    width: 3.5rem; 
+}
+#home-main4 hr{
+    margin-left: 2rem;
+    width: 11rem; 
+}
+#home-maindishes h4{
+    margin-left: -5rem;
+}
+#home-beverages{
+    margin-top: -55.8rem;
+    margin-left: 82rem; 
+}
+#home-beverages h4{
+    margin-left: -6rem;
+}
+#home-bev1 hr{
+    margin-left: 2rem;
+    width: 9rem; 
+}
+#home-bev2 hr{
+    margin-left: 2rem;
+    width: 10rem; 
+}
+#home-bev3 hr{
+    margin-left: 2rem;
+    width: 7rem; 
+}
+#home-bev4 hr{
+    margin-left: 2rem;
+    width: 9.4rem; 
+}
+.HomePage-5{
+   background-color: black;
+   width: 94.5rem;
+   margin-top: -25rem;
+
+}
+#home-visit{
+    width: 40rem;
+    height: 50rem;
+    margin-left: 3rem;
+}    
+.home-img4 img{
+    width: 40rem;
+    height:30rem ;
+    margin-top: -44rem;
+    margin-left:51rem ;
+    
+}
+.HomePage-5 h1{
+    font-family:'pirata one', cursive;  
+    font-weight: 400;
+    font-size: 90px;
+    color: #991b1f;
+    margin-top: -4rem;
+}
+.HomePage-5  p{
+    color: #d1cbcb;
+    margin-left: 4rem;
+    font-size: 25px;  
+}

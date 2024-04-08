@@ -1,19 +1,38 @@
 import React, { useState } from "react";
 import "../Staff/Stafflogin.css";
+import axios from "axios";
+import {Link}  from 'react-router-dom'
 
 function Stafflogin() {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
-  const Handlechange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const handleclick=(e)=>{
+    setForm({...form,[e.target.name]:e.target.value})
+  }
   const onSubmitdata = (e) => {
     e.preventDefault();
     console.log(form);
+    axios.post('http://localhost:4000/stafflogin',form)
+    .then((result)=>{
+      console.log(result);
+      if(result.data.status===200){
+        alert("Successfully Login")
+        console.log(result.data.msg);
+        console.log("Submitted");
+      //  localStorage.setItem('staffid',);
+      }
+    })
+    .catch((error)=>{
+console.log(error);
+    })
+    console.log(form);
     alert("Login Successfully");
   };
+  
+console.log(form);
+ 
   return (
     <div id="staff-login">
       <div className="staff_login_form">
@@ -26,7 +45,7 @@ function Stafflogin() {
                   type="email"
                   name="email" placeholder="Email"
                   className="form-control"
-                  onChange={Handlechange}
+                  onChange={handleclick}
                 />
              
           </div>
@@ -36,7 +55,7 @@ function Stafflogin() {
                   type="Password"
                   name="password" placeholder="Password"
                   className="form-control"
-                  onChange={Handlechange}
+                  onChange={handleclick}
                 />
             
           </div>
@@ -47,7 +66,7 @@ function Stafflogin() {
           <br />
          
           <div className="forgot__password">
-            <a style={{color:"white",marginLeft:"15rem"}} href= "forgot.in">Forgot Password?</a>
+            <Link to={`/staffforgotpass`} style={{color:"white",marginLeft:"15rem"}} href= "forgot.in">Forgot Password?</Link>
           </div>
         </form>
       </div>

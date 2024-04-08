@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+.main1{
+    /* background-image: url("../../Images/tasty-pizza-near-ingredients.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 50rem;
+}
+.container1{
+    position: absolute ;
+    margin-left: 25rem;
+    margin-bottom: 15rem;
+}
+#hd{
+    margin-top: 10rem;
+    margin-left: 10rem;
+    font-size:7rem;
+    -webkit-text-fill-color:#991b1f;
+    font-family:'pirata one', cursive; 
+}
+#subhd{
+    margin-left: 17rem;
+    font-size: 3rem;
+    -webkit-text-fill-color: #991b1f;
+    font-family:'pirata one', cursive; 
+}
+.main2{
+    
+    
+    /* background-image: url("./vintage-old-rustic-cutlery-dark\ \(3\).jpg"); */
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:50rem;
+    width: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+
+}
+.container2{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    
+
+}
+#hd2{
+    margin-top: 3rem;
+    margin-left: 8rem;
+    font-size: 5rem;
+    -webkit-text-fill-color:#991b1f;
+    
+}
+#p1{
+    margin-top: 5rem;
+    margin-left: 6rem;
+    -webkit-text-fill-color: #cecece;
+    width: 40rem;
+    font-size: 2rem;
+}
+.main3{
+    
+    
+    margin-top: 50rem;
+    background-color: black;
+    /* background-image: url("./modern-kitchen-composition-with-healthy-ingredients.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+     /* background-position:top; */
+    height: 50rem; 
+    
+
+}
+#hd3{
+    text-align: center;
+    font-size:6rem ;
+    -webkit-text-fill-color: #991b1f;
+}
+#czn{
+    margin-top: 3REM;
+    margin-left: 5REM;
+   height: 25rem;
+   width: 32rem; 
+   border-radius: 10REM;
+}
+#para{
+    margin-top: 7rem;
+    margin-left: 10rem;
+    -webkit-text-fill-color: #cecece;
+    width: 40rem;
+    font-size: 2rem;
+}
+.czn{
+    display: flex;
+}
+
+

@@ -98,17 +98,6 @@ function Staffreg() {
               </div>
               </div>
               </div>
-
-              <div className="staff-age-dob">
-              <div className="row gt-2">
-              <div className="col-auto">
-                <input type="text" placeholder="Age" name="age" onChange={handleclick}className="form-control"required value={form1.age}/>
-              </div>
-              <div className="col-auto">
-              <input type="date" placeholder="DOB" name="dob" onChange={handleclick}className="form-control"required value={form1.dob}/>
-              </div>
-              </div>
-              </div>
            
              <div className="staffno-email-pass">
               <input type="text" placeholder="Contact No" name="contactno" onChange={handleclick} className="form-control" required value={form1.contactno}/><br/>
@@ -118,40 +107,32 @@ function Staffreg() {
               <input type="password" placeholder="Confirm Password" name="confirmpassword" onChange={handleclick} className="form-control"required value={form1.confirmpassword}/><br/>
               </div>
               <div className="staff-photo">
-                <h6>Upload your photo</h6>
-                <input type="file" name="uploadyourphoto"  className="form-control"required onChange={handleFileChange} /><br/>
+                <label className="label">Upload your photo</label>
+                <input type="file" name="uploadyourphoto"  className="form-control"required  onChange={handleFileChange} value={form1.uploadyourphoto}/><br/>
               </div>
               <div className="staff-address">
               <input type="text"placeholder="Address" name="address"onChange={handleclick} className="form-control" required value={form1.address}/><br/>
               </div>
               
               <div className="staff-idproof">
-                <h6>ID proof</h6>
-                <input type="file" name="selectanidproof" onChange={handleFileChange} className="form-control"required/><br/>
+                <label>Upload an ID Proof</label>
+                <input type="file" name="selectanidproof" className="form-control" onChange={handleFileChange} required value={form1.selectanidproof}/><br/>
               </div>
 
              
               <div className="drop-down">
   
-  {/* <button style={{height:'45px',width:'28.5rem',backgroundColor:'rgba(240,248,255,0.416)',color:'black'}} class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> */}
-  <select style={{backgroundColor:"rgba(240,248,255,0.416)",width:"28.5rem"}} name="jobposition" onChange ={handleclick} className="form-control" required value={form1.jobposition}>
-    <option  value='Jpose'>Choose your Job position</option>
-    <option  value='Dish-washer'>Dish washer</option>
-    <option  value='Cashier'>Cashier</option>
-    <option  value='Cooking'>Cooking</option>
-    <option  value='Delivery'>Delivery</option>
+
+  <select name="jobposition" className="form-control" value={form1.jobposition} onChange ={handleclick}>
+    <option value={'Jpose'}>Choose your Job position</option>
+    <option value={'Dish-washer'}>Dish washer</option>
+    <option value={'Cashier'}>Cashier</option>
+    <option value={'Cooking'}>Cooking</option>
+    <option value={'Delivery'}>Delivery</option>
 
 
   </select>
-    
-  {/* </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Dish washer</a></li>
-    <li><a class="dropdown-item" href="#">Cashier</a></li>
-    <li><a class="dropdown-item" href="#">Cooking</a></li>
-    <li><a class="dropdown-item" href="#">Delivery</a></li> */}
-
-  {/* </ul> */}
+  
 </div>
 
         
