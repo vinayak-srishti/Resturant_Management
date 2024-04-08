@@ -12,6 +12,8 @@ import StaffMenu from './Components/Staff/StaffMenu';
 import UserLogin from './Components/User/UserLogin';
 import Staffaddfood from './Components/Staff/Staffaddfood';
 import AdminUserList from './Components/Admin/AdminUserList';
+import Payment from './Components/User/Payment';
+import Adminlogin from './Components/Admin/Adminlogin';
 import Adminlogin from './Components/Admin/Adminlogin';
 import Feedback from './Components/User/Feedback';
 import Aboutus from './Components/User/AboutUs';
@@ -30,6 +32,9 @@ function App() {
   return ( 
     <BrowserRouter>
     <div>
+      
+      
+      {/* <Navbar/> */}
        <Routes> 
       {/*******************************User************************************/}
       <Route path='/gallery' element={[<Navbar/>,<Gallery/>,<Footer/>]} />
@@ -44,6 +49,10 @@ function App() {
       <Route path='/userstarter' element={[<Navbar/>,<UserStarter/>]}/>
       <Route path='/userbeverages' element={[<Navbar/>,<UserBeverages/>]}/>
       <Route path='/usermaincourse' element={[<Navbar/>,<UserMaincourse/>]}/>
+      <Route path='/feedback' element={<Feedback/>}/>
+      <Route path='/usermenu' element={<UserMenu/>}/>
+      <Route path='/navbar' element={<Navbar/>}/>
+      <Route path='/payment' element={<Payment/>}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffregister' element={<Staffreg/>}/>
@@ -54,10 +63,10 @@ function App() {
       <Route path='/staffnavbar' element={<StaffNavbar/>}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
-      <Route path='/adminuserlist' element={<AdminStafflist/>} />
+      <Route path='/adminuserlist' element={<AdminUserList/>} />
       <Route path='/adminnav' element={<Adminsidenav/>}/>
       <Route path="/admindashboard" element={[<Adminsidenav/>,<AdminDashboard/>]}/>
-      
+      <Route path='/adminstafflist' element={<AdminStafflist/>}/>
       </Routes> 
     </div>
      </BrowserRouter>
