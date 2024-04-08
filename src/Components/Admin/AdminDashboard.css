@@ -1,0 +1,26 @@
+#dash_users {
+width: 24rem;
+height: 13rem;
+margin-left: 10rem;
+}
+#dash_staff{
+width: 24rem;
+height: 13rem;
+margin-left: 3rem;
+}
+#dash_staff {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
+}
+#dash_users {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
+   }
+.admindash_card{
+    margin-top: 6rem;
+    margin-left: 22rem;
+    font-family: monospace;
+}
+.admindash_card h5{
+  font-size: 25px;
+  font-family: 'Bona Nova';
+  margin-top: -3rem;
+}

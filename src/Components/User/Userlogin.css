@@ -4,9 +4,7 @@
     width: 100rem;
     background-repeat: no-repeat;
     background-size: cover;
-    position:absolute ;
-    
-    
+    position:absolute ;   
 }
 .user_login form {
     
@@ -54,14 +52,6 @@
     height: 3rem;
     margin-left: 5rem;
     margin-top: 1rem;
-}
-body {
-    /* background-image: url("../../images/tasty-pizza-near-ingredients.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:absolute ;
-    
-    
 }
 .user_login form {
     

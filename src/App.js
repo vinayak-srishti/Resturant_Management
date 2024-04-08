@@ -6,7 +6,6 @@ import Stafflogin from './Components/Staff/Stafflogin';
 import HomePage from './Components/User/HomePage';
 import UserRegistration from './Components/User/UserRegistration'
 import Footer from './Components/User/Footer';
-import Staffreg from './Components/Staff/Staffreg';
 import ContactUs from './Components/User/ContactUs';
 import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
@@ -24,8 +23,11 @@ import UserStarter from './Components/User/UserStarter';
 import UserBeverages from './Components/User/UserBeverages';
 import UserMaincourse from './Components/User/UserMaincourse';
 import StaffNavbar from './Components/Staff/StaffNavbar';
+import Staffreg from './Components/Staff/Staffreg';
+import AdminDashboard from './Components/Admin/AdminDashboard';
+import AdminStafflist from './Components/Admin/AdminStafflist';
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
     <div>
        <Routes> 
@@ -44,7 +46,7 @@ function App() {
       <Route path='/usermaincourse' element={[<Navbar/>,<UserMaincourse/>]}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
-      <Route path='/staffreg' element={<Staffreg/>}/>
+      <Route path='/staffregister' element={<Staffreg/>}/>
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       <Route path='/editfood/:id' element={<Staffeditfood/>}/>
@@ -52,8 +54,9 @@ function App() {
       <Route path='/staffnavbar' element={<StaffNavbar/>}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
-      <Route path='/adminuserlist' element={<AdminUserList/>} />
+      <Route path='/adminuserlist' element={<AdminStafflist/>} />
       <Route path='/adminnav' element={<Adminsidenav/>}/>
+      <Route path="/admindashboard" element={[<Adminsidenav/>,<AdminDashboard/>]}/>
       
       </Routes> 
     </div>

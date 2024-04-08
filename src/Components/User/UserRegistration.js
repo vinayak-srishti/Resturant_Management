@@ -30,6 +30,7 @@ function UserRegistration() {
   };
   const onSubmitdata = (e) => {
     e.preventDefault();
+    
     axios
       .post("http://localhost:4000/userregister", form)
       .then((result) => {
@@ -68,8 +69,8 @@ function UserRegistration() {
 
       <div className='userregno-email-pass'>
       <input type='text' placeholder='Contact No' name='contactno' onChange={handleclickfunction} className='form-control' required/><br/>
-      <input type='email' placeholder='Email' name='email' onChange={handleclickfunction} className='form-control' required/><br/>
-      <input type='password' placeholder=' Password' onChange={handleclickfunction} name='password' className='form-control' required/>
+      <input  id="userreg_email" type='email' placeholder='Email' name='email' onChange={handleclickfunction} className='form-control' required/><br/>
+      <input id="userreg_pass" type='password' placeholder=' Password' onChange={handleclickfunction} name='password' className='form-control' required/>
     
      </div>
     
@@ -107,7 +108,7 @@ function UserRegistration() {
 
               <div className="userregpincode">
                 <input
-                  type="number"
+                  type="text"
                   placeholder="Pincode"
                   name="pincode"
                   value={form.pincode}
