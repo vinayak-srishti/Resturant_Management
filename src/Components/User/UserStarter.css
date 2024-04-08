@@ -1,0 +1,73 @@
+.starter_top img{
+    height: 230px;
+    width: 100%;
+  }
+  .Userstarter{
+    background-color: black;
+    width: 96rem;
+  }
+  .userstarter_card:hover .card{
+    height: 400px;
+  }
+  .userstarter_card :hover .userstarter_bottom {
+    height: 45%;
+    border-radius: 6px;
+  }
+  .starter_top,
+  .userstarter_bottom,
+  .userstarter_card {
+  transition: height 0.5s;
+  }
+  .starter_top{
+    height: 100%;
+  }
+  .userstarter_bottom {
+    background-color: #ffffff;
+    height: 100%;
+    font-family:'Bona Nova';
+  }
+  .userstarter_card  .card:hover {
+    height: 400px;
+  }
+  .userstarter_card .card:hover .starter_top {
+    height: 20%;
+  }
+  .userstarter_card .card{
+    width: 400px;
+    overflow: hidden;
+    height: 330px;
+    margin-left: 5rem;
+  }
+  
+  .bottom-section p{
+    padding: -10rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+  }
+  
+  .userstarter_card .card{
+    margin-left: 3rem;
+    
+  }
+  .container{
+    padding: 2px 16px;
+    margin-left: 4rem;
+  } 
+  .userstarter_card  .card{
+    box-shadow: 0 4px 8px 0 rgba(248, 245, 245, 0.788);
+    transition: 0.3s;
+  }
+  
+  .userstarter_card .card{
+    box-sizing: content-box;
+    margin: 25px;
+  }
+  
+  .userstarter_card .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
+  }
+  .userstarter_bottom h5{
+    font-size: 20px;
+  }
+  
+  

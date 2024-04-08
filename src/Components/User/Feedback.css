@@ -3,13 +3,13 @@
     margin-top: -13rem;
     color: #991b1f;
 }
-.card{
+#feedcard{
    margin-left: 3rem;
    margin-right: 3rem;
 }
-.container{
+#feedcontainer{
     width: 80rem;
-    padding-block: 3rem;
+    padding-block:3rem;
     margin-top: -2rem;
 }
 .feedback{

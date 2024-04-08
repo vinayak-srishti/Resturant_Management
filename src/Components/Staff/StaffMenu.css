@@ -1,4 +1,4 @@
-.top-section img{
+.staffmenu_topsection img{
   height: 230px;
   width: 100%;
 }
@@ -6,19 +6,19 @@
   background-color: black;
   width: 96rem;
 }
-.card:hover{
+.staffmenu_card:hover .card{
   height: 400px;
 }
-.card:hover .bottom-section {
+.staffmenu_card :hover .bottom-section {
   height: 45%;
   border-radius: 6px;
 }
-.top-section,
+.staffmenu_topsection,
 .bottom-section,
-.card {
+.staffmenu_card {
 transition: height 0.5s;
 }
-.top-section {
+.staffmenu_topsection{
   height: 100%;
 }
 .bottom-section {
@@ -26,13 +26,13 @@ transition: height 0.5s;
   height: 100%;
   font-family:'Bona Nova';
 }
-.card:hover {
+.staffmenu_card  .card:hover {
   height: 400px;
 }
-.card:hover .top-section {
+.staffmenu_card .card:hover .staffmenu_topsection {
   height: 20%;
 }
-.card {
+.staffmenu_card .card{
   width: 400px;
   overflow: hidden;
   height: 330px;
@@ -48,24 +48,25 @@ transition: height 0.5s;
   font-size: 20px;
   margin-top: 1rem;
 }
-.card{
+.staffmenu_card .card{
   margin-left: 3rem;
   
 }
-#staffmenu-container{
+.container{
   padding: 2px 16px;
   margin-left: 4rem;
 } 
-.card {
+.staffmenu_card  .card{
   box-shadow: 0 4px 8px 0 rgba(206, 9, 9, 0.788);
   transition: 0.3s;
 }
 
-.card {
+.staffmenu_card .card{
   box-sizing: content-box;
   margin: 25px;
 }
 
-.card:hover {
+.staffmenu_card .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
 }
+

@@ -38,8 +38,9 @@ function StaffMenu() {
              {axiosdata.map((a)=>{
         return (
               <div class="col-3">
+                <div className='staffmenu_card'>
                 <div class="card" style={{ width: 18 + "rem" }}>
-                  <div class="top-section">
+                  <div class="top-section" className='staffmenu_topsection'>
                   <img src={`http://localhost:4000/${a.img.filename}`}class="card-img-top" alt="..." />
                   </div>
                   <div class="card-body">
@@ -57,6 +58,7 @@ function StaffMenu() {
                       class="btn btn-danger"
                       style={{ marginLeft: "2rem" }}  onClick={()=>{handleclick(a._id)}}> Delete</button>
                   </div>
+                </div>
                 </div>
                 </div>
               </div>

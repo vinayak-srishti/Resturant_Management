@@ -10,7 +10,6 @@ import Staffreg from './Components/Staff/Staffreg';
 import ContactUs from './Components/User/ContactUs';
 import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
-import UserMenu from './Components/User/UserMenu';
 import UserLogin from './Components/User/UserLogin';
 import Staffaddfood from './Components/Staff/Staffaddfood';
 import AdminUserList from './Components/Admin/AdminUserList';
@@ -21,6 +20,10 @@ import Navbar from './Components/User/Navbar'
 import Adminsidenav from './Components/Admin/Adminsidenav';
 import StaffForgotPwd from './Components/Staff/StaffForgotPwd';
 import Staffeditfood from './Components/Staff/Staffeditfood';
+import UserStarter from './Components/User/UserStarter';
+import UserBeverages from './Components/User/UserBeverages';
+import UserMaincourse from './Components/User/UserMaincourse';
+import StaffNavbar from './Components/Staff/StaffNavbar';
 function App() {
   return (
     <BrowserRouter>
@@ -35,8 +38,10 @@ function App() {
       <Route path='/aboutus' element={[<Navbar/>,<Aboutus/>,<Footer/>]} />
       <Route path='/userlogin' element={<UserLogin/>}/>
       <Route path='/navbar' element={<Navbar/>} />
-      <Route path='/usermenu'  element={<UserMenu/>} />
       <Route path='/feedback' element={<Feedback/>} />
+      <Route path='/userstarter' element={[<Navbar/>,<UserStarter/>]}/>
+      <Route path='/userbeverages' element={[<Navbar/>,<UserBeverages/>]}/>
+      <Route path='/usermaincourse' element={[<Navbar/>,<UserMaincourse/>]}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffreg' element={<Staffreg/>}/>
@@ -44,6 +49,7 @@ function App() {
       <Route path="/addfood" element={<Staffaddfood/>}/>
       <Route path='/editfood/:id' element={<Staffeditfood/>}/>
       <Route path='/staffforgotpass' element={<StaffForgotPwd/>}/>
+      <Route path='/staffnavbar' element={<StaffNavbar/>}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
       <Route path='/adminuserlist' element={<AdminUserList/>} />

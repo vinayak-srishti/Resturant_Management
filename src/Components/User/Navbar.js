@@ -44,18 +44,18 @@ function Navbar() {
                     </Link>
                     <ul class="dropdown-menu">
                       <li>
-                        <Link class="dropdown-item" href="#">
+                        <Link to={`/userstarter`} class="dropdown-item" >
                           Starters
                         </Link>
                       </li>
                       <li>
-                        <Link class="dropdown-item" href="#">
+                        <Link to={`/usermaincourse`} class="dropdown-item" >
                           Main Course
                         </Link>
                       </li>
                       <li>
-                        <Link class="dropdown-item" href="#">
-                          Desserts
+                        <Link to={`/userbeverages`} class="dropdown-item" >
+                          Beverages
                         </Link>
                       </li>
                     </ul>
@@ -70,6 +70,9 @@ function Navbar() {
                     <Link to={`/contactus`} class="nav-link" href="#">
                       ContactUs
                     </Link>
+                  </li>
+                  <li class="nav-item">
+                  
                   </li>
                 </ul>
               </div>
