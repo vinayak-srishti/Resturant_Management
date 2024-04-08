@@ -1,31 +1,59 @@
 import React, { useState } from "react";
 import "../User/UserLogin.css"
+import axios from 'axios';
+// import { response } from "express";
 
 function UserLogin() {
   const [form, setForm] = useState({
-    username: "",
+    email: "",
     password: "",
   });
+
   const HandleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+  console.log(form);
+   
+  
+   
   const onSubmitData = (e) => {
     e.preventDefault();
     console.log(form);
-    alert("Submitted");
+    axios.post('http://localhost:4000/userlogin',form)
+    .then((result)=>{
+      console.log(result)
+      if (result.data.status === 200) {  
+      
+        console.log(result.data.msg);
+        localStorage.setItem("user_id",result. data._id)
+
+        console.log("submitted"); 
+      }
+
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
+
+
+
+    // alert(response.msg);
   };
   return (
     <div className="user_page">
       <div className="user_login">
         <form onSubmit={onSubmitData}>
-          <h3>LOGIN</h3>
-          <div className="usrlogin_username">
+          <h3>USER LOGIN</h3>
+          <div className="userlogin_username">
             <div className="row gt-2">
-              <div className="col-auto">Username</div>
+              
               <div className="col-auto">
                 <input
-                  type="text"
-                  name="username"
+                
+                  type="email"
+                  name="email"
+                  maxLength={20}
+                  placeholder="enter your mail id"
                   className="form-control"
                   onChange={HandleChange}
                 />
@@ -35,11 +63,13 @@ function UserLogin() {
 
           <div className="usrlogin_password">
             <div className="row gt-2">
-              <div className="col-auto">Password</div>
+             
               <div className="col-auto">
                 <input
                   type="Password"
                   name="password"
+                  maxLength={20}
+                  placeholder="password"
                   className="form-control"
                   onChange={HandleChange}
                 />
@@ -47,7 +77,7 @@ function UserLogin() {
             </div>
           </div>
 
-          <button className="btn btn-danger">Login</button>
+          <button className="btn btn-danger " type="submit">Login</button>
           <br />
           <div className="user_forgot">
             <a href="forgot.in">forgotPassword?</a>
