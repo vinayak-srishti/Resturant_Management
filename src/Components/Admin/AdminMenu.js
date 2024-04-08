@@ -18,7 +18,7 @@ function AdminMenu() {
     <div>
       <div className="container">
             <div class="row">
-            {data.map((a)=>{
+            {adminmenu.map((a)=>{
         return (
               <div class="col-3">
                 <div class="card" style={{ width: 18 + "rem" }}>
