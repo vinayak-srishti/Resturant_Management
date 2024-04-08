@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-body{
+/* body{
     /* background-image: url('../../Images/HomePage1.jpg'); */
-    background-size: cover;
+    /* background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-}
+} */ */
 
 .Home-Page p{
     font-size: 60px;

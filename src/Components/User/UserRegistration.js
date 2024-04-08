@@ -30,6 +30,7 @@ function UserRegistration() {
   };
   const onSubmitdata = (e) => {
     e.preventDefault();
+    
     axios
       .post("http://localhost:4000/userregister", form)
       .then((result) => {

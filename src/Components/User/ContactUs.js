@@ -3,7 +3,7 @@ import "../User/ContactUs.css";
 import { FiPhoneCall } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
 import { TfiEmail } from "react-icons/tfi";
-function ContacttUs() {
+function ContactUs() {
   const [form, setForm] = useState({
     yourname: "",
     youremail: "",
@@ -22,18 +22,18 @@ function ContacttUs() {
 
   return (
     <div>
-      <div id="contact-us">
-        <h1>CONTACT US</h1>
-        <h5>How to find Us</h5>
+      <div id="ContactUs">
+        <h1 id="ContactUs_h1">CONTACT US</h1>
+        <h5 id="ContactUs_h5">How to find Us</h5>
       </div>
-      <div className="contact-info">
+      <div className="ContactUs_info">
         <h3
           style={{ fontFamily: "Pirata One", color: "aliceblue" }}
-          className="c-i"
+          className="ContactUs_head"
         >
           Contact Info
         </h3>
-        <h3 style={{ fontFamily: "Pirata One" }} className="phone">
+        <h3 style={{ fontFamily: "Pirata One" }} className="ContactUs_Phone">
           <FiPhoneCall style={{ marginRight: "25px" }} />
           Phone
         </h3>
@@ -47,7 +47,7 @@ function ContacttUs() {
         >
           +91 9876543210
         </p>
-        <h3 style={{ fontFamily: "Pirata One" }} className="location">
+        <h3 style={{ fontFamily: "Pirata One" }} className="ContactUs_Address">
           <SlLocationPin style={{ marginRight: "25px" }} />
           Address
         </h3>
@@ -71,7 +71,7 @@ function ContacttUs() {
         >
           Kochi,Kerala 682019
         </p>
-        <h3 style={{ fontFamily: "Pirata One" }} className="email">
+        <h3 style={{ fontFamily: "Pirata One" }} className="ContactUs_Email">
           <TfiEmail style={{ marginRight: "25px" }} />
           Email
         </h3>
@@ -85,9 +85,10 @@ function ContacttUs() {
         >
           eldemeter@gmail.com
         </p>
-        <form className="opening-hours">
-          <h5 id="reservations">Call For Reservations</h5>
-          <h1 id="opening-hours">Opening Hours</h1>
+        <div className="ContactUs_hours">
+        <form className="ContactUs_Timings">
+          <h5 id="ContactUs_reservations">Call For Reservations</h5>
+          <h1 id="ContactUs_Openinghours">Opening Hours</h1>
           <p
             style={{
               color: "brown",
@@ -96,25 +97,26 @@ function ContacttUs() {
               marginLeft: "50px",
             }}
           >
-            --------------------------------------------------------------
+            ----------------------------------
           </p>
-          <h5 style={{ fontFamily: "Pirata One" }} id="opening-days">
+          <h5  style={{ fontFamily: "Pirata One" }} id="ContactUs_openingdays">
             Monday-Friday Saturday-Sunday
           </h5>
-          <p style={{ fontFamily: "Pirata One" }} id="opening-time">
+          <p style={{ fontFamily: "Pirata One" }} id="ContactUs_openingtime">
             10AM-12PM CLOSED
           </p>
           <button
             style={{ fontFamily: "Pirata One" }}
-            id="button1"
+            id="ContactUs_button1"
             type="button"
             class="btn btn-danger"
           >
             +91 9876543210
           </button>
         </form>
-        <form onSubmit={onsubmitdata}>
-          <div className="contact-form">
+        </div>
+        <form onSubmit={onsubmitdata} >
+          <div className="ContactUs_form">
             <h3
               style={{
                 color: "aliceblue",
@@ -125,7 +127,7 @@ function ContacttUs() {
             >
               Contact form
             </h3>
-            <div className="name-email" style={{ padding: "1rem" }}>
+            <div className="ContactUs_name_email" style={{ padding: "1rem" }}>
               <div className="row gt-2">
                 <div className="col-auto">
                   <input
@@ -149,7 +151,7 @@ function ContacttUs() {
                 </div>
               </div>
             </div>
-            <div className="number-subject" style={{ padding: "1rem" }}>
+            <div className="Contact_Us_number_subject" style={{ padding: "1rem" }}>
               <div className="row gt-2">
                 <div className="col-auto">
                   <input
@@ -176,13 +178,13 @@ function ContacttUs() {
               </div>
             </div>
             <div
-              className="message"
+              className="Contact_Us_message"
               style={{ width: "30rem", marginRight: "58rem" }}
             >
-              <div className="col-auto">
+              
                 <input
                   type="textarea"
-                  style={{ height: "10rem" }}
+                  style={{ height:"10rem" ,marginLeft:"1rem",width:"28.5rem"}}
                   placeholder="Message"
                   name="message"
                   onChange={handleclick}
@@ -190,16 +192,17 @@ function ContacttUs() {
                   required
                 />
                 <br />
-              </div>
+              
               <button
                 style={{
                   height: "50px",
-                  width: "145px",
+                  width: "9rem",
                   position: "absolute",
-                  bottom: "-5rem",
-                  left: "0.8rem",
+                  top: "24rem",
+                  left: "11rem",
                   color: "aliceblue",
-                  backgroundColor: "brown",
+                  color: "#991b1f",
+                  WebkitTextFillColor:"aliceblue"
                 }}
                 type="button"
                 class="btn btn-danger"
@@ -214,4 +217,4 @@ function ContacttUs() {
   );
 }
 
-export default ContacttUs;
+export default ContactUs;
