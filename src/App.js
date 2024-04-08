@@ -20,8 +20,8 @@ function App() {
   return (
     <BrowserRouter>
     <div>
-      {/* <AdminUserList/> */}
-      {/* <Payment/> */}
+      
+      
       
       {/* <Navbar/> */}
        <Routes> 
@@ -32,6 +32,7 @@ function App() {
       <Route path='/homepage' element={<HomePage/>} />
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/userlogin' element={<UserLogin/>}/>
+      <Route path='/payment' element={<Payment/>}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffreg' element={<Staffreg/>}/>
@@ -39,6 +40,7 @@ function App() {
       <Route path="/addfood" element={<Staffaddfood/>}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
+      <Route path='/userlist' element={<AdminUserList/>}/>
       
       </Routes> 
     </div>
