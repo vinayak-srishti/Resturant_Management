@@ -26,7 +26,6 @@ function AdminUserList() {
               <th scope="col">Email</th>
               <th scope="col">Contact</th>
               <th scope="col">Address</th>
-
             </tr>
           </thead>
           

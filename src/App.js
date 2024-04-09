@@ -32,9 +32,6 @@ function App() {
   return ( 
     <BrowserRouter>
     <div>
-      
-      
-      {/* <Navbar/> */}
        <Routes> 
       {/*******************************User************************************/}
       <Route path='/gallery' element={[<Navbar/>,<Gallery/>,<Footer/>]} />
@@ -54,13 +51,13 @@ function App() {
       <Route path='/payment' element={<Payment/>}/>
       <Route path='/usercart' element={<UserCart/>}/>
       {/********************************staff***********************************/}
-      <Route path='/staffmenu' element={<StaffMenu/>} />
+      <Route path='/staffmenu' element={[<StaffNavbar/>,<StaffMenu/>]} />
       <Route path='/staffregister' element={<Staffreg/>}/>
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       <Route path='/editfood/:id' element={<Staffeditfood/>}/>
       <Route path='/staffforgotpass' element={<StaffForgotPwd/>}/>
-      <Route path='/staffnavbar' element={<StaffNavbar/>}/>
+      <Route path='/staffnavbar' element={[<StaffNavbar/>,<HomePage/>,<footer/>]}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
       <Route path='/adminuserlist' element={<AdminUserList/>} />

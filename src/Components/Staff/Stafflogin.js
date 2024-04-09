@@ -19,10 +19,9 @@ function Stafflogin() {
       console.log(result);
       if(result.data.status===200){
         alert("Successfully Login")
-        Navigate('/homepage')
+        Navigate('/staffnavbar')
         console.log(result.data.msg);
         console.log("Submitted");
-      //  localStorage.setItem('staffid',);
       }
     })
     .catch((error)=>{
