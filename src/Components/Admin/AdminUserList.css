@@ -5,6 +5,12 @@ font-family: arial, sans-serif;
   justify-content: flex-end;
   
 }
+
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+

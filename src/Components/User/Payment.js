@@ -6,6 +6,7 @@ function Payment() {
     <div>
         <center>
           <div className='payment_main1'>
+
         <form>
           <input type='number' placeholder="Card Number" className='form-control' style={{marginTop:"2rem",border:"1px solid grey",width:"380px"}}/><br/>
           <div className='payment_main2'>
