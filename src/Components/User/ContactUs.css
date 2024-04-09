@@ -7,7 +7,7 @@
     width: 100%;
     position: absolute;
 }
-#ContactUs_h1{
+h1{
   color: #f1e9e9;
   font-size: 4rem; 
   font-weight: bolder;
@@ -15,7 +15,7 @@
   padding-top: 15rem;
   margin-left: 45px;
 }
-#ContactUs_h5{
+h5{
     color: #991b1f;
     font-family: 'Pirata One';
     font-size: 30px;

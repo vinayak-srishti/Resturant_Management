@@ -8,14 +8,10 @@
 }
  .staff-form form{
     background-color: rgb(0,0,0,0.073);
-     position: absolute;
-     /* top: -10rem; */
-     right: 2.5rem;
-    /* height: 30rem; */
+     /* right: 2.5rem; */
     width: 50rem;
+    margin-top: -13rem;
     margin-left: 45rem;
-     
-    
 }
 
 .staff-form h1{
@@ -92,8 +88,12 @@
 .staff-photo{
    width: 28.5rem; 
    margin-left: 1rem;
-   /* padding-top: 2.5rem; */
+  font-size: 23px;
+  margin-top: -2rem;
 } 
+.staff-photo label{
+    color: aliceblue;
+}
 .staff-photo input{
     background-color: rgba(240,248,255,0.416);
     -webkit-text-fill-color: black;
@@ -102,6 +102,11 @@
     width: 31rem; 
    margin-left: 1rem;
    padding: 1rem;
+   font-size: 23px;
+   margin-top: -4rem;
+}
+.staff-idproof label{
+    color: aliceblue;
 }
 .staff-idproof input{
     background-color: rgba(240,248,255,0.416);
@@ -110,18 +115,20 @@
 }
 .staff-button{
     width: 15rem;
-    position: absolute;
-    bottom: -16rem;
-    right: 17rem;
-    
+    margin-top: 2rem;
+    /* bottom: -16rem; */
+    /* right: 17rem; */
+    /* margin-top: -10rem; */
 } 
 
  
-.staff-photo h6{
+.staff-photo {
     -webkit-text-fill-color: aliceblue;
     margin-top: -2rem;
 }
-.staff-idproof h6{
-    -webkit-text-fill-color: aliceblue;
-    margin-top: -4rem;
+.drop-down{
+    
+    width: 29.5rem; 
+    margin-left: 1rem;
+
 }

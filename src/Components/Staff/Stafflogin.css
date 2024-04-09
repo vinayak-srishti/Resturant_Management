@@ -25,6 +25,7 @@ margin-bottom: 3.5rem;
     background-color: rgba(240,248,255,0.416);
     color: black;
     border: 1px solid  white;
+    -webkit-text-fill-color: black;
     
 }
 .staff_login_password input{
@@ -33,6 +34,7 @@ margin-bottom: 3.5rem;
    background-color: rgba(240,248,255,0.416);
    color: black;
    border: 1px solid  white;
+   -webkit-text-fill-color: black;
 
 
 }

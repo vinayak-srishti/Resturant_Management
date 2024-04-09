@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../Admin/AdminDashboard.css'
+import axios from 'axios'
 function AdminDashboard() {
+  const [order,setorder]=useState([])
+  useEffect(()=>{
+    axios.post()
+  })
   return (
     <div  className='admindash_card'>
       <div class="row">
@@ -9,7 +14,7 @@ function AdminDashboard() {
       <div class="card-body">
         <h5 class="card-title" style={{fontFamily:"Courier New', Courier, monospace"}}>USERS</h5>
         <p class="card-text" style={{fontFamily:"Courier New', Courier, monospace"}}>Total no of available users:</p>
-        <a href="#" class="btn btn-primary">Userlist</a>
+        
       </div>
     </div>
   </div>
@@ -18,7 +23,7 @@ function AdminDashboard() {
       <div class="card-body">
         <h5 class="card-title">STAFFS</h5>
         <p class="card-text">Total no of available staffs:</p>
-        <a href="#" class="btn btn-primary">Stafflist</a>
+        
       </div>
     </div>
   </div>
