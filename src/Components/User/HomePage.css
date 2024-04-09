@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+.Home-Page{
+    background-image: url('../../Images/HomePage1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    width: 95rem;
+    height: 50rem;
+    margin-top: -8rem;
+}
  #homepage_img{
      background-image: url('../../Images/HomePage1.jpg'); 
      background-size: cover;

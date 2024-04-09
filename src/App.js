@@ -62,7 +62,6 @@ function App() {
       <Route path='/adminnav' element={<Adminsidenav/>}/>
       <Route path="/admindashboard" element={[<Adminsidenav/>,<AdminDashboard/>]}/>
       <Route path='/adminstafflist' element={<AdminStafflist/>}/>
-
       </Routes> 
     </div>
      </BrowserRouter>
