@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../User/UserLogin.css"
+import "../User/Userlogin.css"
 import axios from 'axios';
+import { useNavigate } from "react-router";
 // import { response } from "express";
 
 function UserLogin() {
@@ -8,6 +9,7 @@ function UserLogin() {
     email: "",
     password: "",
   });
+  
 
   const HandleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -24,8 +26,9 @@ function UserLogin() {
       console.log(result)
       if (result.data.status === 200) {  
       
+      
         console.log(result.data.msg);
-        localStorage.setItem("user_id",result. data._id)
+        localStorage.setItem("user_id",result.data._id)
 
         console.log("submitted"); 
       }

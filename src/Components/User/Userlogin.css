@@ -55,14 +55,7 @@
     margin-left: 5rem;
     margin-top: 1rem;
 }
-body {
-    /* background-image: url("../../images/tasty-pizza-near-ingredients.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:absolute ;
-    
-    
-}
+
 .user_login form {
     
     border: 2px solid black;
