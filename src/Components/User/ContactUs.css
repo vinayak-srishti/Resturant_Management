@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-#ContactUs{
+.ContactUs{
     background-image: url('../../Images/ContactUs.jpg');
     background-size: cover;
     height: 40rem;

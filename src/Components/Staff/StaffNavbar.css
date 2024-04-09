@@ -1,0 +1,35 @@
+.staff_navbar{
+    background-color: black;
+    width: 96rem !important;
+   }
+  .staff_head{
+      display: flex;
+      -webkit-text-fill-color: rgba(13, 11, 11, 0.886);
+      font-family:cursive ;
+      font-size: 23.5px;   
+  }
+  .staff_navmar_main2{
+    margin-top: 0.5rem;
+      margin-left: 35rem;
+      font-size: 23.5px;
+      -webkit-text-fill-color: rgb(228, 228, 228);
+      
+      
+  }
+  .staff_navmar_main2 ul{
+      padding: 0;
+      justify-content: space-between;
+      list-style-type: none;
+      
+  }
+  .staff_navmar_main2 li{
+      font-family: 'pirata one';
+      font-size: 30px;
+      text-decoration: none;
+      padding-right: 30px;
+      
+  
+  }
+  .staff_navmar_main2 li a:hover{
+      color: rgb(191, 12, 12);
+  }

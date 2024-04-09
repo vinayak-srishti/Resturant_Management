@@ -29,6 +29,7 @@ function Staffreg() {
   //   }
   //   }
 
+
   const handleclick = (e) => {
     settForm({ ...form1, [e.target.name]: [e.target.value] });
   };
@@ -56,6 +57,35 @@ function Staffreg() {
     console.log("Staffreg form ", formData);
     axios
       .post("http://localhost:4000/staffregister", formData, {
+
+    
+
+     const handleclick=(e)=>{
+      settForm({...form1,[e.target.name]:[e.target.value]})
+     }
+     const handleFileChange = (e) => {
+      const { name, files } = e.target;
+      settForm({ ...form1, [name]: files[0] });
+    };
+     const onSubmitdata=(e)=>{
+      e.preventDefault()
+      const formData = new FormData();
+      formData.append("firstname", form1.firstname);
+      formData.append("lastname", form1.lastname);
+      formData.append("age", form1.age);
+      formData.append("dob", form1.dob);
+      formData.append("contactno", form1.contactno);
+      formData.append("email", form1.email);
+      formData.append("password", form1.password);
+      formData.append("confirmpassword", form1.confirmpassword);
+      formData.append("files", form1.uploadyourphoto);
+      formData.append("address", form1.address);
+      formData.append("files", form1.selectanidproof);
+      formData.append("jobposition", form1.jobposition);
+
+      console.log('Staffreg form ', formData)
+      axios.post("http://localhost:4000/staffregister",formData, {
+
         headers: {
           "Content-Type": "multipart/form-data",
         },

@@ -19,11 +19,11 @@ function Feedback() {
   return (
     <div className='feedback'>
     <h1 id='feedback-heading'>FeedBack Of EL-Demeter</h1>
-      <div className='container'>
+      <div className='container' id='feedcontainer'>
       
       {feedback.map((a)=>{
         return(
-          <div className="card" style={{marginTop:"1.5rem"}}>
+          <div class="card" style={{marginTop:"1.5rem"}} id='feedcard'>
   <div className="card-header">
     {a.name}
   </div>

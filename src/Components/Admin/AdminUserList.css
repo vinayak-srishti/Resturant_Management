@@ -1,0 +1,16 @@
+table{
+font-family: arial, sans-serif;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
