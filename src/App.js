@@ -14,7 +14,6 @@ import Staffaddfood from './Components/Staff/Staffaddfood';
 import AdminUserList from './Components/Admin/AdminUserList';
 import Payment from './Components/User/Payment';
 import Adminlogin from './Components/Admin/Adminlogin';
-import Adminlogin from './Components/Admin/Adminlogin';
 import Feedback from './Components/User/Feedback';
 import Aboutus from './Components/User/AboutUs';
 import Navbar from './Components/User/Navbar'
@@ -28,6 +27,7 @@ import StaffNavbar from './Components/Staff/StaffNavbar';
 import Staffreg from './Components/Staff/Staffreg';
 import AdminDashboard from './Components/Admin/AdminDashboard';
 import AdminStafflist from './Components/Admin/AdminStafflist';
+import UserCart from './Components/User/UserCart';
 function App() {
   return ( 
     <BrowserRouter>
@@ -50,9 +50,9 @@ function App() {
       <Route path='/userbeverages' element={[<Navbar/>,<UserBeverages/>]}/>
       <Route path='/usermaincourse' element={[<Navbar/>,<UserMaincourse/>]}/>
       <Route path='/feedback' element={<Feedback/>}/>
-      <Route path='/usermenu' element={<UserMenu/>}/>
       <Route path='/navbar' element={<Navbar/>}/>
       <Route path='/payment' element={<Payment/>}/>
+      <Route path='/usercart' element={<UserCart/>}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={<StaffMenu/>} />
       <Route path='/staffregister' element={<Staffreg/>}/>

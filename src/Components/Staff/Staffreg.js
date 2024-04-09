@@ -42,9 +42,6 @@ function Staffreg() {
       const { name, files } = e.target;
       settForm({ ...form1, [name]: files[0] });
     };
-
-
-
      const onSubmitdata=(e)=>{
       e.preventDefault()
       const formData = new FormData();

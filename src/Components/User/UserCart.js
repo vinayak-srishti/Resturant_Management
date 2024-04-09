@@ -6,7 +6,7 @@ function UserCart() {
 //   const id=localStorage.getItem(userid,data_id)
   useEffect(() => {
     axios
-      .post(`http://localhost:4000/usercartfind ${id}`)
+      // .post(`http://localhost:4000/usercartfind ${id}`)
       .then((result)=>{
         console.log(result);
         setcarddata(result.data.msg);
@@ -17,8 +17,8 @@ function UserCart() {
   }, []);
   const handleremove=()=>{
     alert("item removed")
-    console.log("id for deletion",id)
-    axios.post(`http://localhost:4000/deleteitem/${id}`)
+    // console.log("id for deletion",id)
+    // axios.post(`http://localhost:4000/deleteitem/${id}`)
     .then((res)=>{
         console.log(res);
         
