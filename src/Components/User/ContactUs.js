@@ -22,8 +22,8 @@ function ContactUs() {
 
   return (
     <div>
-      <div id="ContactUs">
-        <h1 id="ContactUs_h1">CONTACT US</h1>
+      <div className="ContactUs">
+        <h1>CONTACT US</h1>
         <h5 id="ContactUs_h5">How to find Us</h5>
       </div>
       <div className="ContactUs_info">

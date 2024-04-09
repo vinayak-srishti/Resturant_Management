@@ -14,7 +14,7 @@ function Footer() {
       <div className='footer-col2'>
         <h1>Phone & Email</h1>
         <h5><IoIosCall style={{fontSize:20,color:'red'}}/>+91 9876543210</h5>
-        <h5><AiOutlineMail style={{fontSize:20 ,color:'red'}}/>eldemeter@gmail.com</h5>
+        <h5 id='footer-email'><AiOutlineMail style={{fontSize:20 ,color:'red'}}/>eldemeter@gmail.com</h5>
       </div>
       <div className='footer-col3'>
         <h1>Our Address</h1>

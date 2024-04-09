@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../Staff/Stafflogin.css";
 import axios from "axios";
-import {Link}  from 'react-router-dom'
-
+import {Link,useNavigate}  from 'react-router-dom'
 function Stafflogin() {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
+  const Navigate=useNavigate()
   const handleclick=(e)=>{
     setForm({...form,[e.target.name]:e.target.value})
   }
@@ -19,6 +19,7 @@ function Stafflogin() {
       console.log(result);
       if(result.data.status===200){
         alert("Successfully Login")
+        Navigate('/homepage')
         console.log(result.data.msg);
         console.log("Submitted");
       //  localStorage.setItem('staffid',);

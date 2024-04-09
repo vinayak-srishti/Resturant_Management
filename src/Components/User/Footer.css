@@ -1,13 +1,13 @@
 .footer{
-    width: 100%;
+    width: 95.1rem;
     bottom: 0;
     background-color: #070707f6;
     padding: 1px 0 20px;
     font-size: 10px;
     font-weight: 400;
-    /* position: absolute; */
+    position: static;
     display: flex;
-    
+    height: 25rem;
     
 }
 .footer-row{
@@ -21,7 +21,8 @@
 }
 .footer-col1 h1{
     font-weight: 500;
-    margin-top: 3rem;
+    margin-top: -9rem;
+    margin-left: -1rem;
     font-style: italic; 
     -webkit-text-fill-color: rgb(187, 7, 7);
     
@@ -41,19 +42,28 @@
 }
 .footer-col2 h1{
     font-weight: 500;
-    margin-top: 4rem;
+    margin-top: -7rem;
     font-style: italic;
     color:rgb(187, 7, 7) ;
     font-size: x-large;
     margin-bottom: 1rem;
+    margin-left: -1rem;
 }
 .footer-col2 h5{
     font-weight: 400;
+    margin-top: -2.8rem;
+    margin-left: -2rem;
+    -webkit-text-fill-color: aliceblue;
+}
+#footer-email{
+    font-weight: 400;
+    margin-top: -7rem;
+    margin-left: -2rem;
     -webkit-text-fill-color: aliceblue;
 }
 .footer-col3 h1{
     font-weight: 500;
-    margin-top: 4rem;
+    margin-top: -7rem;
     font-style: italic;
     color:rgb(187, 7, 7) ;
     font-size: x-large;
@@ -66,7 +76,7 @@
 }
 .footer-col4 h1{
     font-weight: 500;
-    margin-top: 4rem;
+    margin-top: -7rem;
     font-style: italic;
     color:rgb(187, 7, 7) ;
     font-size: x-large;

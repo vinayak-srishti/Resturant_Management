@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-.main1{
-    /* background-image: url("../../Images/tasty-pizza-near-ingredients.jpg"); */
+.Aboutus_page1{
     background-image: url("../../Images/User_login.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,7 +10,7 @@
 .container1{
     position: absolute ;
     margin-left: 25rem;
-    margin-bottom: 15rem;
+    margin-top: -15rem;
 }
 #hd{
     margin-top: 10rem;
@@ -26,103 +25,120 @@
     -webkit-text-fill-color: #991b1f;
     font-family:'pirata one', cursive; 
 }
-.main2{
-    
-    
-    /* background-image: url("./vintage-old-rustic-cutlery-dark\ \(3\).jpg"); */
+.Aboutus_page2{
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     height:50rem;
     width: 100%;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
     position: absolute;
-
 }
-.container2{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+.container2 form{
+    height: 30rem;
+    width: 90rem;
+    margin-left: 3rem;
+}
+.container2 p {
+    font-size: 27px;
+    font-weight: 400;
+    color: #f6f2f2;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    display: flex;
     
-
 }
-#hd2{
+.container2 h2{
     margin-top: 3rem;
-    margin-left: 8rem;
-    font-size: 5rem;
-    -webkit-text-fill-color:#991b1f;
-    
-}
-#p1{
-    margin-top: 5rem;
     margin-left: 6rem;
-    -webkit-text-fill-color: #cecece;
-    width: 40rem;
-    font-size: 2rem;
-}
-.main3{
-    
-    
-    margin-top: 50rem;
-    background-color: black;
-    /* background-image: url("./modern-kitchen-composition-with-healthy-ingredients.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-     /* background-position:top; */
-    height: 50rem; 
-    
-
-}
-#hd3{
-    text-align: center;
-    font-size:6rem ;
-    -webkit-text-fill-color: #991b1f;
-}
-#czn{
-    margin-top: 3REM;
-    margin-left: 5REM;
-   height: 25rem;
-   width: 32rem; 
-   border-radius: 10REM;
-}
-#para{
-    margin-top: 7rem;
-    margin-left: 10rem;
-    -webkit-text-fill-color: #cecece;
-    width: 40rem;
-    font-size: 2rem;
-}
-.czn{
+    -webkit-text-fill-color:#991b1f;
+    font-size: 80px;
+    font-family:'pirata one', cursive;  
+    font-weight: 700;
+    color: #991b1f;
     display: flex;
 }
-.main4{
+.Aboutus_page3{
+    margin-top: 50rem;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem; 
+}
+.Aboutus_page3 h2{
+    text-align: center;
+    font-size:6rem ;
+    /* margin-top: 6rem; */
+    margin-left: 20rem;
+    -webkit-text-fill-color: #991b1f;
+    font-family:'pirata one', cursive; 
+}
+.aboutus_img1 img{
+    margin-top: 3rem;
+    margin-left: 5rem;
+   height: 25rem;
+   width: 32rem; 
+   border-radius: 50%;
+   /* display: flex; */
+}
+.Aboutus_page3 form{
+    width: 45rem;
+    height: 40rem;
+    -webkit-text-fill-color: #cecece;
+      margin-left:45rem ;
+      margin-top: -20rem;
+      font-size: 30px;
+}
+
+.Aboutus_page4{
     display: flex;
     background-color: black;
     height: 30rem;
     
 }
-#sb{
+.aboutus_img2 img{
     height: 25rem;
     width: 32rem; 
-    border-radius: 10REM;
-    margin-left :5rem;
+    border-radius: 50%;
+    margin-left :7rem;
+    margin-top: -3rem;
     
 }
-#sbp{
-    margin-left: 5rem;
-    -webkit-text-fill-color: #cecece;
+.Aboutus_page4 p{
+    font-size: 30px;
+    font-weight: 400;
+    color: #f6f2f2;
+}
+.Aboutus_page4 form{
     width: 40rem;
-    font-size: 2rem;
-
+    height: 30rem;
+    margin-left: 3rem;
 }
 #btn{
-    margin-left: 25rem;
-    height: 5rem;
-    width: 30rem;
-    font-size: 3rem;
-    ;
+    margin-left: 30rem;
+    height: 3rem;
+    width: 25rem;
+    font-size: 1.5rem;
+    background-color:#991b1f;
 }
-.button{
+.Aboutus_button{
     background-color: black;
     height: 10rem;
+}
+.aboutus_img3 img{
+    height: 20rem;
+    width: 25rem;
+    margin-top: -5rem;
+    margin-left: 3rem;
+}
+.aboutus_img4 img{
+    height: 20rem;
+    width: 28rem;
+    margin-top: -20rem;
+    margin-left: 33rem;
+}
+.aboutus_img5 img{
+    height: 20rem;
+    width: 25rem;
+    margin-top: -23rem;
+    margin-left: 66rem;
 }
