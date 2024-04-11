@@ -4,7 +4,6 @@
     background-image: url('../../Images/HomePage1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    /* position: absolute; */
     width: 95rem;
     height: 50rem;
     margin-top: -8rem;
@@ -138,9 +137,6 @@
     display: flex;
     font-weight: 550;
     font-size: large;
-}
-hr{
-    color: black;
 }
 #home-starter1 hr{
     margin-left: 2rem;

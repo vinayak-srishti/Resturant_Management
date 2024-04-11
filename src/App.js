@@ -50,6 +50,7 @@ function App() {
       <Route path='/usercart' element={<UserCart/>}/>
       {/********************************staff***********************************/}
       <Route path='/staffmenu' element={[<StaffNavbar/>,<StaffMenu/>]} />
+      <Route path='/staffmenuadmin' element={<StaffMenu/>}/>
       <Route path='/staffregister' element={<Staffreg/>}/>
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
