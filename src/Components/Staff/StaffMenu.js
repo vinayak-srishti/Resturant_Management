@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../Staff/StaffMenu.css'
 import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
 function StaffMenu() {
     const [axiosdata,setaxiosdata]=useState([])
     // const {id}=useParams()

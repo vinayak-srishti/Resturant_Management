@@ -8,28 +8,7 @@ function Stafflogin() {
     password: "",
   });
 
-  const navigate=useNavigate()
-  const handleclick = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-  const onSubmitdata = (e) => {
-    e.preventDefault();
-    console.log(form);
-    axios
-      .post("http://localhost:4000/stafflogin", form)
-      .then((result) => {
-        console.log(result);
-        if (result.data.status === 200) {
-          alert("Successfully Login");
-          navigate('/homepage')
-          console.log(result.data.msg);
-          console.log("Submitted");
-          //  localStorage.setItem('staffid',);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  
   const Navigate=useNavigate()
   const handleclick=(e)=>{
     setForm({...form,[e.target.name]:e.target.value})
@@ -42,7 +21,7 @@ function Stafflogin() {
       console.log(result);
       if(result.data.status===200){
         alert("Successfully Login")
-        Navigate('/homepage')
+        Navigate('/staffnavbar')
         console.log(result.data.msg);
         console.log("Submitted");
       }

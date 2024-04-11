@@ -3,9 +3,7 @@ import '../Admin/AdminDashboard.css'
 import axios from 'axios'
 function AdminDashboard() {
   const [order,setorder]=useState([])
-  useEffect(()=>{
-    axios.post()
-  })
+
   return (
     <div  className='admindash_card'>
       <div class="row">
