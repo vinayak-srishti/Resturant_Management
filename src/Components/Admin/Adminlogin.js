@@ -13,6 +13,7 @@ function Adminlogin() {
     e.preventDefault();
     if (adlog.username==="admin" && adlog.password === "123"){
       console.log("successful");
+      
     }
     else {
       console.log("incorrect");

@@ -20,18 +20,21 @@ function Stafflogin() {
     .then((result)=>{
       console.log(result);
       if(result.data.status===200){
-        alert("Successfully Login")
-        Navigate('/staffnavbar')
         console.log(result.data.msg);
-        console.log("Submitted");
+        localStorage.setItem("staff_id" , result.data.msg._id);
+        console.log(result.data.msg._id);
+        
+        // console.log("Submitted");
+        // Navigate('/staffnavbar')
+      
       }
     })
     .catch((error)=>{
 console.log(error);
     })
 
-    console.log(form);
-    alert("Login Successfully");
+    // console.log(form);
+    // alert("Login Successfully");
   };
 
   console.log(form);
