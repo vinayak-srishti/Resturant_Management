@@ -23,14 +23,12 @@ import StaffForgotPwd from './Components/Staff/StaffForgotPwd';
 import Staffeditfood from './Components/Staff/Staffeditfood';
 import Staffreg from './Components/Staff/Staffreg';
 import AdminDashboard from './Components/Admin/AdminDashboard';
+import AdminStafflist from './Components/Admin/AdminStafflist';
 
 function App() {
   return ( 
     <BrowserRouter>
     <div>
-      
-      
-    
        <Routes> 
       {/*******************************User************************************/}
       <Route path='/gallery' element={<Gallery/>} />
@@ -56,8 +54,7 @@ function App() {
       <Route path='/adminuserlist' element={<AdminUserList/>}/>
       <Route path='/adminnav' element={<Adminsidenav/>}/>
       <Route path='/admindashboard' element={<AdminDashboard/>}/>
-      {/* <Route path='/adminstafflist'  element={<AdminStaffList/>}/> */}
-      
+      <Route path='/adminstafflist'  element={<AdminStafflist/>}/>
       </Routes> 
     </div>
      </BrowserRouter>
