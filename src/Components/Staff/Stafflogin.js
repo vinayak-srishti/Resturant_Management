@@ -74,7 +74,10 @@ console.log(error);
             Login
           </button>
           <br />
- 
+          <div className="create_ac">
+<Link to ={`/staffregister`}  style={{ color: "white", marginLeft: "15rem",textDecoration:'none' }}>Create New Account</Link>
+          </div>
+
           <div className="forgot__password">
             <Link
               to={`/forgotpass`}
