@@ -89,7 +89,7 @@ function UserLogin() {
           </div>
           <div className="user_forgot">
             <Link
-              to={`/staffforgotpass`}
+              to={`/forgotpass`}
               style={{ color: "white", marginLeft: "5rem" ,textDecoration:"none"}}
             
             >

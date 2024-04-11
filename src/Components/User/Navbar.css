@@ -1,38 +1,29 @@
-
   .navbar_main{
-      background-color: black; 
-       
+    background-color: black;
+   width: 95rem;
    }
   .head{
       display: flex;
-      -webkit-text-fill-color: rgba(255, 255, 255, 0.662);
-      font-family:cursive ;
-      font-size: 23.5px;
-  
-      
-      
+      -webkit-text-fill-color: rgba(13, 11, 11, 0.886);
+      font-family:'pirata one';
+      font-size: 23.5px;   
   }
   .navmar_main2{
-      margin-left: 40rem;
+    margin-top: 0.5rem;
+      margin-left: 35rem;
       font-size: 23.5px;
-      -webkit-text-fill-color: rgb(228, 228, 228);
-      
-      
+      -webkit-text-fill-color: rgb(228, 228, 228);   
   }
   .navmar_main2 ul{
       padding: 0;
-      /* display: flex; */
       justify-content: space-between;
-      list-style-type: none;
-      
+      list-style-type: none;   
   }
   .navmar_main2 li{
-      font-family: cursive;
-      font-size: 23px;
+      font-family: 'pirata one';
+      font-size: 30px;
       text-decoration: none;
       padding-right: 30px;
-      
-  
   }
   .navmar_main2 li a:hover{
       color: rgb(191, 12, 12);
