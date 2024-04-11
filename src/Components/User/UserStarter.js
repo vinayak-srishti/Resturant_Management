@@ -2,13 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../User/UserStarter.css'
 function UserStarter() {
-    const[count,setcount]=useState(0)
-  const increment=()=>{
-      setcount(count+1)
-  }
-  const decrement=()=>{
-      setcount(count-1)
-  }
     const[data,setdata]=useState([])
     useEffect(()=>{
       axios.post('http://localhost:4000/starter')
@@ -36,15 +29,13 @@ function UserStarter() {
                   </div>
                   <div className='userstarter_bottom'>
                   <div class="card-body" >
-                    <h5 class="bottom-section" >{a.name}</h5>
+                    <h5 class="bottom-section" style={{fontWeight:"600",fontSize:"20px",WebkitTextFillColor:"black"}}>{a.name}</h5>
                     <p class="card-text" >
-                      <h6> {a.price} </h6>
+                      <h6 style={{fontWeight:"600",fontSize:"20px"}}>RS. {a.price} </h6>
                       {a.description}
                       <br/>
                     </p>
-              <button onClick={decrement}  style={{width:"3rem",marginLeft:"0.5rem" }}>-</button>
-              <button onClick={increment}  style={{width:"3rem" ,marginLeft:"0.5rem"}}>+</button>
-                   <button style={{width:"3rem",marginLeft:"5rem"}}>{count}</button> 
+             <button type='button' className='btn btn-danger' style={{marginLeft:"8rem",width:"7rem"}}>Add</button>
                   </div>
                   </div>
                 </div>

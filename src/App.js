@@ -59,6 +59,7 @@ function App() {
       <Route path='/staffnavbar' element={[<StaffNavbar/>,<HomePage/>,<footer/>]}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
+      <Route path='/adminhome' element={[<Adminsidenav/>,<AdminDashboard/>]}/>
       <Route path='/adminuserlist' element={<AdminUserList/>}/>
       <Route path='/adminnav' element={<Adminsidenav/>}/>
       <Route path="/admindashboard" element={[<Adminsidenav/>,<AdminDashboard/>]}/>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import "../Admin/adminlogin.css"
-
+import {useNavigate} from 'react-router-dom'
 function Adminlogin() {
   const [adlog,setAdlog]=useState({
     username:"",
     password: ""
   })
+  const  navigate = useNavigate();
   const HandleChange=(e)=>{
     setAdlog({...adlog,[e.target.name]: e.target.value})
   }
@@ -13,6 +14,7 @@ function Adminlogin() {
     e.preventDefault();
     if (adlog.username==="admin" && adlog.password === "123"){
       console.log("successful");
+      navigate('/adminhome  ')
     }
     else {
       console.log("incorrect");
