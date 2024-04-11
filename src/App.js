@@ -9,7 +9,8 @@ import Footer from './Components/User/Footer';
 import ContactUs from './Components/User/ContactUs';
 import Gallery from './Components/User/Gallery';
 import StaffMenu from './Components/Staff/StaffMenu';
-import UserLogin from './Components/User/UserLogin';
+
+import Userlogin from './Components/User/Userlogin';
 import Staffaddfood from './Components/Staff/Staffaddfood';
 import AdminUserList from './Components/Admin/AdminUserList';
 import Payment from './Components/User/Payment';
@@ -38,9 +39,9 @@ function App() {
       <Route path='/userregistration' element={<UserRegistration/>} />
       <Route path='/footer' element={<Footer/>} />
       <Route path='/homepage' element={[<Navbar/>,<HomePage/>,<Footer/>]} />
-      <Route path='/contactus' element={[<Navbar/>,<ContactUs/>,<Footer/>]}/ >
+      <Route path='/contactus' element={[<Navbar/>,<ContactUs/>,<Footer/>]}/>
       <Route path='/aboutus' element={[<Navbar/>,<Aboutus/>,<Footer/>]} />
-      <Route path='/userlogin' element={<UserLogin/>}/>
+      <Route path='/userlogin' element={<Userlogin/>}/>
       <Route path='/navbar' element={<Navbar/>} />
       <Route path='/feedback' element={<Feedback/>} />
       <Route path='/userstarter' element={[<Navbar/>,<UserStarter/>]}/>
@@ -55,7 +56,7 @@ function App() {
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       <Route path='/editfood/:id' element={<Staffeditfood/>}/>
-      <Route path='/staffforgotpass' element={<StaffForgotPwd/>}/>
+      <Route path='/forgotpass' element={<StaffForgotPwd/>}/>
       <Route path='/staffnavbar' element={[<StaffNavbar/>,<HomePage/>,<footer/>]}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>

@@ -74,10 +74,10 @@ console.log(error);
             Login
           </button>
           <br />
-
+ 
           <div className="forgot__password">
             <Link
-              to={`/staffforgotpass`}
+              to={`/forgotpass`}
               style={{ color: "white", marginLeft: "15rem" }}
               href="forgot.in"
             >
