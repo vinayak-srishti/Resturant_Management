@@ -45,7 +45,7 @@ function App() {
       <Route path='/stafflogin' element={<Stafflogin/>}/>
       <Route path="/addfood" element={<Staffaddfood/>}/>
       <Route path='/editfood' element={<Staffeditfood/>}/>
-      <Route path='/staffforgotpass' element={<StaffForgotPwd/>}/>
+      <Route path='/forgotpass' element={<StaffForgotPwd/>}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
       <Route path='/adminuserlist' element={<AdminUserList/>} />

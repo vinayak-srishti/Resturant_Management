@@ -121,7 +121,7 @@ function Staffreg() {
                   </div>
                   <div className="col-auto">
                     <input
-                      type="text"
+                      type="date"
                       placeholder="DOB"
                       name="dob"
                       onChange={handleclick}
