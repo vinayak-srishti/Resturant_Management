@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../Staff/StaffMenu.css'
-import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 function StaffMenu() {
     const [axiosdata,setaxiosdata]=useState([])
     // const {id}=useParams()
@@ -30,15 +30,16 @@ function StaffMenu() {
       });
     })
   return (
-    <div>
+    <div className='Staffmenu'>
            
           <div className="container">
             <div class="row">
              {axiosdata.map((a)=>{
         return (
               <div class="col-3">
+                <div className='staffmenu_card'>
                 <div class="card" style={{ width: 18 + "rem" }}>
-                  <div class="top-section">
+                  <div class="top-section" className='staffmenu_topsection'>
                   <img src={`http://localhost:4000/${a.img.filename}`}class="card-img-top" alt="..." />
                   </div>
                   <div class="card-body">
@@ -49,18 +50,21 @@ function StaffMenu() {
                       {a.description}
                       <br/>
                     </p>
-                    <a href="#" class="btn btn-primary">
+                   <Link to={`/editfood/${a._id}`} className='btn btn-primary'>
                     Edit
-                    </a>
+                    </Link>
                     <button
                       class="btn btn-danger"
                       style={{ marginLeft: "2rem" }}  onClick={()=>{handleclick(a._id)}}> Delete</button>
                   </div>
                 </div>
                 </div>
+                </div>
               </div>
                 );
               })} 
+              
+              <button type='button' className='btn btn-danger' style={{marginLeft:"5rem",height:"3rem",color:"#991b1f",WebkitTextFillColor:"white"}} >Add New Menu Item</button>  
             </div>
           </div>
       

@@ -1,0 +1,73 @@
+.maincourse_top img{
+    height: 230px;
+    width: 100%;
+  }
+  .Usermaincourse{
+    background-color: black;
+    width: 96rem;
+  }
+  .usermaincourse_card:hover .card{
+    height: 400px;
+  }
+  .usermaincourse_card :hover .usermaincourse_bottom{
+    height: 45%;
+    border-radius: 6px;
+  }
+  .maincourse_top,
+  .usermaincourse_bottom,
+  .usermaincourse_card {
+  transition: height 0.5s;
+  }
+  .maincourse_top{
+    height: 100%;
+  }
+  .usermaincourse_bottom{
+    background-color: #ffffff;
+    height: 100%;
+    font-family:'Bona Nova';
+  }
+  .usermaincourse_card  .card:hover {
+    height: 400px;
+  }
+  .usermaincourse_card .card:hover .maincourse_top {
+    height: 20%;
+  }
+  .usermaincourse_card .card{
+    width: 400px;
+    overflow: hidden;
+    height: 330px;
+    margin-left: 5rem;
+  }
+  
+  .bottom-section p{
+    padding: -10rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+  }
+  
+  .usermaincourse_card .card{
+    margin-left: 3rem;
+    
+  }
+  .container{
+    padding: 2px 16px;
+    margin-left: 4rem;
+  } 
+  .usermaincourse_card  .card{
+    box-shadow: 0 4px 8px 0 rgba(224, 221, 221, 0.788);
+    transition: 0.3s;
+  }
+  
+  .usermaincourse_card .card{
+    box-sizing: content-box;
+    margin: 25px;
+  }
+  
+  .usermaincourse_card .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
+  }
+  .usermaincourse_bottom h5{
+    font-size: 20px;
+  }
+  
+  

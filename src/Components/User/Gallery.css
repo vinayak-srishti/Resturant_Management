@@ -1,7 +1,7 @@
 .Gallery{
     background-image: url('../../Images/Galleryimg1.jpg');
     background-size: cover;
-
+    width: 95rem;
 }
 form{
     margin-left: 20rem;

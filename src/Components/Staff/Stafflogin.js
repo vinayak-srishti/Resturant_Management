@@ -2,35 +2,34 @@ import React, { useState } from "react";
 import "../Staff/Stafflogin.css";
 import axios from "axios";
 import { Link,useNavigate } from "react-router-dom";
-
 function Stafflogin() {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
 
-  const navigate=useNavigate()
-  const handleclick = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  
+  const Navigate=useNavigate()
+  const handleclick=(e)=>{
+    setForm({...form,[e.target.name]:e.target.value})
+  }
   const onSubmitdata = (e) => {
     e.preventDefault();
     console.log(form);
-    axios
-      .post("http://localhost:4000/stafflogin", form)
-      .then((result) => {
-        console.log(result);
-        if (result.data.status === 200) {
-          alert("Successfully Login");
-          navigate('/homepage')
-          console.log(result.data.msg);
-          console.log("Submitted");
-          //  localStorage.setItem('staffid',);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    axios.post('http://localhost:4000/stafflogin',form)
+    .then((result)=>{
+      console.log(result);
+      if(result.data.status===200){
+        alert("Successfully Login")
+        Navigate('/staffnavbar')
+        console.log(result.data.msg);
+        console.log("Submitted");
+      }
+    })
+    .catch((error)=>{
+console.log(error);
+    })
+
     console.log(form);
     alert("Login Successfully");
   };
@@ -82,8 +81,8 @@ function Stafflogin() {
           <div className="forgot__password">
             <Link
               to={`/forgotpass`}
-              style={{ color: "white", marginLeft: "15rem",textDecoration:'none' }}
-              
+              style={{ color: "white", marginLeft: "15rem" }}
+              href="forgot.in"
             >
               Forgot Password?
             </Link>

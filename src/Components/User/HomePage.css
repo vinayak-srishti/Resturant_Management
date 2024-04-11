@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
 .Home-Page{
     background-image: url('../../Images/HomePage1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    /* position: absolute; */
     width: 95rem;
     height: 50rem;
     margin-top: -8rem;
 }
-
+ #homepage_img{
+     background-image: url('../../Images/HomePage1.jpg'); 
+     background-size: cover;
+ background-repeat: no-repeat; 
+ height: 50rem;
+ margin-top: -10rem;
+ width: 95rem;
+ } 
 .Home-Page p{
     font-size: 60px;
     font-family:'pirata one', cursive;  
     font-weight: 400;
     color: #991b1f;
     margin-left: 48rem;
-    margin-top: 9rem;
+    margin-top: 10rem;
     display: flex;
 }  
 #home-head1{
@@ -33,7 +40,7 @@
 }
 .Home-Page2{
     background-color:hwb(0 4% 96%);
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
     width: 94.5rem;
 }
 .Home-Page2 p{
@@ -46,6 +53,7 @@
 .Home-Page2 h5{
     margin-left: 6rem;
     color: whitesmoke;
+    font-family: 'Bona Nova';
 }
 .Home-Page2 img{
     width: 30rem;
@@ -117,9 +125,10 @@
     font-weight: 900;
 }
 .HomePage-4 h1{
-    margin-left: -8rem;
+    margin-left: -5rem;
     margin-top: -14rem;
     font-size: larger;
+    color: #991b1f;
 }
 .HomePage-4 h6{
     margin-top: 2rem;
@@ -128,9 +137,6 @@
     display: flex;
     font-weight: 550;
     font-size: large;
-}
-hr{
-    color: black;
 }
 #home-starter1 hr{
     margin-left: 2rem;

@@ -53,6 +53,7 @@
     margin-left: 5rem;
     margin-top: 1rem;
 }
+
 .user_login form {
     
     border: 2px solid black;
@@ -99,4 +100,7 @@
     height: 3rem;
     margin-left: 5rem;
     margin-top: 1rem;
+}
+.user_last{
+    display: flex;
 }

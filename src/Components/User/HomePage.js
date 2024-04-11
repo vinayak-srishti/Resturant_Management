@@ -9,8 +9,8 @@ function HomePage() {
   return (
     <div>
 
-
-      <div className="Home-Page">
+ 
+      <div className="Home-Page" id="homepage_img">
         <p>Welcome To EL DemeteR </p>
         <p id="home-head1">Delicious Food & Wonderful</p>
         <p id="home-head2"> Eating Experience</p>
@@ -58,7 +58,7 @@ function HomePage() {
         <form>
           <h4>FRESH TASTE BUDS</h4>
           <h1>STARTERS</h1>
-          <h6 id="home-starter1">Hot & Sour Soup <hr/> 150</h6>
+          <h6 id="home-starter1">Hot & Sour Soup <hr/> 280</h6>
           <h6 id="home-starter2">chicken tikka<hr/>600</h6>
           <h6 id="home-starter3">Baked spring rolls<hr/>300</h6>
           <h6 id="home-starter4">Ginger chicken meatballs<hr/>400</h6>
