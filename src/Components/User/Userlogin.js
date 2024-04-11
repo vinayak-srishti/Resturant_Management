@@ -4,8 +4,6 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-// import { response } from "express";
-
 function UserLogin() {
   const [form, setForm] = useState({
     email: "",
@@ -27,7 +25,8 @@ function UserLogin() {
         console.log(result);
         if (result.data.status === 200) {
           console.log(result.data.msg);
-          localStorage.setItem("user_id", result.data._id);
+          localStorage.setItem("user_id", result.data.data._id);
+          console.log(result.data.data._id);
 
           console.log("submitted");
         }
@@ -35,8 +34,6 @@ function UserLogin() {
       .catch((error) => {
         console.log(error);
       });
-
-    // alert(response.msg);
   };
   return (
     <div className="user_page">
@@ -49,7 +46,7 @@ function UserLogin() {
                 <input
                   type="email"
                   name="email"
-                  maxLength={20}
+                  // maxLength={20}
                   placeholder="enter your mail id"
                   className="form-control"
                   onChange={HandleChange}
@@ -64,7 +61,7 @@ function UserLogin() {
                 <input
                   type="Password"
                   name="password"
-                  maxLength={20}
+                
                   placeholder="password"
                   className="form-control"
                   onChange={HandleChange}

@@ -14,7 +14,7 @@ function Adminlogin() {
     e.preventDefault();
     if (adlog.username==="admin" && adlog.password === "123"){
       console.log("successful");
-      navigate('/adminhome  ')
+      navigate('/adminhome')
     }
     else {
       console.log("incorrect");

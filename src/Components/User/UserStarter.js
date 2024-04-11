@@ -14,7 +14,12 @@ function UserStarter() {
       console.log(err,'error');
       })
   },[])
-  return (
+  const addcart=(foodid)=>{
+console.log("foodid",foodid);
+
+  } 
+  // console.log("userid");
+   return (
     
       <div className='Userstarter'>
       <div className="container">
@@ -35,7 +40,7 @@ function UserStarter() {
                       {a.description}
                       <br/>
                     </p>
-             <button type='button' className='btn btn-danger' style={{marginLeft:"8rem",width:"7rem"}}>Add</button>
+             <button type='button' className='btn btn-danger' style={{marginLeft:"8rem",width:"7rem"}} onClick={()=>addcart(a._id)}>Add</button>
                   </div>
                   </div>
                 </div>

@@ -3,11 +3,12 @@ import "../User/ContactUs.css";
 import { FiPhoneCall } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
 import { TfiEmail } from "react-icons/tfi";
+import axios from 'axios'
 function ContactUs() {
   const [form, setForm] = useState({
-    yourname: "",
-    youremail: "",
-    yournumber: "",
+    name: "",
+    email: "",
+    number: "",
     subject: "",
     message: ""
   });
@@ -15,10 +16,23 @@ function ContactUs() {
   const handleclick = (e) => {
     setForm({ ...form, [e.target.name]: [e.target.value] });
   };
-  const onsubmitdata = () => {
-    console.log(form);
-    console.log("submitted");
-  };
+  const onsubmitdata = (e) => {
+    e.preventDefault()
+    axios.post("http://localhost:4000/userregister", form)
+    .then((result) => {
+      console.log(result);
+      if (result.data.staus === 200) {
+        alert("submitted");
+        console.log(result.data);
+        console.log("submitted");
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  console.log(form);
+};
+  
 
   return (
     <div>
@@ -136,6 +150,7 @@ function ContactUs() {
                     name="yourname"
                     onChange={handleclick}
                     className="form-control"
+                    value={form.name}
                     required
                   />
                 </div>
@@ -146,6 +161,7 @@ function ContactUs() {
                     name="youremail"
                     onChange={handleclick}
                     className="form-control"
+                    value={form.email}
                     required
                   />
                 </div>
@@ -160,6 +176,7 @@ function ContactUs() {
                     name="yournumber"
                     onChange={handleclick}
                     className="form-control"
+                    value={form.number}
                     required
                   />
                   <br />
@@ -171,6 +188,7 @@ function ContactUs() {
                     name="subject"
                     onChange={handleclick}
                     className="form-control"
+                    value={form.subject}
                     required
                   />
                   <br />
@@ -189,6 +207,7 @@ function ContactUs() {
                   name="message"
                   onChange={handleclick}
                   className="form-control"
+                  value={form.message}
                   required
                 />
                 <br />
@@ -204,7 +223,7 @@ function ContactUs() {
                   color: "#991b1f",
                   WebkitTextFillColor:"aliceblue"
                 }}
-                type="button"
+                type="submit"
                 class="btn btn-danger"
               >
                 Send message
