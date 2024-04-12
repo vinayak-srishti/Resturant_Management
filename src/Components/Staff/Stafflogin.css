@@ -40,7 +40,14 @@ margin-bottom: 3.5rem;
 .forgot__password{
     font-family: 'Times New Roman', Times, serif;
 -webkit-text-fill-color: white;
-font-size: 16px;
-margin-top: 2.5rem;
+font-size: 18px;
+margin-top: -1.4rem;
 margin-left: 2rem;
+}
+.create_ac{
+    font-family: 'Times New Roman', Times, serif;
+-webkit-text-fill-color: white;
+font-size: 18px;
+margin-left: -15rem;
+margin-top: 1.4rem;
 }
