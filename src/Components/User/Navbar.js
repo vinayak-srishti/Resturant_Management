@@ -1,5 +1,6 @@
 import React from 'react'
 import "../User/Navbar.css"
+import { IoCartOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom'
 function Navbar() {
   return (
@@ -73,6 +74,9 @@ function Navbar() {
                   </li>
                   <li class="nav-item">
                   
+                  </li>
+                  <li class="nav-item">
+                    
                   </li>
                 </ul>
               </div>
