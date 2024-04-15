@@ -14,14 +14,14 @@ function ContactUs() {
   });
 
   const handleclick = (e) => {
-    setForm({ ...form, [e.target.name]: [e.target.value] });
+    setForm({ ...form, [e.target.name]:[e.target.value] });
   };
   const onsubmitdata = (e) => {
-    e.preventDefault()
-    axios.post("http://localhost:4000/userregister", form)
+  e.preventDefault()
+    axios.post("http://localhost:4000/contactfeed",form)
     .then((result) => {
       console.log(result);
-      if (result.data.staus === 200) {
+      if (result.data.status === 200) {
         alert("submitted");
         console.log(result.data);
         console.log("submitted");
@@ -32,7 +32,6 @@ function ContactUs() {
     });
   console.log(form);
 };
-  
 
   return (
     <div>
@@ -147,10 +146,10 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Name "
-                    name="yourname"
+                    name="name"
                     onChange={handleclick}
                     className="form-control"
-                    value={form.name}
+                  
                     required
                   />
                 </div>
@@ -158,10 +157,10 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Email "
-                    name="youremail"
+                    name="email"
                     onChange={handleclick}
                     className="form-control"
-                    value={form.email}
+                    
                     required
                   />
                 </div>
@@ -173,10 +172,10 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Number "
-                    name="yournumber"
+                    name="number"
                     onChange={handleclick}
                     className="form-control"
-                    value={form.number}
+                
                     required
                   />
                   <br />
@@ -188,7 +187,7 @@ function ContactUs() {
                     name="subject"
                     onChange={handleclick}
                     className="form-control"
-                    value={form.subject}
+                  
                     required
                   />
                   <br />
@@ -207,12 +206,12 @@ function ContactUs() {
                   name="message"
                   onChange={handleclick}
                   className="form-control"
-                  value={form.message}
+                  
                   required
                 />
                 <br />
               
-              <button
+              <button 
                 style={{
                   height: "50px",
                   width: "9rem",

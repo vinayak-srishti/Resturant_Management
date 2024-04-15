@@ -10,7 +10,6 @@ function UserLogin() {
     password: "",
   });
   const navigate = useNavigate();
-
   const HandleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -27,7 +26,7 @@ function UserLogin() {
           console.log(result.data.msg);
           localStorage.setItem("user_id", result.data.data._id);
           console.log(result.data.data._id);
-
+           navigate('/homepage')
           console.log("submitted");
         }
       })

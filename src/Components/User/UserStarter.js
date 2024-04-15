@@ -2,7 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../User/UserStarter.css'
 function UserStarter() {
+  const userid=localStorage.getItem('user_id')
     const[data,setdata]=useState([])
+    const[cartdata,setcartdata]=useState({
+      foodid:'',
+      userid:userid,
+      count:1
+    })
+
     useEffect(()=>{
       axios.post('http://localhost:4000/starter')
       .then((result)=>{
@@ -16,7 +23,15 @@ function UserStarter() {
   },[])
   const addcart=(foodid)=>{
 console.log("foodid",foodid);
+cartdata.foodid=foodid
 
+axios.post('http://localhost:4000/usercart',cartdata)
+      .then((result)=>{
+       console.log(result);
+      })
+      .catch((err)=>{
+      console.log(err,'error');
+      })
   } 
   // console.log("userid");
    return (
