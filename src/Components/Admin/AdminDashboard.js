@@ -4,7 +4,7 @@ import axios from 'axios'
 function AdminDashboard() {
   const [order,setorder]=useState([])
   useEffect(()=>{
-    axios.post('http://localhost:4000/transdetails')
+    axios.post('http://localhost:4000/transhistory')
     .then((result)=>{
 console.log(result);
 setorder(result.data.msg)
@@ -40,7 +40,7 @@ console.log(order);
 
 
   <div>
-  <table class="table table-hover table-dark">
+  <table class="table table-hover table-dark" id='admindashtable'>
   <thead>
     <tr>
       <th scope="col">Usermail</th>
@@ -49,7 +49,6 @@ console.log(order);
       <th scope="col">Price</th>
       <th scope="col">Date</th>
       <th scope="col">Time</th>
-
     </tr>
   </thead>
 <tbody>
@@ -62,16 +61,7 @@ console.log(order);
       <td>{y.fprice}</td>
       <td>{y.date}</td>
       <td>{y.time}</td>
-
-
-      
-
-    </tr>
-   
-   
-  
-
-        
+    </tr>      
       )
     })}
     </tbody>

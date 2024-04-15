@@ -23,7 +23,7 @@ function ContactUs() {
       console.log(result);
       if (result.data.status === 200) {
         alert("submitted");
-        console.log(result.data.msg);
+        console.log(result.data);
         console.log("submitted");
       }
     })
@@ -146,7 +146,7 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Name "
-                    name="yourname"
+                    name="name"
                     onChange={handleclick}
                     className="form-control"
                   
@@ -157,7 +157,7 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Email "
-                    name="youremail"
+                    name="email"
                     onChange={handleclick}
                     className="form-control"
                     
@@ -172,7 +172,7 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Number "
-                    name="yournumber"
+                    name="number"
                     onChange={handleclick}
                     className="form-control"
                 
