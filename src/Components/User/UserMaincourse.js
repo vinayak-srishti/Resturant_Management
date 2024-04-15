@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../User/UserMaincourse.css'
 function UserMaincourse() {
-    const[count,setcount]=useState(0)
-  const increment=()=>{
-      setcount(count+1)
-  }
-  const decrement=()=>{
-      setcount(count-1)
-  }
+  const userid=localStorage.getItem('user_id')
     const[data,setdata]=useState([])
+    const[cartdata,setcartdata]=useState({
+      foodid:'',
+      userid:userid,
+      count:1
+    })
     useEffect(()=>{
       axios.post('http://localhost:4000/maincourse')
       .then((result)=>{
@@ -21,6 +20,17 @@ function UserMaincourse() {
       console.log(err,'error');
       })
   },[])
+  const addcart=(foodid)=>{
+    console.log("foodid",foodid);
+    cartdata.foodid=foodid
+    axios.post('http://localhost:4000/usercart',cartdata)
+      .then((result)=>{
+       console.log(result);
+      })
+      .catch((err)=>{
+      console.log(err,'error');
+      })
+  } 
   return (
     <div className='Usermaincourse'>
       <div className="container">
@@ -35,15 +45,13 @@ function UserMaincourse() {
                   </div>
                   <div className='usermaincourse_bottom'>
                   <div class="card-body" >
-                    <h5 class="bottom-section" >{a.name}</h5>
+                    <h5 class="bottom-section"  style={{fontSize:"20px",fontFamily:'Bona Nova',WebkitTextFillColor:"black"}}>{a.name}</h5>
                     <p class="card-text" >
-                      <h6> {a.price} </h6>
+                      <h6 style={{fontWeight:"600",fontSize:"20px"}}>RS. {a.price} </h6>
                       {a.description}
                       <br/>
                     </p>
-              <button onClick={decrement}  style={{width:"3rem",marginLeft:"0.5rem" }}>-</button>
-              <button onClick={increment}  style={{width:"3rem" ,marginLeft:"0.5rem"}}>+</button>
-                   <button style={{width:"3rem",marginLeft:"5rem"}}>{count}</button> 
+                    <button type='button' className='btn btn-danger' style={{marginLeft:"8rem",width:"7rem" }} onClick={()=>addcart(a._id)}>Add</button>
                   </div>
                   </div>
                 </div>
