@@ -57,7 +57,7 @@ function App() {
       <Route path="/addfood" element={<Staffaddfood/>}/>
       <Route path='/editfood/:id' element={<Staffeditfood/>}/>
       <Route path='/forgotpass' element={<StaffForgotPwd/>}/>
-      <Route path='/staffnavbar' element={[<StaffNavbar/>,<HomePage/>,<footer/>]}/>
+      <Route path='/staffnavbar' element={[<StaffNavbar/>,<HomePage/>,<Footer/>]}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
       <Route path='/adminuserlist' element={<AdminUserList/>}/>

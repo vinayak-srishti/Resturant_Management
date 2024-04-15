@@ -64,7 +64,7 @@ function StaffMenu() {
                 );
               })} 
               
-              <button type='button' className='btn btn-danger' style={{marginLeft:"5rem",height:"3rem",color:"#991b1f",WebkitTextFillColor:"white"}} >Add New Menu Item</button>  
+              <Link to={`/addfood`} type='button' className='btn btn-danger' style={{marginLeft:"5rem",height:"3rem",color:"#991b1f",WebkitTextFillColor:"white"}} >Add New Menu Item</Link>  
             </div>
           </div>
       

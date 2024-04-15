@@ -6,9 +6,7 @@ function Stafflogin() {
   const [form, setForm] = useState({
     email: "",
     password: "",
-  });
-
-  
+  }); 
   const Navigate=useNavigate()
   const handleclick=(e)=>{
     setForm({...form,[e.target.name]:e.target.value})
@@ -25,7 +23,7 @@ function Stafflogin() {
         console.log(result.data.msg._id);
         
         // console.log("Submitted");
-        // Navigate('/staffnavbar')
+        Navigate('/staffnavbar')
       
       }
     })
@@ -84,8 +82,8 @@ console.log(error);
           <div className="forgot__password">
             <Link
               to={`/forgotpass`}
-              style={{ color: "white", marginLeft: "15rem" }}
-              href="forgot.in"
+              style={{ color: "white", marginLeft: "15rem" ,textDecoration:'none'}}
+              
             >
               Forgot Password?
             </Link>
