@@ -29,6 +29,8 @@ import Staffreg from './Components/Staff/Staffreg';
 import AdminDashboard from './Components/Admin/AdminDashboard';
 import AdminStafflist from './Components/Admin/AdminStafflist';
 import UserCart from './Components/User/UserCart';
+import AdminTransaction from './Components/Admin/AdminTransaction';
+import AdminFundHistory from './Components/Admin/AdminFundHistory';
 import Orderhistory from './Components/Admin/Orderhistory';
 function App() {
   return ( 
@@ -66,6 +68,8 @@ function App() {
       <Route path='/adminnav' element={<Adminsidenav/>}/>
       <Route path="/admindashboard" element={[<Adminsidenav/>,<AdminDashboard/>]}/>
       <Route path='/adminstafflist' element={<AdminStafflist/>}/>
+      <Route path='/admintranshis'element={<AdminTransaction/>}/>
+      <Route path='/admintranshistory' element={<AdminFundHistory/>}/>
       <Route path='/adminorderhistory' element={<Orderhistory/>}/>
       </Routes> 
     </div>
