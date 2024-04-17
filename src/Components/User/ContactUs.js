@@ -3,11 +3,11 @@ import "../User/ContactUs.css";
 import { FiPhoneCall } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
 import { TfiEmail } from "react-icons/tfi";
-import axios from 'axios'
+import axios from "axios";
 function ContactUs() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
+  const [form, setForm] =useState({
+    name:"",
+    email:"",
     number: "",
     subject: "",
     message: ""
@@ -17,21 +17,22 @@ function ContactUs() {
     setForm({ ...form, [e.target.name]:e.target.value});
   };
   const onsubmitdata = (e) => {
-  e.preventDefault()
-    axios.post("http://localhost:4000/contactfeed",form)
-    .then((result) => {
-      console.log(result);
-      if (result.data.status === 200) {
-        alert("submitted");
-        console.log(result.data);
-        console.log("submitted");
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  console.log(form);
-};
+    e.preventDefault();
+    console.log("data",form);
+    axios
+      .post("http://localhost:4000/contactfeed", form)
+      .then((result) => {
+        console.log(result);
+        if (result.data.status === 200) {
+          console.log(result.data.msg);
+          console.log("submitted");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log(form);
+  };
 
   return (
     <div>
@@ -99,36 +100,36 @@ function ContactUs() {
           eldemeter@gmail.com
         </p>
         <div className="ContactUs_hours">
-        <form className="ContactUs_Timings">
-          <h5 id="ContactUs_reservations">Call For Reservations</h5>
-          <h1 id="ContactUs_Openinghours">Opening Hours</h1>
-          <p
-            style={{
-              color: "brown",
-              position: "absolute",
-              top: "14rem",
-              marginLeft: "50px",
-            }}
-          >
-            ----------------------------------
-          </p>
-          <h5  style={{ fontFamily: "Pirata One" }} id="ContactUs_openingdays">
-            Monday-Friday Saturday-Sunday
-          </h5>
-          <p style={{ fontFamily: "Pirata One" }} id="ContactUs_openingtime">
-            10AM-12PM CLOSED
-          </p>
-          <button
-            style={{ fontFamily: "Pirata One" }}
-            id="ContactUs_button1"
-            type="button"
-            class="btn btn-danger"
-          >
-            +91 9876543210
-          </button>
-        </form>
+          <form className="ContactUs_Timings">
+            <h5 id="ContactUs_reservations">Call For Reservations</h5>
+            <h1 id="ContactUs_Openinghours">Opening Hours</h1>
+            <p
+              style={{
+                color: "brown",
+                position: "absolute",
+                top: "14rem",
+                marginLeft: "50px",
+              }}
+            >
+              ----------------------------------
+            </p>
+            <h5 style={{ fontFamily: "Pirata One" }} id="ContactUs_openingdays">
+              Monday-Friday Saturday-Sunday
+            </h5>
+            <p style={{ fontFamily: "Pirata One" }} id="ContactUs_openingtime">
+              10AM-12PM CLOSED
+            </p>
+            <button
+              style={{ fontFamily: "Pirata One" }}
+              id="ContactUs_button1"
+              type="button"
+              class="btn btn-danger"
+            >
+              +91 9876543210
+            </button>
+          </form>
         </div>
-        <form onSubmit={onsubmitdata} >
+        <form onSubmit={onsubmitdata}>
           <div className="ContactUs_form">
             <h3
               style={{
@@ -149,7 +150,6 @@ function ContactUs() {
                     name="name"
                     onChange={handleclick}
                     className="form-control"
-                  
                     required
                   />
                 </div>
@@ -160,13 +160,15 @@ function ContactUs() {
                     name="email"
                     onChange={handleclick}
                     className="form-control"
-                    
                     required
                   />
                 </div>
               </div>
             </div>
-            <div className="Contact_Us_number_subject" style={{ padding: "1rem" }}>
+            <div
+              className="Contact_Us_number_subject"
+              style={{ padding: "1rem" }}
+            >
               <div className="row gt-2">
                 <div className="col-auto">
                   <input
@@ -175,7 +177,6 @@ function ContactUs() {
                     name="number"
                     onChange={handleclick}
                     className="form-control"
-                
                     required
                   />
                   <br />
@@ -187,7 +188,6 @@ function ContactUs() {
                     name="subject"
                     onChange={handleclick}
                     className="form-control"
-                  
                     required
                   />
                   <br />
@@ -198,20 +198,22 @@ function ContactUs() {
               className="Contact_Us_message"
               style={{ width: "30rem", marginRight: "58rem" }}
             >
-              
-                <input
-                  type="textarea"
-                  style={{ height:"10rem" ,marginLeft:"1rem",width:"28.5rem"}}
-                  placeholder="Message"
-                  name="message"
-                  onChange={handleclick}
-                  className="form-control"
-                  
-                  required
-                />
-                <br />
-              
-              <button 
+              <input
+                type="textarea"
+                style={{
+                  height: "10rem",
+                  marginLeft: "1rem",
+                  width: "28.5rem",
+                }}
+                placeholder="Message"
+                name="message"
+                onChange={handleclick}
+                className="form-control"
+                required
+              />
+              <br />
+
+              <button
                 style={{
                   height: "50px",
                   width: "9rem",
@@ -220,7 +222,7 @@ function ContactUs() {
                   left: "11rem",
                   color: "aliceblue",
                   color: "#991b1f",
-                  WebkitTextFillColor:"aliceblue"
+                  WebkitTextFillColor: "aliceblue",
                 }}
                 type="submit"
                 class="btn btn-danger"

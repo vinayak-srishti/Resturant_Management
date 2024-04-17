@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react'
 import '../Admin/AdminDashboard.css'
 import axios from 'axios'
 function AdminDashboard() {
+
   const [order,setorder]=useState([])
+const [scount,setscount]=useState([])
+const [ucount,setucount]=useState([])
   useEffect(()=>{
     axios.post('http://localhost:4000/orderhistory')
     .then((result)=>{
@@ -16,6 +19,32 @@ console.log(err,'error');
 useEffect(()=>{
 console.log(order);
 },[order])
+useEffect(()=>{
+ 
+
+  axios.post('http://localhost:4000/staffcount')
+ 
+  .then((result)=>{
+    // console.log(result.data.msg);
+    setscount(result.data.msg)
+     console.log("scount",scount);
+        })
+        .catch((err)=>{
+    console.log(err,'error');
+        })
+     
+})
+useEffect(()=>{
+  axios.post('http://localhost:4000/usercount')  
+  .then((result)=>{
+    // console.log(result.data.msg);
+    setucount(result.data.msg)
+     console.log("ucount",ucount);
+        })
+        .catch((err)=>{
+    console.log(err,'error');
+        })
+},[ucount])
   return (
     <div  className='admindash_card'>
       <div class="row">
@@ -23,8 +52,10 @@ console.log(order);
     <div class="card"id='dash_users'>
       <div class="card-body">
         <h5 class="card-title" style={{fontFamily:"Courier New', Courier, monospace"}}>USERS</h5>
-        <p class="card-text" style={{fontFamily:"Courier New', Courier, monospace"}}>Total no of available users:</p>
-        
+        <p class="card-text" style={{fontFamily:"Courier New', Courier, monospace"}}>Total no of available users:{ucount}</p>
+        {/* <button onClick={handleklik}>See Now</button> */}
+        {/* <button onClick={handleklik} type="button" class="btn btn-dark">See Now</button> */}
+       
       </div>
     </div>
   </div>
@@ -32,7 +63,10 @@ console.log(order);
     <div class="card" id='dash_staff'>
       <div class="card-body">
         <h5 class="card-title">STAFFS</h5>
-        <p class="card-text">Total no of available staffs:</p>
+        <p class="card-text">Total no of available staffs:{scount}</p>
+        {/* <button onClick={handleclick} type="button" class="btn btn-dark">See Now</button> */}
+        
+        
         
       </div>
     </div>

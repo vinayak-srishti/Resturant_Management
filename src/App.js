@@ -31,6 +31,7 @@ import AdminStafflist from './Components/Admin/AdminStafflist';
 import UserCart from './Components/User/UserCart';
 import AdminTransaction from './Components/Admin/AdminTransaction';
 import AdminFundHistory from './Components/Admin/AdminFundHistory';
+import Orderhistory from './Components/Admin/Orderhistory';
 function App() {
   return ( 
     <BrowserRouter>
@@ -59,7 +60,7 @@ function App() {
       <Route path="/addfood" element={<Staffaddfood/>}/>
       <Route path='/editfood/:id' element={<Staffeditfood/>}/>
       <Route path='/forgotpass' element={<StaffForgotPwd/>}/>
-      <Route path='/staffnavbar' element={[<StaffNavbar/>,<HomePage/>,<footer/>]}/>
+      <Route path='/staffnavbar' element={[<StaffNavbar/>,<HomePage/>,<Footer/>]}/>
       {/********************************Admin***********************************/}
       <Route path='/adminlogin' element={<Adminlogin/>}/>
       <Route path='/adminhome' element={[<Adminsidenav/>,<AdminDashboard/>]}/>
@@ -69,6 +70,7 @@ function App() {
       <Route path='/adminstafflist' element={<AdminStafflist/>}/>
       <Route path='/admintranshis'element={<AdminTransaction/>}/>
       <Route path='/admintranshistory' element={<AdminFundHistory/>}/>
+      <Route path='/adminorderhistory' element={<Orderhistory/>}/>
       </Routes> 
     </div>
      </BrowserRouter>

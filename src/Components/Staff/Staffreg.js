@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../Staff/Staffreg.css";
-
+import {useNavigate} from 'react-router-dom'
 function Staffreg() {
   const [form1, settForm] = useState({
     firstname: "",
@@ -28,7 +28,7 @@ function Staffreg() {
   //     seterrormsg('not strong password')
   //   }
   //   }
-
+     const Navigate=useNavigate()
      const handleclick=(e)=>{
       settForm({...form1,[e.target.name]:[e.target.value]})
      }
@@ -64,9 +64,11 @@ function Staffreg() {
         if (result.data.status === 200) {
           alert("successfully registered");
           console.log(result.data);
-          console.log("submitted");
+           Navigate('/stafflogin')
         }
+       
       })
+     
       .catch((error) => {
         console.log(error);
       });
