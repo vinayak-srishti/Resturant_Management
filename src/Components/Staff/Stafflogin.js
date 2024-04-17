@@ -1,35 +1,35 @@
 import React, { useState } from "react";
 import "../Staff/Stafflogin.css";
 import axios from "axios";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Stafflogin() {
   const [form, setForm] = useState({
     email: "",
     password: "",
-  }); 
-  const Navigate=useNavigate()
-  const handleclick=(e)=>{
-    setForm({...form,[e.target.name]:e.target.value})
-  }
+  });
+  const Navigate = useNavigate();
+  const handleclick = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
   const onSubmitdata = (e) => {
     e.preventDefault();
     console.log(form);
-    axios.post('http://localhost:4000/stafflogin',form)
-    .then((result)=>{
-      console.log(result);
-      if(result.data.status===200){
-        console.log(result.data.msg);
-        localStorage.setItem("staff_id" , result.data.msg._id);
-        console.log(result.data.msg._id);
-        
-        // console.log("Submitted");
-        Navigate('/staffnavbar')
-      
-      }
-    })
-    .catch((error)=>{
-console.log(error);
-    })
+    axios
+      .post("http://localhost:4000/stafflogin", form)
+      .then((result) => {
+        console.log(result);
+        if (result.data.status === 200) {
+          console.log(result.data.msg);
+          localStorage.setItem("staff_id", result.data.msg._id);
+          console.log(result.data.msg._id);
+
+          // console.log("Submitted");
+          Navigate("/staffnavbar");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     // console.log(form);
     // alert("Login Successfully");
@@ -76,14 +76,26 @@ console.log(error);
           </button>
           <br />
           <div className="create_ac">
-<Link to ={`/staffregister`}  style={{ color: "white", marginLeft: "15rem",textDecoration:'none' }}>Create New Account</Link>
+            <Link
+              to={`/staffregister`}
+              style={{
+                color: "white",
+                marginLeft: "15rem",
+                textDecoration: "none",
+              }}
+            >
+              Create New Account
+            </Link>
           </div>
 
           <div className="forgot__password">
             <Link
               to={`/forgotpass`}
-              style={{ color: "white", marginLeft: "15rem" ,textDecoration:'none'}}
-              
+              style={{
+                color: "white",
+                marginLeft: "15rem",
+                textDecoration: "none",
+              }}
             >
               Forgot Password?
             </Link>

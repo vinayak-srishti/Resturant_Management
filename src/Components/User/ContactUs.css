@@ -1,11 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 .ContactUs{
     background-image: url('../../Images/ContactUs.jpg');
     background-size: cover;
     height: 40rem;
-    width: 100%;
-    position: absolute;
+    width: 100%; 
 }
 h1{
   color: #f1e9e9;
@@ -25,16 +23,15 @@ h5{
 }
 .ContactUs_info{
     background-color: rgb(15, 14, 14);
-    height: 110rem;
+    height: 60rem;
     overflow:hidden;
     width: 100%;
-
+    
 }
 .ContactUs_head{
     display: flex;
     color: aliceblue;
     font-family: 'Bona Nova';
-    margin-top: 38rem;
     color: #991b1f;
     font-weight: bold;
     font-size: 40px;
@@ -67,8 +64,6 @@ background-color: black;
 height: 40rem;
 width:30rem;
 font-family: 'Pirata One';
-
-
 }
 #ContactUs_reservations{
     color: whitesmoke;
@@ -76,7 +71,6 @@ font-family: 'Pirata One';
     font-weight: lighter;
     margin-left: 6.5rem;
     margin-top: 0rem;
-    
 }
 #ContactUs_Openinghours {
     color: #991b1f;
@@ -84,7 +78,6 @@ font-family: 'Pirata One';
     position: absolute;
     bottom: 27.5rem;
     margin-left: 7rem;
-    /* width: 55rem; */
 }
 #ContactUs_openingdays{
     color: whitesmoke;
@@ -121,31 +114,26 @@ font-family: 'Pirata One';
     top: 69rem;
     left: 3rem;
     color: rgba(240, 248, 255, 0.584);
+    margin-top: 8rem;
 }
-/* input[type=text], input[type=email] ,input[type=textarea]{
-    -webkit-text-fill-color: rgb(11, 12, 13); */
-    
-/* } */
 .ContactUs_hours form{
    width: 35rem; 
-   /* display: flex; */
+   margin-top: 15rem;
    margin-left:100rem ;
 }
 .ContactUs_name_email input[type=text], [type=email]{
+    -webkit-text-fill-color: rgb(12, 12, 12);
+    background-color:rgba(245, 245, 245, 0.475);
+    border: none;
+}
+.Contact_Us_number_subject input [type=text]{
     -webkit-text-fill-color: aliceblue;
     background-color:rgba(245, 245, 245, 0.475);
     border: none;
-
 }
-.Contact_Us_number_subject input [type=text], [type=text]{
-    -webkit-text-fill-color: aliceblue;
+.Contact_Us_message input [type=text]{
+    -webkit-text-fill-color: rgb(12, 12, 12);
     background-color:rgba(245, 245, 245, 0.475);
     border: none;
-
 }
-.Contact_Us_message input[type=text]{
-    -webkit-text-fill-color: aliceblue;
-    background-color:rgba(245, 245, 245, 0.475);
-    border: none;
 
-}

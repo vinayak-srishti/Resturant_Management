@@ -16,8 +16,8 @@ function Adminsidenav() {
       <Link to={`/adminuserlist`}><PiUserList  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>User List</Link>
       <Link to={`/adminstafflist`}><TbListDetails  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>Staff List</Link>
       <a href="#section"><GrTransaction  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>Transaction History</a>
-      <a href="#section"><FaBorderAll  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>Order History</a>
-      <a href="#section"><VscFeedback  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>FeedBack</a>
+      <Link to ={`/adminorderhistory`}><FaBorderAll  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>Order History</Link>
+      <Link to={`/feedback`}><VscFeedback  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>FeedBack</Link>
     </div>
     
     </div>
