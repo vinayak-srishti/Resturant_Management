@@ -76,7 +76,7 @@ function Navbar() {
                   
                   </li>
                   <li class="nav-item">
-                    
+                    <Link to={`/usercart`} class="nav-link"><IoCartOutline  style={{color:"white",marginLeft:"-3rem",height:"2.5rem"}}/></Link>
                   </li>
                 </ul>
               </div>

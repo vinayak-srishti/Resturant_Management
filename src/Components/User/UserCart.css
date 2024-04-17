@@ -1,0 +1,11 @@
+.usercartcard .card{
+    width: 40rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+    /* margin: 20px; */
+    margin-left: 27rem;
+}
+.usercart{
+    background-color: black;
+    
+}
