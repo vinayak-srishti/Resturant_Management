@@ -3,6 +3,8 @@ import axios from 'axios';
 import "../User/UserCart.css";
 function UserCart() {
   const [cartdata, setcarddata] = useState([]);
+ const [foodprice,setfoodprice]=useState([])
+ const [totalprice,setprice]=useState([])
 
   const id=localStorage.getItem('user_id')
   useEffect(() => {
@@ -30,6 +32,9 @@ function UserCart() {
         console.log(err);
       });
   }; 
+  const pricechange=(e)=>{
+    setfoodprice(e.target.value)
+  }
   return (
     <div>
      {cartdata.map((y)=>{
@@ -39,8 +44,9 @@ function UserCart() {
                       {y.foodid.name}
                     </div>
                     <div class="card-body">
-                      <h5 class="card-title">{y.foodid.price}</h5>
+                      <h5 class="card-title" onChange={pricechange}>{y.foodid.price}</h5>
                       <p class="card-text">{y.foodid.description}</p>
+                      <input type='number' placeholder='Count'/>
                       <button class="btn btn-primary" onClick={handleremove}>Remove</button>
                     </div>
                   </div>

@@ -4,7 +4,7 @@ import axios from 'axios'
 function AdminDashboard() {
   const [order,setorder]=useState([])
   useEffect(()=>{
-    axios.post('http://localhost:4000/transhistory')
+    axios.post('http://localhost:4000/orderhistory')
     .then((result)=>{
 console.log(result);
 setorder(result.data.msg)

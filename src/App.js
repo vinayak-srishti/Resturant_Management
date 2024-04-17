@@ -30,6 +30,7 @@ import AdminDashboard from './Components/Admin/AdminDashboard';
 import AdminStafflist from './Components/Admin/AdminStafflist';
 import UserCart from './Components/User/UserCart';
 import AdminTransaction from './Components/Admin/AdminTransaction';
+import AdminFundHistory from './Components/Admin/AdminFundHistory';
 function App() {
   return ( 
     <BrowserRouter>
@@ -67,6 +68,7 @@ function App() {
       <Route path="/admindashboard" element={[<Adminsidenav/>,<AdminDashboard/>]}/>
       <Route path='/adminstafflist' element={<AdminStafflist/>}/>
       <Route path='/admintranshis'element={<AdminTransaction/>}/>
+      <Route path='/admintranshistory' element={<AdminFundHistory/>}/>
       </Routes> 
     </div>
      </BrowserRouter>
