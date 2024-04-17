@@ -14,7 +14,7 @@ function ContactUs() {
   });
 
   const handleclick = (e) => {
-    setForm({ ...form, [e.target.name]:[e.target.value] });
+    setForm({ ...form, [e.target.name]:e.target.value});
   };
   const onsubmitdata = (e) => {
   e.preventDefault()
