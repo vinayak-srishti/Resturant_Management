@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../User/UserCart.css";
+import { Link } from "react-router-dom";
 function UserCart() {
   const [cartdata, setcarddata] = useState([]);
   const [cartUpdated, setCartUpdated] = useState([])
@@ -43,6 +44,7 @@ function UserCart() {
   }, [cartUpdated])
   // console.log(cartdata);
   // console.log("new arr", unitTotal)
+  
   const onChangeCount = (e, price,index) => {
     console.log(e.target.value);
     let qty = e.target.value;
@@ -91,6 +93,7 @@ function UserCart() {
         return (
           <div className="usercartcard">
             <div class="card">
+              
               <div class="card-header" style={{ fontSize: "25px" }}>
                 {y.foodid?.name}
               </div>
@@ -128,13 +131,15 @@ function UserCart() {
           </div>
         );
       })}
-      <button
+      
+      <Link to={`/payment`}
         type="button"
         className="btn btn-danger"
         style={{ marginTop: "6.5rem", height: "5rem", width: "96rem" }}
+        
       >
         Total:{cartTotal}
-      </button>
+      </Link>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-
 function AdminFundHistory() {
 
    const [fund,setfund]=useState([])
@@ -21,14 +20,13 @@ function AdminFundHistory() {
   return (
 
 
-    <div>
-       <table class="table table-hover table-dark" id='admindashtable'>
+    <div className='Adminfund'>
+       <table class="table table-hover table-dark" id='admindashtable' style={{width:"90rem",marginTop:"-0.3rem"}}>
   <thead>
     <tr>
-      <th scope="col">Usermail</th>
-      <th scope="col">Food Name</th>
-     
-      <th scope="col">Price</th>
+      <th scope="col" style={{WebkitTextFillColor:"red",fontSize:"20px"}}>Usermail</th>
+      <th scope="col" style={{WebkitTextFillColor:"red",fontSize:"20px"}}>Food Name</th>
+      <th scope="col"style={{WebkitTextFillColor:"red",fontSize:"20px"}}>Price</th>
    
     </tr>
   </thead>

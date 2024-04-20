@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 
-
 function AdminTransaction() {
 const [transdata,setTransdata]=useState([])
 useEffect(()=>{
@@ -15,7 +14,7 @@ useEffect(()=>{
   })
 },[])
   return (
-    <div>
+    <div className='admintransaction'>
          <table class="table table-hover" cellSpacing={"10px"} cellPadding={"5px"}>
           <thead>
             <tr>

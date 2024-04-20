@@ -2,21 +2,18 @@
     background-image: url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50rem;
-    width: 120rem;
+    height: 47rem;
+    width: 94.6rem;
     position: absolute;
     
 }
 .admin_login form{
     border: 2px solid black;
-    border-radius: 5px;
     width: 25rem;
     height: 18rem;
-    margin:4rem;
     margin-left:23rem;
     margin-top: 10rem;
-    box-shadow: 5px;
-    background-color: rgba(240, 248, 255, 0);
+   
     
 }
 .admin_login h3{
@@ -41,14 +38,11 @@
     margin-left: 15rem;
     margin-top: 2rem;
 }
-input[type="text"]{
+input[type="text"],[type="password"]{
     -webkit-text-fill-color: rgb(27, 20, 10);
     background-color: rgba(255, 255, 255, 0.211);
     
 }
 .admin_login table{
     -webkit-text-fill-color: aliceblue;
-}
-input[type="password"]{
-    background-color: rgba(255, 255, 255, 0.211);
 }

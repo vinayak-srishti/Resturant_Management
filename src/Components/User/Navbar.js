@@ -1,6 +1,7 @@
 import React from 'react'
 import "../User/Navbar.css"
 import { IoCartOutline } from "react-icons/io5";
+import { IoIosLogOut } from "react-icons/io";
 import { Link } from 'react-router-dom'
 function Navbar() {
   return (
@@ -77,6 +78,10 @@ function Navbar() {
                   </li>
                   <li class="nav-item">
                     <Link to={`/usercart`} class="nav-link"><IoCartOutline  style={{color:"white",marginLeft:"-3rem",height:"2.5rem"}}/></Link>
+                  </li>
+
+                  <li class="nav-item">
+                    <Link to={`/userlogin`} class="nav-link"><IoIosLogOut style={{color:"white",marginLeft:"-3rem",height:"1.5rem"}}/></Link>
                   </li>
                 </ul>
               </div>
