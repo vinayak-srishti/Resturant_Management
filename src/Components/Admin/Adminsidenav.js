@@ -6,6 +6,7 @@ import { TbListDetails } from "react-icons/tb";
 import { GrTransaction } from "react-icons/gr";
 import { FaBorderAll } from "react-icons/fa";
 import { VscFeedback } from "react-icons/vsc";
+import { IoIosLogOut } from "react-icons/io";
 import { Link } from 'react-router-dom';
 function Adminsidenav() {
     
@@ -18,8 +19,13 @@ function Adminsidenav() {
       <Link to={`/admintranshistory`}><GrTransaction  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>Transaction History</Link>
       <Link to={`/adminorderhistory`}><FaBorderAll  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>Order History</Link>
       <Link to={`/feedback`}><VscFeedback  style={{fontSize:25,color:'white',marginRight:"1rem"}}/>FeedBack</Link>
+      <div className='adminlogout'>
+      <Link to={`/adminlogin`}  ><IoIosLogOut style={{marginRight:"1rem"}}/>LogOut</Link>
+      </div>
     </div>
-    
+  
+
+              
     </div>
   )
 }

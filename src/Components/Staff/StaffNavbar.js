@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Staff/StaffNavbar.css'
 import { Link } from 'react-router-dom'
+import { IoIosLogOut } from "react-icons/io";
 function StaffNavbar() {
   return (
     <div>
@@ -45,6 +46,9 @@ function StaffNavbar() {
                     <Link to={`/contactus`} class="nav-link" href="#">
                       ContactUs
                     </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to={`/stafflogin`} class="nav-link"><IoIosLogOut style={{color:"white",marginLeft:"1rem",height:"1.5rem"}}/></Link>
                   </li>
                 </ul>
               </div>

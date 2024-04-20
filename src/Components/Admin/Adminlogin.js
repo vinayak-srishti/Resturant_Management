@@ -49,6 +49,7 @@ function Adminlogin() {
                 className="form-control"
                 onChange={HandleChange}
                 required
+                
               />
             </td>
           </tr>
