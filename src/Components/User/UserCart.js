@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../User/UserCart.css";
 import { Link } from "react-router-dom";
+import { RiDeleteBin6Line } from "react-icons/ri";
 function UserCart() {
   const [cartdata, setcarddata] = useState([]);
   const [cartUpdated, setCartUpdated] = useState([])
@@ -14,13 +15,12 @@ function UserCart() {
   }]);
   
   useEffect(() => {
-    // console.log("id", id);
+    
     axios
       .post(`http://localhost:4000/usercartfind/${id}`)
       .then((result) => {
-        // console.log(result.data.msg);
         let newArr = result.data.msg.map((item) => {
-          let newObj = {...item, totalPrice: 0}
+          let newObj = {...item, totalPrice: item.foodid.price}
           return newObj
         })
         console.log("udpated arr", newArr)
@@ -55,23 +55,12 @@ function UserCart() {
 
     
 
-    // setUnitTotal(updatedItems);
-
-
-    // console.log(price);
-    // unitTotal[unitTotal.length]=(e.target.value )*price
-    // setUnitTotal({ ...unitTotal, unitTotal: e.target.value * price });
-    // console.log(unitTotal);
-    // unitTotal[index].id=index
-    // unitTotal[index].count=(e.target.value)
-    // unitTotal[index].price=(e.target.value )*price
-
-
+   
     console.log(unitTotal[index]);
     };
   const countcalculate = (e,price) => {
     setUnitTotal({ ...unitTotal, unitTotal: e.target.value * price });
-    // console.log(unitTotal);
+    
   };
   const handleremove = (id) => {
     console.log("id for deletion", id);
@@ -94,38 +83,38 @@ function UserCart() {
           <div className="usercartcard">
             <div class="card">
               
-              <div class="card-header" style={{ fontSize: "25px" }}>
+              <div class="card-title" id="usercart-title" style={{ fontSize: "25px" }}>
                 {y.foodid?.name}
               </div>
               <div class="card-body">
+              
+                  <img src={`http://localhost:4000/${y.foodid?.img.filename}`}class="card-img-top" alt="..." />
+                  
                 <h5
                   class="card-title"
                   style={{ fontFamily: "Bona Nova", fontSize: "25px" }}
                 >
-                  RS.{y.foodid?.price}
+                  RS. {y.totalPrice}
                 </h5>
 
                 <button
-                  class="btn btn-primary"
+                  class="btn btn-danger"
                   onClick={() => {
                     handleremove(y._id);
                   }}
-                >
+                ><RiDeleteBin6Line  style={{marginTop:"-0.1rem",marginRight:"0.5rem"}}/>
                   Remove
                 </button>
                 <input
-                  type="number"
+                  type="number" 
                   onChange={($event) => {
                     onChangeCount($event, y.foodid?.price,index);
                   }}
                   placeholder="count"
                   style={{ width: "5rem", marginLeft: "3rem" }}
                 />
-                {/* {console.log(index)} */}
-
-                {/* <input type="text"   value={unitTotal[index].price} /> */}
                 
-                <span> Total Price: {y.totalPrice} </span>
+                 {/* <span> Total Price:{y.totalPrice}</span>  */}
               </div>
             </div>
           </div>
@@ -135,10 +124,10 @@ function UserCart() {
       <Link to={`/payment`}
         type="button"
         className="btn btn-danger"
-        style={{ marginTop: "6.5rem", height: "5rem", width: "96rem" }}
+        style={{ marginTop: "6.5rem", height: "5rem", width: "96rem",fontSize:"20px",fontFamily:"fantasy" }}
         
       >
-        Total:{cartTotal}
+         Pay :  {cartTotal}
       </Link>
     </div>
   );

@@ -4,7 +4,7 @@
   }
   .Usermaincourse{
     background-color: black;
-    width: 96rem;
+    width: 100%;
   }
   .usermaincourse_card:hover .card{
     height: 400px;

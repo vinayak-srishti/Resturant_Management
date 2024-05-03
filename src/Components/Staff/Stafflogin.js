@@ -24,13 +24,14 @@ function Stafflogin() {
           console.log(result.data.msg._id);
 
           // console.log("Submitted");
-          Navigate("/staffnavbar");
+         
         }
       })
       .catch((error) => {
         console.log(error);
       });
-
+      alert("Login Successfully");
+      Navigate("/staffnavbar");
     // console.log(form);
     // alert("Login Successfully");
   };

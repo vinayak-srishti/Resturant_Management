@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import "../User/UserRegistration.css";
 import axios from 'axios';
+import {useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 function UserRegistration() {
+
+  function alert () {
+    Swal.fire("Successfully Registered");
+  }
   const [form, setform] = useState({
     firstname: "",
     lastname: "",
@@ -13,32 +20,30 @@ function UserRegistration() {
     state: "",
     pincode: ""
   });
+ 
 
-  // const[errormsg,seterrormsg]=useState('')
-  // const validate=(value)=>{
-  //   if(validator.isStrongPassword(value,{
-  //    minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:1
-  //   })){
-  //     seterrormsg('strong password');
-  //   }else{
-  //     seterrormsg('not strong password')
-  //   }
-  // }
-
+ 
+  const navigate=useNavigate()
   const handleclickfunction = (e) => {
     setform({ ...form, [e.target.name]: e.target.value });
   };
+ 
+    
   const onSubmitdata = (e) => {
     e.preventDefault();
     
     axios
-      .post("http://localhost:4000/userregister", form)
+      .post("http://localhost:4000/userregister",form)
+    
       .then((result) => {
-        console.log(result);
-        if (result.data.staus === 200) {
-          alert("succefully registered");
+        console.log("test",result);
+        console.log(result.status);
+        if (result.data.status === 200) {
+        
+
           console.log(result.data);
           console.log("submitted");
+          navigate('/homepage')
         }
       })
       .catch((error) => {
@@ -46,8 +51,10 @@ function UserRegistration() {
       });
     console.log(form);
   };
+ 
+ 
   return (
-    // <div id="userreg">
+    
       
       <div className="userregcustomer-form">
         <center>
@@ -117,15 +124,16 @@ function UserRegistration() {
                   required
                 />
               </div>
-              <button type="submit" className="btn btn-danger">
+              <button type="submit" onClick={alert} className="btn btn-danger" >
                 Register
               </button>
               <br />
+            
             </div>
           </form>
         </center>
       </div>
-    // </div>
+    
   );
 }
 

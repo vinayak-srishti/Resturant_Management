@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../Staff/Staffaddfood.css';
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Staffaddfood() {
   const [fdata, setfdata] = useState({
@@ -10,8 +11,9 @@ function Staffaddfood() {
     img:null,
     ftype: ""
   });
+  const navigate = useNavigate();
   const handleChange = (e) => {
-    setfdata({ ...fdata, [e.target.name]: e.target.value });
+    setfdata({ ...fdata, [e.target.name]: [e.target.value] });
   };
 
   const handleFileChange = (e) => {
@@ -29,15 +31,18 @@ function Staffaddfood() {
       })
       .then((result) => {
         console.log(result);
-        if (result.data.staus === 200) {
-          alert("succefully registered");
+        if (result.data.status === 200) {
+          
           console.log(result.data);
           console.log("submitted");
+          
         }
       })
       .catch((error) => {
         console.log(error);
       });
+      alert("Food Added To Menu");
+      navigate('/staffmenu')
   };
 
   return (

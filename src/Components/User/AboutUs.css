@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-.Aboutus_page1{
+ .Aboutus_page1{
     background-image: url("../../Images/User_login.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     height: 50rem;
-    width: 95rem;
-}
+    width: 100%;  
+ } 
 .container1{
-    position: absolute ;
     margin-left: 25rem;
     margin-top: -15rem;
 }
@@ -31,7 +29,7 @@
     background-repeat: no-repeat;
     height:50rem;
     width: 100%;
-    position: absolute;
+    margin-top: -5rem;
 }
 .container2 form{
     height: 30rem;
@@ -44,7 +42,6 @@
     color: #f6f2f2;
     margin-left: 3rem;
     margin-top: 1rem;
-    display: flex;
     
 }
 .container2 h2{
@@ -55,10 +52,9 @@
     font-family:'pirata one', cursive;  
     font-weight: 700;
     color: #991b1f;
-    display: flex;
+
 }
 .Aboutus_page3{
-    margin-top: 50rem;
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,7 +63,7 @@
 .Aboutus_page3 h2{
     text-align: center;
     font-size:6rem ;
-    /* margin-top: 6rem; */
+    
     margin-left: 20rem;
     -webkit-text-fill-color: #991b1f;
     font-family:'pirata one', cursive; 
@@ -78,7 +74,6 @@
    height: 25rem;
    width: 32rem; 
    border-radius: 50%;
-   /* display: flex; */
 }
 .Aboutus_page3 form{
     width: 45rem;
@@ -123,7 +118,7 @@
 .Aboutus_button{
     background-color: black;
     height: 10rem;
-}
+ } 
 .aboutus_img3 img{
     height: 20rem;
     width: 25rem;
@@ -135,7 +130,7 @@
     width: 28rem;
     margin-top: -20rem;
     margin-left: 33rem;
-}
+} 
 .aboutus_img5 img{
     height: 20rem;
     width: 25rem;

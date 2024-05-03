@@ -135,5 +135,8 @@ font-family: 'Pirata One';
     -webkit-text-fill-color: rgb(12, 12, 12);
     background-color:rgba(245, 245, 245, 0.475);
     border: none;
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 

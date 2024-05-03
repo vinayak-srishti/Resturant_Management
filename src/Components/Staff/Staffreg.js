@@ -30,7 +30,7 @@ function Staffreg() {
   //   }
      const Navigate=useNavigate()
      const handleclick=(e)=>{
-      settForm({...form1,[e.target.name]:[e.target.value]})
+      settForm({...form1,[e.target.name]:e.target.value})
      }
      const handleFileChange = (e) => {
       const { name, files } = e.target;
@@ -60,11 +60,13 @@ function Staffreg() {
         },
       })
       .then((result) => {
-        console.log(result);
+        console.log("test",result);
+        console.log(result.status);
         if (result.data.status === 200) {
-          alert("successfully registered");
+          
           console.log(result.data);
-           Navigate('/stafflogin')
+          console.log("submitted");
+          
         }
        
       })
@@ -73,6 +75,8 @@ function Staffreg() {
         console.log(error);
       });
     console.log(form1);
+    alert("successfully registered");
+    Navigate('/stafflogin')
   };
   return (
     <div id="staff-register">

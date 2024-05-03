@@ -4,18 +4,11 @@
     background-image: url('../../Images/HomePage1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 95rem;
+    width: 100%;
     height: 50rem;
-    margin-top: -8rem;
+    margin-top: -10rem;
 }
- #homepage_img{
-     background-image: url('../../Images/HomePage1.jpg'); 
-     background-size: cover;
- background-repeat: no-repeat; 
- height: 50rem;
- margin-top: -10rem;
- width: 95rem;
- } 
+
 .Home-Page p{
     font-size: 60px;
     font-family:'pirata one', cursive;  
@@ -40,8 +33,7 @@
 }
 .Home-Page2{
     background-color:hwb(0 4% 96%);
-    /* margin-top: 7rem; */
-    width: 94.5rem;
+    width: 100%;
 }
 .Home-Page2 p{
    font-family:'pirata one', cursive;  
@@ -103,7 +95,7 @@
 }
 .Home-Page3{
     background-color: black;
-    width: 94.5rem;
+    width: 100%;
 }
 .home-img3 form{
     width: 40rem;
@@ -202,7 +194,7 @@
 }
 .HomePage-5{
    background-color: black;
-   width: 94.5rem;
+   width: 100%;
    margin-top: -25rem;
 
 }

@@ -4,7 +4,7 @@
   }
   .Userbeverages{
     background-color: black;
-    width: 96rem;
+    width: 100%;
   }
   .userbeverages_card:hover .card{
     height: 400px;

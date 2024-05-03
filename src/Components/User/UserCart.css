@@ -2,10 +2,27 @@
     width: 40rem;
     height: 15rem;
     margin-bottom: 2rem;
-    /* margin: 20px; */
     margin-left: 27rem;
 }
 .usercart{
     background-color: black;
     
+}
+.usercartcard  img{
+    width: 10rem;
+    height: 10rem;
+    margin-top: -2rem;
+}
+.usercartcard h5{
+    margin-top: -12rem;
+    margin-left: 20rem;
+}
+.usercartcard button{
+    margin-left: 16rem;
+}
+#usercart-title{
+    font-size: 20px;
+    margin-left: 19rem;
+    font-weight: 400;
+    font-family: 'Bona Nova';
 }
